@@ -25,17 +25,62 @@
  *
  * ----------------------------------------------------------------------
  */
-	define("__CA_APP_TYPE__", "PROVIDENCE");
-	define("__CA_MICROTIME_START_OF_REQUEST__", microtime());
-	define("__CA_BASE_MEMORY_USAGE__", memory_get_usage(true));
-	require("./app/helpers/errorHelpers.php");
-	
-	if (!file_exists('./setup.php')) {
-		caDisplayException(new ApplicationException("No setup.php found"));
-		exit; 
-	}
-	require('./setup.php');
-	require_once('./app/helpers/post-setup.php');
+
+use App\Kernel;
+use Symfony\Component\Dotenv\Dotenv;
+use Symfony\Component\ErrorHandler\Debug;
+use Symfony\Component\HttpFoundation\Request;
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+
+// make these globals available to Symfony
+define("__CA_APP_TYPE__", "PROVIDENCE");
+define("__CA_MICROTIME_START_OF_REQUEST__", microtime());
+define("__CA_BASE_MEMORY_USAGE__", memory_get_usage(true));
+require(__DIR__ . "/./app/helpers/errorHelpers.php");
+
+
+if (!file_exists(__DIR__ . '/./setup.php')) {
+	caDisplayException(new ApplicationException("No setup.php found"));
+	exit;
+}
+require(__DIR__ . '/./setup.php');
+require_once(__DIR__ . '/./app/helpers/post-setup.php');
+
+
+
+(new Dotenv())->bootEnv(dirname(__DIR__) . '/.env');
+
+if ($_SERVER['APP_DEBUG']) {
+	umask(0000);
+
+	Debug::enable();
+}
+
+if ($trustedProxies = $_SERVER['TRUSTED_PROXIES'] ?? false) {
+	Request::setTrustedProxies(explode(',', $trustedProxies), Request::HEADER_X_FORWARDED_ALL ^ Request::HEADER_X_FORWARDED_HOST);
+}
+
+if ($trustedHosts = $_SERVER['TRUSTED_HOSTS'] ?? false) {
+	Request::setTrustedHosts([$trustedHosts]);
+}
+
+$kernel = new Kernel($_SERVER['APP_ENV'], (bool)$_SERVER['APP_DEBUG']);
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);
+
+if ($response->getStatusCode() === 404) {
+//	handleLegacy();
+} else {
+	$response->send();
+	$kernel->terminate($request, $response);
+	exit();
+}
+
+
+//function handleLegacy()
+{
 
 	try {
 		// connect to database
@@ -128,3 +173,7 @@
 	} catch (Exception $e) {
 		caDisplayException($e);
 	}
+
+	$kernel->terminate($request, $response);
+
+}

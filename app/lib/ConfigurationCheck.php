@@ -33,7 +33,7 @@
  /**
   *
   */
-  
+
 require_once(__CA_LIB_DIR__."/Configuration.php");
 require_once(__CA_LIB_DIR__."/Db/Transaction.php");
 require_once(__CA_LIB_DIR__.'/GenericVersionUpdater.php');
@@ -96,7 +96,7 @@ final class ConfigurationCheck {
 	}
 	# -------------------------------------------------------
 	/**
-	 * Invokes an explicit list of tests to be executed before 
+	 * Invokes an explicit list of tests to be executed before
 	 * CollectiveAccess installation
 	 */
 	public static function performInstall() {
@@ -146,7 +146,7 @@ final class ConfigurationCheck {
 		if (!is_writeable(__CA_APP_DIR__.'/tmp')) {
 			self::addError(_t('The CollectiveAccess <i>app/tmp</i> directory is NOT writeable by the installer. This may result in installation errors. It is recommended that you change permissions on this directory (<i>%1</i>) to allow write access prior to installation. You can reload the installer to verify that the changed permissions are correct.', __CA_APP_DIR__.'/tmp'));
 		}
-		
+
 		//
 		// Check app/log
 		//
@@ -222,7 +222,7 @@ final class ConfigurationCheck {
 		if (!self::$opo_db->connected()) {
 			self::addError(_t("Could not connect to database. Did you enter your database login information into setup.php?"));
 		}
-		
+
 		return true;
 	}
 	# -------------------------------------------------------
@@ -253,7 +253,7 @@ final class ConfigurationCheck {
 			for($vn_i = ($vn_schema_revision + 1); $vn_i <= __CollectiveAccess_Schema_Rev__; $vn_i++) {
 				if ($o_instance = ConfigurationCheck::getVersionUpdateInstance($vn_i)) {
 					if ($vs_preupdate_message = $o_instance->getPreupdateMessage()) {
-						self::addError(_t("For migration %1", $vn_i).": {$vs_preupdate_message}");		
+						self::addError(_t("For migration %1", $vn_i).": {$vs_preupdate_message}");
 					}
 				}
 			}
@@ -279,7 +279,7 @@ final class ConfigurationCheck {
 		if (!defined("__CA_SITE_PROTOCOL__")) {
 			self::addError(_t("Your setup.php file does not include a setting for __CA_SITE_PROTOCOL__. Please update it using the current setup.php-dist as a template."));
 		}
-		
+
 		return true;
 	}
 	# -------------------------------------------------------
@@ -342,7 +342,7 @@ final class ConfigurationCheck {
 	# -------------------------------------------------------
 	public static function caUrlRootQuickCheck() {
 		$possible_url_roots =  self::_urlRootGuesses();
-		
+
 		if (caGetOSFamily() === OS_WIN32) {	// Windows paths are case insensitive
 			if(!in_array(strtolower(__CA_URL_ROOT__), array_map(function($v) { return strtolower($v); }, $possible_url_roots))) {
 				self::addError(_t("It looks like the __CA_URL_ROOT__ variable in your setup.php is not set correctly. Please try to set it to &quot;%1&quot;.",$possible_url_roots[0]));
@@ -374,10 +374,12 @@ final class ConfigurationCheck {
 	}
 	# -------------------------------------------------------
 	private static function _baseGuesses() {
-		return [
+		$guesses = [
+			$_SERVER['DOCUMENT_ROOT'] . '..', // hack for moving index into public
 			str_replace("/index.php", "", str_replace("\\", "/", $_SERVER["SCRIPT_FILENAME"])),
 			$_SERVER['SCRIPT_FILENAME'] ? pathinfo($_SERVER['SCRIPT_FILENAME'], PATHINFO_DIRNAME) :  join(DIRECTORY_SEPARATOR, array_slice(explode(DIRECTORY_SEPARATOR, __FILE__), 0, -3))
 		];
+		return $guesses;
 	}
 	# -------------------------------------------------------
 	private static function _urlRootGuesses() {
@@ -428,7 +430,7 @@ final class ConfigurationCheck {
 		if (!class_exists("ZipArchive")){
 			self::addError(_t("The PHP ZipArchive module is required for CollectiveAccess to run. Please install it."));
 		}
-		
+
 		if (@preg_match('/\p{L}/u', 'a') != 1) {
 			self::addError(_t("Your version of the PHP PCRE module lacks unicode features. Please install a module version with UTF-8 support."));
 		}
@@ -594,16 +596,16 @@ final class ConfigurationCheck {
 	# -------------------------------------------------------
 	public static function performDatabaseSchemaUpdate() {
 		$va_messages = array();
-		if (($vn_schema_revision = self::getSchemaVersion()) < __CollectiveAccess_Schema_Rev__) {			
-			
+		if (($vn_schema_revision = self::getSchemaVersion()) < __CollectiveAccess_Schema_Rev__) {
+
 			for($vn_i = ($vn_schema_revision + 1); $vn_i <= __CollectiveAccess_Schema_Rev__; $vn_i++) {
 				if (!($o_updater = ConfigurationCheck::getVersionUpdateInstance($vn_i))) {
 					$o_updater = new GenericVersionUpdater($vn_i);
 				}
-				
-				
+
+
 				$va_methods_that_errored = array();
-				
+
 				// pre-update tasks
 				foreach($o_updater->getPreupdateTasks() as $vs_preupdate_method) {
 					if (!$o_updater->$vs_preupdate_method()) {
@@ -611,7 +613,7 @@ final class ConfigurationCheck {
 						$va_methods_that_errored[] = $vs_preupdate_method;
 					}
 				}
-				
+
 				if (is_array($va_new_messages = $o_updater->applyDatabaseUpdate())) {
 					$va_messages = $va_messages + $va_new_messages;
 				} else {
@@ -624,7 +626,7 @@ final class ConfigurationCheck {
 						$va_methods_that_errored[] = $vs_postupdate_method;
 					}
 				}
-				
+
 				if ($vs_message = $o_updater->getPostupdateMessage()) {
 					$va_messages[(sizeof($va_methods_that_errored) ? "error" : "info")."_{$vn_i}_{$vs_postupdate_method}_postupdate_message"] = _t("For migration %1", $vn_i).": {$vs_message}";
 				} else {
@@ -636,10 +638,10 @@ final class ConfigurationCheck {
 				}
 			}
 		}
-		
+
 		// Clean cache
 		caRemoveDirectory(__CA_APP_DIR__.'/tmp', false);
-		
+
 		return $va_messages;
 	}
 	# -------------------------------------------------------

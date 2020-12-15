@@ -66,7 +66,7 @@ $va_search_config_settings = $this->getVar('search_config_settings');
 			</tr>
 			<tr>
 				<td><?php print _t('System GUID'); ?></td>
-				<td><?php print __CA_SYSTEM_GUID__; ?></td>
+				<td><?php print defined('__CA_SYSTEM_GUID__') ? __CA_SYSTEM_GUID__ : ''; ?></td>
 			</tr>
 			<tr>
 				<td><?php print _t('Last change log ID'); ?></td>
@@ -82,7 +82,7 @@ $va_search_config_settings = $this->getVar('search_config_settings');
 			</tr>
 		</tbody>
 	</table>
-	
+
 	<div class="control-box rounded">
 		<div class="control-box-middle-content"><?php print _t('Search Engine'); ?>: <?php print $this->getVar('search_config_engine_name'); ?></div>
 	</div><div class="clear"></div>
@@ -162,12 +162,12 @@ while($va_search_config_settings->nextSetting()){
 <?php
 	}
 ?>
-	
-	
+
+
 	<div class="control-box rounded">
 		<div class="control-box-middle-content"><?php print _t('Media Processing Plugins'); ?></div>
 	</div><div class="clear"></div>
-	
+
 	<table id="caMediaConfigPluginList" class="listtable">
 		<thead>
 			<tr>
@@ -187,8 +187,8 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 ?>
 			<tr>
 				<td><?php print $vs_plugin_name; ?></td>
-				<td><?php 
-					print $va_plugin_info['description']; 
+				<td><?php
+					print $va_plugin_info['description'];
 					if (is_array($va_plugin_info['errors']) && sizeof($va_plugin_info['errors'])) {
 						print '<div style="color:red;">'.join('<br/>', $va_plugin_info['errors']).'</div>';
 					}
@@ -222,7 +222,7 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 	<div class="control-box rounded">
 		<div class="control-box-middle-content"><?php print _t('PDF Rendering Plugins'); ?></div>
 	</div><div class="clear"></div>
-	
+
 	<table id="caMediaConfigPluginList" class="listtable">
 		<thead>
 			<tr>
@@ -242,8 +242,8 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 ?>
 			<tr>
 				<td><?php print $vs_plugin_name; ?></td>
-				<td><?php 
-					print $va_plugin_info['description']; 
+				<td><?php
+					print $va_plugin_info['description'];
 					if (is_array($va_plugin_info['errors']) && sizeof($va_plugin_info['errors'])) {
 						print '<div style="color:red;">'.join('<br/>', $va_plugin_info['errors']).'</div>';
 					}
@@ -277,7 +277,7 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 	<div class="control-box rounded">
 		<div class="control-box-middle-content"><?php print _t('Barcode generation'); ?></div>
 	</div><div class="clear"></div>
-	
+
 	<table id="caMediaConfigPluginList" class="listtable">
 		<thead>
 			<tr>
@@ -299,8 +299,8 @@ foreach($va_barcode_components as $vs_component_name => $va_component_info){
 ?>
 			<tr>
 				<td><?php print $va_component_info['name']; ?></td>
-				<td><?php 
-					print $va_component_info['description']; 
+				<td><?php
+					print $va_component_info['description'];
 					if (is_array($va_component_info['errors']) && sizeof($va_component_info['errors'])) {
 						print '<div style="color:red;">'.join('<br/>', $va_component_info['errors']).'</div>';
 					}
@@ -327,11 +327,11 @@ foreach($va_barcode_components as $vs_component_name => $va_component_info){
 ?>
 		</tbody>
 	</table>
-	
+
 	<div class="control-box rounded">
 		<div class="control-box-middle-content"><?php print _t('Application Plugins'); ?></div>
 	</div><div class="clear"></div>
-	
+
 	<table id="caMediaConfigPluginList" class="listtable">
 		<thead>
 			<tr>
@@ -351,8 +351,8 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 ?>
 			<tr>
 				<td><?php print $vs_plugin_name; ?></td>
-				<td><?php 
-					print $va_plugin_info['description']; 
+				<td><?php
+					print $va_plugin_info['description'];
 					if (is_array($va_plugin_info['errors']) && sizeof($va_plugin_info['errors'])) {
 						print '<div style="color:red;">'.join('<br/>', $va_plugin_info['errors']).'</div>';
 					}
@@ -379,11 +379,11 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 ?>
 		</tbody>
 	</table>
-	
+
 		<div class="control-box rounded">
 		<div class="control-box-middle-content"><?php print _t('Metadata Extraction Tools'); ?></div>
 	</div><div class="clear"></div>
-	
+
 	<table id="caMediaConfigPluginList" class="listtable">
 		<thead>
 			<tr>
@@ -403,8 +403,8 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 ?>
 			<tr>
 				<td><?php print $vs_plugin_name; ?></td>
-				<td><?php 
-					print $va_plugin_info['description']; 
+				<td><?php
+					print $va_plugin_info['description'];
 					if (is_array($va_plugin_info['errors']) && sizeof($va_plugin_info['errors'])) {
 						print '<div style="color:red;">'.join('<br/>', $va_plugin_info['errors']).'</div>';
 					}
@@ -431,7 +431,7 @@ foreach($va_plugins as $vs_plugin_name => $va_plugin_info){
 ?>
 		</tbody>
 	</table>
-	
+
 </div>
 
 <div class="editorBottomPadding"><!-- empty --></div>

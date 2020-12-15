@@ -1,6 +1,6 @@
 <?php
 /** ---------------------------------------------------------------------
- * app/lib/ApplicationError.php : 
+ * app/lib/ApplicationError.php :
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -15,10 +15,10 @@
  * the terms of the provided license as published by Whirl-i-Gig
  *
  * CollectiveAccess is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * This source code is free and modifiable under the terms of 
+ * This source code is free and modifiable under the terms of
  * GNU General Public License. (http://www.gnu.org/copyleft/gpl.html). See
  * the "license.txt" file for details, or visit the CollectiveAccess web site at
  * http://www.CollectiveAccess.org
@@ -29,11 +29,12 @@
  *
  * ----------------------------------------------------------------------
  */
- 
+
  /**
   *
   */
- 
+
+
 require_once(__CA_LIB_DIR__."/Configuration.php");
 
 /**
@@ -99,21 +100,21 @@ class ApplicationError {
  * URL of page to redirect to upon error, if $opb_redirect_on_error is set
  *
  * @access private
- */	
+ */
 	private $ops_redirect_on_error_page = '';
 /**
  * Indexed array of error numbers to ignore opb_halt_on_error, opb_report_on_error and opb_redirect_on_error for
  *
  * @access private
- */	
-	private $opa_dont_report_errors = array(251);	
+ */
+	private $opa_dont_report_errors = array(251);
 /**
  * Configuration() object containing error messages
  *
  * @access private
- */	
+ */
 	private $opo_error_messages;
-	
+
 /**
  * Constructor takes optional parameters to create a new error. If parameters are omitted, an empty (non-error state)
  * error object is created. An error state can subsequently be set using the setError() method
@@ -125,17 +126,17 @@ class ApplicationError {
  * @param bool $pb_halt_on_error Whether or not to halt on error state (ie. whether do die()) [default is true]
  * @param bool $pb_report_on_error Whether or not to emit a visible report of error state [default is true]
  * @param string $ps_error_definition_file Path to error definition file; if omitted default file, based upon locale, is used
- */	
+ */
 	public function __construct($pn_error_number=0, $ps_error_description='', $ps_error_context='', $ps_error_source='', $pb_halt_on_error = true, $pb_report_on_error = true, $ps_error_definition_file='') {
  		$this->opo_config = Configuration::load();
- 		
+
 		$this->ops_redirect_on_error_page = $this->opo_config->get("error_redirect_to_page");
-		
+
 		# Set locale, if necessary
 		if (($vs_locale = $this->opo_config->get("locale")) && ((file_exists("Error/errors.".$vs_locale)) || ($this->file_exists_incpath("Error/errors.".$vs_locale)))) {
 			$this->ops_locale = $vs_locale;
-		} 
-		
+		}
+
 		# load error messages
 		$vs_error_definitions_loaded = 0;
 		if ($ps_error_definition_file) {
@@ -154,8 +155,8 @@ class ApplicationError {
 		if (!$vs_error_definitions_loaded) {
 			die("Error.php: Couldn't load error definitions!\n");
 		}
-		
-		
+
+
 		$this->opb_halt_on_error = $pb_halt_on_error;
 		$this->opb_report_on_error = $pb_report_on_error;
 		if ($pn_error_number) {
@@ -173,13 +174,13 @@ class ApplicationError {
  * @param string $ps_error_context Context where error occurred. This is typically the Class name and method name where the error occurred. Ex. "Configuration->new()"
  * @param string $ps_error_source Source of error - typically a string identifying the field in a form where the error occurred.
  * @return integer Always returns 1
- */		
+ */
 	public function setError ($pn_error_number, $ps_error_description='', $ps_error_context='', $ps_error_source='') {
 		$this->opn_error_number = $pn_error_number;
 		$this->ops_error_description = $ps_error_description;
 		$this->ops_error_context = $ps_error_context;
 		$this->ops_error_source = $ps_error_source;
-		
+
 		if (($this->opb_halt_on_error) || ($this->opb_report_on_error)) {
 			$this->halt();
 		}
@@ -194,7 +195,7 @@ class ApplicationError {
  * @param bool $pb_halt_and_report_on_error True if halt, report and redirect should be active, false if not. Generally this
  * method is used to turn all options off in one shot.
  * @return integer Always return 1
- */	
+ */
 	public function setErrorOutput($pb_halt_and_report_on_error) {
 		$this->opb_halt_on_error = $pb_halt_and_report_on_error;
 		$this->opb_report_on_error = $pb_halt_and_report_on_error;
@@ -206,7 +207,7 @@ class ApplicationError {
  *
  * @param integer $pb_halt_on_error True to halt on error, false otherwise.
  * @return integer Always returns 1
- */	
+ */
 	public function setHaltOnError ($pb_halt_on_error) {
 		$this->opb_halt_on_error = $pb_halt_on_error;
 		return 1;
@@ -216,7 +217,7 @@ class ApplicationError {
  *
  * @param integer $pb_report_on_error True to print an error message on error, false otherwise.
  * @return integer Always returns 1
- */	
+ */
 	public function setReportOnError ($pb_report_on_error) {
 		$this->opb_report_on_error = $pb_report_on_error;
 		return 1;
@@ -233,20 +234,20 @@ class ApplicationError {
  *
  * @param integer $pb_redirect_on_error True to redirect to another URL on error, false otherwise.
  * @return integer Always returns 1
- */	
+ */
 	public function setRedirectOnError ($pb_redirect_on_error) {
 		$this->opb_redirect_on_error = $pb_redirect_on_error;
 		return 1;
 	}
 /**
- * Set URL to redirect to when redirect on error option is set. Normally, the URL is taken from the 
+ * Set URL to redirect to when redirect on error option is set. Normally, the URL is taken from the
  * 'error_redirect_to_page' directive in the application configuration file. Use this method to override that
  * value on a per-error basis.
  *
- * @param integer $ps_redirect_on_error_url The URL to redirect to. The URL should be absolute or root-relative 
+ * @param integer $ps_redirect_on_error_url The URL to redirect to. The URL should be absolute or root-relative
  * without query parameters. Query parameters containing information about the error states will be appended to
  * this URL.
- */	
+ */
 	public function setRedirectOnErrorURL ($ps_redirect_on_error_url) {
 		$this->ops_redirect_on_error_page = $ps_redirect_on_error_url;
 		return 1;
@@ -256,7 +257,7 @@ class ApplicationError {
  * locale (if locale is set by the 'locale' directive in the application configuration file). If the locale is not set or
  * there is no standard error definition file for the locale, the default en_us (US English) locale is used. You can override
  * the use of standard locale-based error messages with your own error definitions by calling this method with the path to your error
- * definition file. 
+ * definition file.
  *
  * An error definition file is simply a standard configuration file containing one error message per line. The configuration directive (or "key")
  * for each error is the error number. The value is the error message itself.
@@ -265,7 +266,7 @@ class ApplicationError {
  *
  * @param string $ps_error_definition_file File path to error definition file
  * @return integer Returns 1 on success, zero on failure
- */	
+ */
 	public function setErrorDefinitionFile ($ps_error_definition_file) {
 		$this->opo_error_messages = Configuration::load($ps_error_definition_file);
 		if ($this->opo_error_messages->isError()) {
@@ -324,7 +325,7 @@ class ApplicationError {
 			return "Unknown error: ".$this->opn_error_number;
 		}
 	}
-	
+
 /**
  * Returns the source of the current error.
  *
@@ -333,7 +334,7 @@ class ApplicationError {
 	public function getErrorSource() {
 		return $this->ops_error_source;
 	}
-	
+
 /**
  * Returns true if halt on error is current set, false otherwise.
  *
@@ -357,7 +358,7 @@ class ApplicationError {
  * @return bool Halt on error option setting
  */
 	public function setDontReportErrorList ($pa_list) {
-		if (!is_array($pa_list)) 
+		if (!is_array($pa_list))
 			return false;
 
 		$this->opa_dont_report_errors = $pa_list;

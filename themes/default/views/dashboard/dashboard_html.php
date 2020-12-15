@@ -32,7 +32,7 @@
 ?>
 
 <!-- Empty DIV uses for the "popup" widget chooser panel -->
-<div id="dashboardWidgetPanel" class="dashboardWidgetPanel">
+<div id="dashboardWidgetPanel" class="dashboardWidgetPanel">N
 	<a href="#" onclick="caDashboardWidgetPanel.hideWidgetPanel();" class="dashboardWidgetPanelHide">&nbsp;</a>
 		<div id="dashboardWidgetPanelTitle"><?php print _t('Add a Widget'); ?></div>
 	<div id="dashboardWidgetPanelContent">

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Models</h1>
+        {% for model, data in models  %}
+            <h3>{{ model }}</h3>
+            <br />{{ data.NAME_SINGULAR }}
+
+                    <table class="table" valign="top">
+                        {% for fieldName, field in data.FIELDS %}
+                            <tr valign="top">
+                                <td>{{ fieldName }}</td>
+                                <td>{{ field.LABEL }}</td>
+                                <td>{{ field.DESCRIPTION }}</td>
+                                <td>{{ field.FIELD_TYPE }}</td>
+                                <td>{{ field.IDENTITY ?? '**' }}</td>
+                                <td>{{ field|keys|join(',') }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <hr />
+        {% endfor %}
+</div>
+{% endblock %}

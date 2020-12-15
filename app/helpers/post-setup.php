@@ -15,10 +15,10 @@
  * the terms of the provided license as published by Whirl-i-Gig
  *
  * CollectiveAccess is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * This source code is free and modifiable under the terms of 
+ * This source code is free and modifiable under the terms of
  * GNU General Public License. (http://www.gnu.org/copyleft/gpl.html). See
  * the "license.txt" file for details, or visit the CollectiveAccess web site at
  * http://www.CollectiveAccess.org
@@ -36,16 +36,17 @@
 # 		For Windows hosts, use a notation similar to "C:/PATH/TO/COLLECTIVEACCESS"; do NOT use backslashes
 #
 if (!defined("__CA_BASE_DIR__")) {
-	define("__CA_BASE_DIR__", ($_SERVER['SCRIPT_FILENAME'] && (php_sapi_name() !== 'cli'))  ? preg_replace("!/install$!", "", pathinfo($_SERVER['SCRIPT_FILENAME'], PATHINFO_DIRNAME)) :  join(DIRECTORY_SEPARATOR, array_slice(explode(DIRECTORY_SEPARATOR, __FILE__), 0, -3)));
+//	define("__CA_BASE_DIR__", ($_SERVER['SCRIPT_FILENAME'] && (php_sapi_name() !== 'cli'))  ? preg_replace("!/install$!", "", pathinfo($_SERVER['SCRIPT_FILENAME'], PATHINFO_DIRNAME)) :  join(DIRECTORY_SEPARATOR, array_slice(explode(DIRECTORY_SEPARATOR, __FILE__), 0, -3)));
+	define("__CA_BASE_DIR__", pathinfo(preg_replace("!/install|/viewers/apps|/tests|support/bin/!", "", isset($_SERVER['SCRIPT_FILENAME']) ? $_SERVER['SCRIPT_FILENAME'] : __FILE__), PATHINFO_DIRNAME));
 }
 
 #
 # __CA_URL_ROOT__ = the root-relative URL path to your CollectiveAccess installation
 #
-#		The default value attempts to determine the relative URL path automatically. You should only change 
+#		The default value attempts to determine the relative URL path automatically. You should only change
 #		this if it's failing to derive the correct value.
 #
-#		If you must to set this manually leave the __CA_URL_ROOT_ *BLANK* if the CollectiveAccess directory is the 
+#		If you must to set this manually leave the __CA_URL_ROOT_ *BLANK* if the CollectiveAccess directory is the
 #		web server root or in the root directory of a virtual host. If CollectiveAccess is in a subdirectory or
 #		an alias is used to point the web server to the correct path, set '__CA_URL_ROOT__' to
 #		the relative url path to the subdirectory; start the path with a slash ('/') but omit trailing slashes.
@@ -60,7 +61,7 @@ if (!defined("__CA_URL_ROOT__")) {
 #
 # __CA_SITE_HOSTNAME__ = the hostname for your system
 #
-#		The default value attempts to determine the relative URL path automatically. You should only change 
+#		The default value attempts to determine the relative URL path automatically. You should only change
 #		this if it's failing to derive the correct value.
 #
 #		If you must set this manually, it must be the full host name. Do not include http:// or any other prefixes.
@@ -78,7 +79,7 @@ if (!defined("__CA_SITE_PROTOCOL__")) {
 	define("__CA_SITE_PROTOCOL__", isset($_SERVER['HTTPS']) ? 'https' : ((isset($_SERVER['HTTP_X_FORWARDED_PROTO']) &&  ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https' : 'http'));
 }
 
-# Path to CollectiveAccess 'app' directory 
+# Path to CollectiveAccess 'app' directory
 if (!defined("__CA_APP_DIR__")) {
 	define("__CA_APP_DIR__", __CA_BASE_DIR__."/app");
 }
@@ -113,7 +114,7 @@ $_CA_INSTANCE_CONFIG_FILES = array(
 
 if (!isset($_SERVER['HTTP_HOST']) || !isset($_CA_INSTANCE_CONFIG_FILES[$_SERVER['HTTP_HOST']]) || !($_CA_CONFIG_PATH = $_CA_INSTANCE_CONFIG_FILES[$_SERVER['HTTP_HOST']])) {
 	$_CA_CONFIG_PATH = $_CA_INSTANCE_CONFIG_FILES['_default_'];
-} 
+}
 
 if (!(file_exists($_CA_CONFIG_PATH))) {
 	$opa_error_messages = array("Configuration files are missing for hostname '".(isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '[unknown]')."'!<br/>Please check the <em>__CA_BASE_DIR__</em> configuration setting in your <em>setup.php</em> file.");
@@ -123,9 +124,9 @@ if (!(file_exists($_CA_CONFIG_PATH))) {
 	exit();
 }
 
-# Only MySQL databases are currently supported but there are three available 
+# Only MySQL databases are currently supported but there are three available
 # methods to interact with them:
-#		Use 'mysql' if you need to use the old PHP "mysql" drivers. This is the default for older versions and can be used if all else fails. 
+#		Use 'mysql' if you need to use the old PHP "mysql" drivers. This is the default for older versions and can be used if all else fails.
 #		Use 'mysqli' to use the PHP MySQLi drivers. This is the current default.
 #		Use 'pdo_mysql' to use the PHP MySQL PDO driver. This has not been fully tested yet but should generally work ok.
 #
@@ -204,7 +205,7 @@ if (!defined("__CA_SMTP_PORT__")) {
 	define("__CA_SMTP_PORT__", 25);
 }
 
-# If your outgoing (SMTP) mail server requires you to authenticate then authentiucation 
+# If your outgoing (SMTP) mail server requires you to authenticate then authentiucation
 # details must be set in  __CA_SMTP_AUTH__, __CA_SMTP_USER__, __CA_SMTP_PASSWORD__
 # and __CA_SMTP_SSL__
 #
@@ -248,41 +249,41 @@ if (!defined("__CA_SMTP_SSL__")) {
 # part of the standard CollectiveAccess configuration check. If you do
 # configure them here and your setup doesn't have the extension, you
 # may see critical errors.
-if (!defined('__CA_CACHE_BACKEND__')) { 
+if (!defined('__CA_CACHE_BACKEND__')) {
 	define('__CA_CACHE_BACKEND__', 'file');
 }
 
 # File path for file-based caching. The default works but in some setups you may want to move this
 # to the fastest available storage (in terms of random access time), like an SSD
-if (!defined('__CA_CACHE_FILEPATH__')) { 
+if (!defined('__CA_CACHE_FILEPATH__')) {
 	define('__CA_CACHE_FILEPATH__', __CA_APP_DIR__.DIRECTORY_SEPARATOR.'tmp');
 }
 
 # Time-to-live for cache items (in seconds)
-if (!defined('__CA_CACHE_TTL__')) { 
+if (!defined('__CA_CACHE_TTL__')) {
 	define('__CA_CACHE_TTL__', 3600);
 }
 
 # Host and port for memcached
-if (!defined('__CA_MEMCACHED_HOST__')) { 
+if (!defined('__CA_MEMCACHED_HOST__')) {
 	define('__CA_MEMCACHED_HOST__', 'localhost');
 }
-if (!defined('__CA_MEMCACHED_PORT__')) { 
+if (!defined('__CA_MEMCACHED_PORT__')) {
 	define('__CA_MEMCACHED_PORT__', 11211);
 }
 
 # Host and port for redis
-if (!defined('__CA_REDIS_HOST__')) { 
+if (!defined('__CA_REDIS_HOST__')) {
 	define('__CA_REDIS_HOST__', 'localhost');
 }
-if (!defined('__CA_REDIS_PORT__')) { 
+if (!defined('__CA_REDIS_PORT__')) {
 	define('__CA_REDIS_PORT__', 6379);
 }
 
-# Redis database index. This is useful if you want to use your Redis instance for several 
-# applications. Redis is usually set up with 16 databases, indexed 0 through 15. 
+# Redis database index. This is useful if you want to use your Redis instance for several
+# applications. Redis is usually set up with 16 databases, indexed 0 through 15.
 # CollectiveAccess will use the first (index 0) unless told otherwise.
-if (!defined('__CA_REDIS_DB__')) { 
+if (!defined('__CA_REDIS_DB__')) {
 	define('__CA_REDIS_DB__', 0);
 }
 
@@ -292,10 +293,10 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT);
 # __CA_ALLOW_AUTOMATIC_UPDATE_OF_VENDOR_DIR__
 #
 # Set this to allow allow web-based loading of missing vendor libraries.
-# This can be a very convenient way to install your system but could present a possible 
-# security risk if your system is publicly accessible on the internet. The risk is that 
-# by exposing the update control on a public url on a publicly accessible site you are 
-# potentially allowing anyone to initiate the update. 
+# This can be a very convenient way to install your system but could present a possible
+# security risk if your system is publicly accessible on the internet. The risk is that
+# by exposing the update control on a public url on a publicly accessible site you are
+# potentially allowing anyone to initiate the update.
 if (!defined('__CA_ALLOW_AUTOMATIC_UPDATE_OF_VENDOR_DIR__')) {
 	define('__CA_ALLOW_AUTOMATIC_UPDATE_OF_VENDOR_DIR__', true);
 }
@@ -308,16 +309,16 @@ caCheckVendorLibraries();
 require_once(__CA_APP_DIR__.'/helpers/preload.php');
 
 #
-# Bail if request is a Google Cloud health check. We can to return an HTTP 200 code to 
+# Bail if request is a Google Cloud health check. We can to return an HTTP 200 code to
 # signify "health"
 #
 if (caRequestIsHealthCheck()) { print "OK"; exit; }
 
 # __CA_ALLOW_DRAG_AND_DROP_PROFILE_UPLOAD_IN_INSTALLER__
 #
-# Set this to enable drag-and-drop upload of profiles in the installer. This allows 
+# Set this to enable drag-and-drop upload of profiles in the installer. This allows
 # you to avoid having to FTP new profiles or changes to existing ones. Note that this can
-# be a security risk as it allows anyone to upload files to your server. You should leave 
+# be a security risk as it allows anyone to upload files to your server. You should leave
 # it set to false unless you really need it.
 if (!defined('__CA_ALLOW_DRAG_AND_DROP_PROFILE_UPLOAD_IN_INSTALLER__')) {
 	define('__CA_ALLOW_DRAG_AND_DROP_PROFILE_UPLOAD_IN_INSTALLER__', false);
@@ -326,8 +327,8 @@ if (!defined('__CA_ALLOW_DRAG_AND_DROP_PROFILE_UPLOAD_IN_INSTALLER__')) {
 # __CA_DISABLE_CONFIG_CACHING__
 #
 # Set this to force configuration settings to be loaded from the plain text
-# files in __CA_CONF_DIR__ on each page refresh. This will have a significant negative 
-# impact on performance. However, there are certain scenarios where want to prevent 
+# files in __CA_CONF_DIR__ on each page refresh. This will have a significant negative
+# impact on performance. However, there are certain scenarios where want to prevent
 # caching, e.g. for debugging. DO NOT touch this unless you know what you're doing!
 if (!defined('__CA_DISABLE_CONFIG_CACHING__')) {
 	define('__CA_DISABLE_CONFIG_CACHING__', false);
@@ -335,11 +336,11 @@ if (!defined('__CA_DISABLE_CONFIG_CACHING__')) {
 
 # __CA_ENABLE_DEBUG_OUTPUT__
 #
-# Set this to have the application print debugging information in the debug 
-# console. This is primarily intended for developers working on custom code. If this 
-# is enabled, any variables passed to the the caDebug() function 
-# (see app/helpers/utilityHelpers.php) will trigger a detailed output of the 
-# variable content. Note that utilityHelpers.php has to be included to use the function, 
+# Set this to have the application print debugging information in the debug
+# console. This is primarily intended for developers working on custom code. If this
+# is enabled, any variables passed to the the caDebug() function
+# (see app/helpers/utilityHelpers.php) will trigger a detailed output of the
+# variable content. Note that utilityHelpers.php has to be included to use the function,
 # but it usually is.
 if (!defined('__CA_ENABLE_DEBUG_OUTPUT__')) {
 	define('__CA_ENABLE_DEBUG_OUTPUT__', false);
@@ -348,10 +349,10 @@ if (!defined('__CA_ENABLE_DEBUG_OUTPUT__')) {
 # __CA_ALLOW_AUTOMATIC_UPDATE_OF_DATABASE__
 #
 # Set this to allow allow web-based database schema updates required after a code updates.
-# This can be a very convenient way to update your database but could present a possible 
-# security risk if your system is publicly accessible on the internet. The risk is that 
-# by exposing the update control on a public url on a publicly accessible site you are 
-# potentially allowing anyone to initiate the database update. 
+# This can be a very convenient way to update your database but could present a possible
+# security risk if your system is publicly accessible on the internet. The risk is that
+# by exposing the update control on a public url on a publicly accessible site you are
+# potentially allowing anyone to initiate the database update.
 if (!defined('__CA_ALLOW_AUTOMATIC_UPDATE_OF_DATABASE__')) {
 	define('__CA_ALLOW_AUTOMATIC_UPDATE_OF_DATABASE__', true);
 }

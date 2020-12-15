@@ -15,10 +15,10 @@
  * the terms of the provided license as published by Whirl-i-Gig
  *
  * CollectiveAccess is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * This source code is free and modifiable under the terms of 
+ * This source code is free and modifiable under the terms of
  * GNU General Public License. (http://www.gnu.org/copyleft/gpl.html). See
  * the "license.txt" file for details, or visit the CollectiveAccess web site at
  * http://www.CollectiveAccess.org
@@ -29,16 +29,16 @@
  *
  * ----------------------------------------------------------------------
  */
- 
+
  /**
   *
   */
- 
+
  	require_once(__CA_LIB_DIR__.'/Error/IErrorSetter.php');
- 
+
 	class BaseObject implements IErrorSetter {
 		# ------------------------------------------------------------------
-		
+
 		public $errors;
 		private $error_output = false;
 		# ------------------------------------------------------------------
@@ -50,7 +50,7 @@
 		# ------------------------------------------------------------------
 		public function &errors($ps_source=null) {
 			if (is_null($ps_source)) { return $this->errors; }
-			
+
 			$va_errors = array();
 			if (sizeof($this->errors)) {
 				foreach ($this->errors as $e) {
@@ -76,7 +76,7 @@
 				}
 			}
 			return $error_descs;
-		} 
+		}
 		# ------------------------------------------------------------------
 		public function &getErrorDescriptions($ps_source=null) {
 			$va_errors = array();
@@ -105,10 +105,10 @@
 			$o_error = new ApplicationError();
 			$o_error->setErrorOutput($this->error_output);
 			$o_error->setError($pn_num,$ps_message,$ps_context, $ps_source);
-			
+
 			if (!$this->errors) { $this->errors = array(); }
 			array_push($this->errors, $o_error);
-			
+
 			$dummy = null;
 			if (($app = AppController::getInstance($dummy, $dummy, true)) && ($o_request = $app->getRequest()) && defined('__CA_ENABLE_DEBUG_OUTPUT__') && __CA_ENABLE_DEBUG_OUTPUT__) {
 				$va_trace = debug_backtrace();
@@ -117,7 +117,7 @@
 				while($va_source = array_shift($va_trace)) {
 					$vs_stacktrace .= " [{$va_source['file']}:{$va_source['line']}]";
 				}
-				
+
 				$o_notification = new NotificationManager($o_request);
 				$o_notification->addNotification("[{$pn_num}] {$ps_message} ({$ps_context}".($ps_source ? "; {$ps_source}" : '').$vs_stacktrace);
 			}

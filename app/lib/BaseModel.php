@@ -371,6 +371,9 @@ class BaseModel extends BaseObject {
 	 * @return BaseModel
 	 */
 	public function __construct($pn_id=null, $pb_use_cache=true) {
+//		assert(false);
+//		dd('stopped');
+//		throw new \Exception("stopped");
 		$this->opn_instantiated_at = time();
 		$vs_table_name = $this->tableName();
 		

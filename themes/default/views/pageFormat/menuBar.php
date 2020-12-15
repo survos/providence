@@ -11,6 +11,8 @@
 			if ($this->request->user->canDoAction('can_quicksearch')) {
 ?>
 				<div class="sf-menu sf-menu-search" >
+
+
 					
 					<!-- Quick search -->
 <?php 	
@@ -38,6 +40,7 @@
 			}
 ?>
 			<ul class="sf-menu" style="background-color:#<?php print $va_menu_color; ?>;">
+				<li><a href="/models">Models</a></li>
 	<?php
 			print $va_menu_bar = $this->getVar('nav')->getHTMLMenuBar('menuBar', $this->request);
 ?>

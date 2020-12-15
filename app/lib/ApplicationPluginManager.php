@@ -102,7 +102,7 @@
 				
 			foreach($va_plugin_locations as $vs_app_plugin_dir) {
 				foreach($va_app_plugin_dirs as $vs_plugin_dir) {
-					if(ApplicationPluginManager::$s_application_plugin_instances[$vs_plugin_dir]) { continue; }
+					if(array_key_exists($vs_app_plugin_dir, ApplicationPluginManager::$s_application_plugin_instances)) { continue; }
 					if (!file_exists($vs_app_plugin_dir.'/'.$vs_plugin_dir.'/'.$vs_plugin_dir.'Plugin.php')) { continue; }
 					require_once($vs_app_plugin_dir.'/'.$vs_plugin_dir.'/'.$vs_plugin_dir.'Plugin.php');
 					$vs_plugin_classname = $vs_plugin_dir.'Plugin';
