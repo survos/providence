@@ -1,3 +1,4 @@
+.env.local
 /nbproject/*
 /app/tmp/*
 app/conf/local/*
