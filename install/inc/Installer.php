@@ -104,7 +104,7 @@ class Installer {
 					$this->addError("Profile validation failed. Your profile doesn't conform to the required XML schema.");
 				}
 			} else {
-				$this->addError("Could not read profile '{$ps_profile_name}'. Please check the file permissions.");
+				$this->addError("Could not read profile '{$ps_profile_name} in ${ps_profile_dir}'. Please check the file permissions.");
 			}
 		}
 

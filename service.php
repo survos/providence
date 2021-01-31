@@ -27,8 +27,16 @@
  */
 
 	define("__CA_IS_SERVICE_REQUEST__", true);
-	if (!file_exists('./setup.php')) { print "No setup.php file found!"; exit; }
-	require('./setup.php');
+if (!$setupFile =  current(array_filter($setups=[getenv('SETUP'), './setup.php', './setup-default.php'],
+		function($fn) { return file_exists($fn); })
+)) {
+	caDisplayException(new ApplicationException("No setup found, checked " . join(',', $setups)));
+	exit;
+}
+require($setupFile);
+
+//	if (!file_exists('./setup.php')) { print "No setup.php file found!"; exit; }
+//	require('./setup.php');
 
 	// connect to database
 	$o_db = new Db(null, null, false);

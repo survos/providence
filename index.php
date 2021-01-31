@@ -29,12 +29,21 @@
 	define("__CA_MICROTIME_START_OF_REQUEST__", microtime());
 	define("__CA_BASE_MEMORY_USAGE__", memory_get_usage(true));
 	require("./app/helpers/errorHelpers.php");
+
+if (!$setupFile =  current(array_filter($setups=[getenv('SETUP'), './setup.php', './setup-default.php'],
+	function($fn) { return file_exists($fn); })
+)) {
+	caDisplayException(new ApplicationException("No setup found, checked " . join(',', $setups)));
+	exit;
+}
+require($setupFile);
 	
-	if (!file_exists('./setup.php')) {
-		caDisplayException(new ApplicationException("No setup.php found"));
-		exit; 
-	}
-	require('./setup.php');
+	
+//	if (!file_exists('./setup.php')) {
+//		caDisplayException(new ApplicationException("No setup.php found"));
+//		exit; 
+//	}
+//	require('./setup.php');
 	require_once('./app/helpers/post-setup.php');
 
 	try {
