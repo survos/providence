@@ -39,10 +39,13 @@
     "hoa/stream": "1.17.02.21"
   },
   "require": {
-    "ext-iconv": "*",
     "ext-simplexml": "*",
     "phpseclib/phpseclib"   : "^2.0",
-    "ext-gettext": "*"
+    "ext-gettext": "*",
+    "ext-zip": "*",
+    "ext-gd": "*",
+    "ext-iconv": "*",
+    "ext-intl": "*"
   },
   "config": {
   	"discard-changes": true,
