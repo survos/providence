@@ -17,8 +17,8 @@ jobs:
       - name: Install PHP
         uses: shivammathur/setup-php@v2
         with:
-          php_version: ${{ matrix.php-versions }}
-          php_extensions: intl,gettext,iconv,simplexml #optional
+          php-version: ${{ matrix.php-versions }}
+          extensions: intl,gettext,iconv,simplexml #optional
           ini-values: "post_max_size=256M" #optional
 
       - name: Checkout
