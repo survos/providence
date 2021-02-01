@@ -84,11 +84,13 @@ Datamodel::load();
 // initialize Tooltip manager
 TooltipManager::init();
 
-
 spl_autoload_register(function ($class) {
     // Anything prefixed with "ca_" is a model
     if (substr($class, 0, 3) === 'ca_') {
-        if(require(__CA_MODELS_DIR__."/{$class}.php")) { return true; }
+    	if (!file_exists($classFilename = __CA_MODELS_DIR__."/{$class}.php")) {
+    		throw new \Exception("Missing $classFilename");
+	    }
+        if(include(__CA_MODELS_DIR__."/{$class}.php")) { return true; }
     }
     
     // strip namespaces if present
@@ -100,7 +102,7 @@ spl_autoload_register(function ($class) {
     $paths = [__CA_LIB_DIR__, __CA_LIB_DIR__.'/Utils', __CA_LIB_DIR__.'/Parsers', __CA_LIB_DIR__.'/Media', __CA_LIB_DIR__.'/Exceptions'];
     foreach($paths as $path) {
         if(file_exists("{$path}/{$class}.php")) {
-            if(require("{$path}/{$class}.php")) { return true; }   
+            if( include("{$path}/{$class}.php")) { return true; }   
         }
     }
     

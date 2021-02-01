@@ -31,11 +31,12 @@
     "phpoffice/phppresentation": "dev-master",
     "phpoffice/phpspreadsheet": "v1.10",
     "phpoffice/phpword": "v0.15.*",
-    "phpunit/phpunit": "10.0.x-dev",
     "scholarslab/bagit": "*",
     "srmklive/flysystem-dropbox-v2": ">=1.0.0",
     "tedivm/stash": "0.14.*",
-    "rector/rector": "9999999-dev"
+    "rector/rector": "9999999-dev",
+    "phpstan/phpstan": "^0.12.69",
+    "hoa/stream": "1.17.02.21"
   },
   "require": {
     "ext-iconv": "*",
@@ -45,5 +46,6 @@
   "config": {
   	"discard-changes": true
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
