@@ -29,6 +29,6 @@ jobs:
           php_version: '7.4'
           php_extensions: intl gettext iconv simplexml zip gd #optional
       - name: Run rector
-        run: vendor/bin/rector process vendor/collectiveaccess/providence/app --dry-run -v
+        run: vendor/bin/rector process app --dry-run -v
       - name: Check PHP Version
         run: php -v
