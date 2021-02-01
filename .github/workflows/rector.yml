@@ -21,8 +21,8 @@ jobs:
       - name: Install
         uses: php-actions/composer@v5
         with:
-          php-version: ${{ matrix.php-versions }}
-          extensions: intl #optional
+          php_version: ${{ matrix.php-versions }}
+          extensions: intl,gettext #optional
           ini-values: "post_max_size=256M" #optional
       - name: Check PHP Version
         run: php -v
