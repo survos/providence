@@ -25,7 +25,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Install App
         uses: php-actions/composer@v5
-      - name: Check PHP Version
-        run: php -v
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: intl,gettext,iconv,simplexml,zip,gd, #optional
       - name: Run rector
         run: vendor/bin/rector process vendor/collectiveaccess/providence/app --dry-run -v
+      - name: Check PHP Version
+        run: php -v
