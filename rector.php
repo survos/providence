@@ -18,7 +18,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 //    var_dump($parameters); die(Option::AUTOLOAD_PATHS);
 	$parameters->set(Option::AUTOLOAD_PATHS, [
 		'./vendor/autoload.php',
-		__DIR__ . '/vendor/squizlabs/php_codesniffer/autoload.php',
+//		__DIR__ . '/vendor/squizlabs/php_codesniffer/autoload.php',
 		'./setup.php',
 		'./app/helpers/post-setup.php'
 //		'./app', './app/lib'
@@ -28,7 +28,9 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set(Option::SETS, [
         SetList::DEAD_CODE,
     ]);
-
+	$parameters->set(Option::AUTO_IMPORT_NAMES, true);
+	$parameters->set(Option::PATHS, [__DIR__ . '/src', __DIR__ . '/tests']);
+	
     // get services (needed for register a single rule)
     // $services = $containerConfigurator->services();
 
