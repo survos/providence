@@ -41,11 +41,14 @@
   "require": {
     "ext-iconv": "*",
     "ext-simplexml": "*",
-    "phpseclib/phpseclib": "^2.0",
+    "phpseclib/phpseclib"   : "^2.0",
     "ext-gettext": "*"
   },
   "config": {
-  	"discard-changes": true
+  	"discard-changes": true,
+    "platform": {
+      "php": "7.4"
+    }
   },
   "minimum-stability": "dev",
   "prefer-stable": true
