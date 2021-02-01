@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13263d8d11929c851e82867375ee2e19",
+    "content-hash": "14c12b4b5cf559042ad1de993ef6d40a",
     "packages": [
         {
             "name": "phpseclib/phpseclib",
@@ -5738,12 +5738,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "c5f26f5de985d992ad68b82ac4ba7ccd7e87d006"
+                "reference": "17cb30f5c7a7246202c63bc7cd1b73161f6074f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/c5f26f5de985d992ad68b82ac4ba7ccd7e87d006",
-                "reference": "c5f26f5de985d992ad68b82ac4ba7ccd7e87d006",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/17cb30f5c7a7246202c63bc7cd1b73161f6074f5",
+                "reference": "17cb30f5c7a7246202c63bc7cd1b73161f6074f5",
                 "shasum": ""
             },
             "require": {
@@ -5762,7 +5762,7 @@
                 "phpstan/phpstan": "^0.12.69, <0.12.70",
                 "phpstan/phpstan-phpunit": "^0.12.17",
                 "psr/simple-cache": "^1.0",
-                "sebastian/diff": "^4.0",
+                "sebastian/diff": "^4.0.4",
                 "symfony/cache": "^4.4.8|^5.1",
                 "symfony/console": "^4.4.8|^5.1",
                 "symfony/dependency-injection": "^5.1",
@@ -5794,7 +5794,6 @@
                 "php-parallel-lint/php-parallel-lint": "^1.2",
                 "phpstan/phpstan-nette": "^0.12.12",
                 "phpunit/phpunit": "^9.5",
-                "sebastian/diff": "^4.0.4",
                 "symfony/security-core": "^5.2",
                 "symfony/security-http": "^5.2",
                 "symplify/changelog-linker": "^9.0.47",
@@ -5941,7 +5940,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-01T10:30:09+00:00"
+            "time": "2021-02-01T17:05:25+00:00"
         },
         {
             "name": "robrichards/xmlseclibs",
@@ -10074,7 +10073,8 @@
     "prefer-lowest": false,
     "platform": {
         "ext-iconv": "*",
-        "ext-simplexml": "*"
+        "ext-simplexml": "*",
+        "ext-gettext": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

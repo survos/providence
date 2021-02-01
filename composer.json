@@ -41,7 +41,8 @@
   "require": {
     "ext-iconv": "*",
     "ext-simplexml": "*",
-    "phpseclib/phpseclib": "^2.0"
+    "phpseclib/phpseclib": "^2.0",
+    "ext-gettext": "*"
   },
   "config": {
   	"discard-changes": true
