@@ -34,7 +34,8 @@
  *
  */
 
+if (!class_exists('ApplicationException')) {
+	class ApplicationException extends Exception {
 
-class ApplicationException extends Exception {
-
+	}	
 }
