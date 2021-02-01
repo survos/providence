@@ -1,5 +1,4 @@
 - name: Run Rector
-  uses: shivammathur/setup-php@2.9.0
 
 # Run this workflow every time a new commit pushed to your repository
 on: push
