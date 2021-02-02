@@ -30,13 +30,18 @@
 	define("__CA_BASE_MEMORY_USAGE__", memory_get_usage(true));
 	require("./app/helpers/errorHelpers.php");
 
-if (!$setupFile =  current(array_filter($setups=[getenv('SETUP'), './setup.php', './setup-default.php'],
-	function($fn) { return file_exists($fn); })
-)) {
-	caDisplayException(new ApplicationException("No setup found, checked " . join(',', $setups)));
-	exit;
-}
-require($setupFile);
+set_include_path('.:..:../../../config') && require_once 'setup.php';
+
+//	if (!$setupFile =  current(array_filter($setups=[getenv('SETUP'), './setup.php', './setup-default.php', '../../../config/setup.php'],
+//	function($fn) {  var_dump(__DIR__ . '/'.$fn); return file_exists($fn); })
+//)) {
+//		die(join(',', $setups));
+//	caDisplayException(new \Exception("No setup found, checked " . join(',', $setups)));
+//	exit;
+//}
+//	
+//require($setupFile);
+require_once('./app/helpers/post-setup.php');
 	
 	
 //	if (!file_exists('./setup.php')) {
