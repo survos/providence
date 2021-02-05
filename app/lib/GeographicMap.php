@@ -35,8 +35,7 @@
   */
  
  require_once(__CA_LIB_DIR__.'/GeographicMapItem.php');
- 
- class GeographicMap {
+class GeographicMap {
  	# -------------------------------------------------------------------
  	private $opo_mapping_engine;
  	# -------------------------------------------------------------------

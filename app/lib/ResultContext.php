@@ -33,8 +33,7 @@
  /**
   *
   */
- 
-	class ResultContext {
+class ResultContext {
 		# ------------------------------------------------------------------
 		private $opo_request;
 		private $ops_table_name;
@@ -1205,9 +1204,7 @@
 		}
 		# ------------------------------------------------------------------
 	}
-	
-	
-	class ResultContextStorage {
+class ResultContextStorage {
 		/**
 		 *
 		 */

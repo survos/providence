@@ -58,8 +58,7 @@
 	require_once(__CA_MODELS_DIR__.'/ca_lists.php');
 	require_once(__CA_MODELS_DIR__.'/ca_acl.php');
 	require_once(__CA_MODELS_DIR__.'/ca_relationship_types.php');
-
-	class BrowseEngine extends BaseFindEngine {
+class BrowseEngine extends BaseFindEngine {
 		# ------------------------------------------------------
 		# Properties
 		# ------------------------------------------------------

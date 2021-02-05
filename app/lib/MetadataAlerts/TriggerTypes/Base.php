@@ -37,7 +37,6 @@ require_once(__CA_LIB_DIR__.'/MetadataAlerts/TriggerTypes/Date.php');
 
 define('__CA_MD_ALERT_CHECK_TYPE_SAVE__', 0);
 define('__CA_MD_ALERT_CHECK_TYPE_PERIODIC__', 1);
-
 abstract class Base {
 
 	/**

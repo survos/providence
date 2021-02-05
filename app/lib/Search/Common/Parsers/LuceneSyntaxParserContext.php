@@ -1,6 +1,4 @@
 <?php
-
-
 class LuceneSyntaxParserContext {
     /**
      * Default field for the context.

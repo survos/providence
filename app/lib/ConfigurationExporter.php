@@ -47,8 +47,6 @@ require_once(__CA_MODELS_DIR__."/ca_search_forms.php");
 require_once(__CA_MODELS_DIR__."/ca_search_form_placements.php");
 require_once(__CA_MODELS_DIR__."/ca_editor_ui_screens.php");
 require_once(__CA_MODELS_DIR__.'/ca_metadata_dictionary_entries.php');
-
-
 final class ConfigurationExporter {
 	# -------------------------------------------------------
 	/** @var Configuration */

@@ -27,8 +27,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
- 
-    class QRrsItem {
+class QRrsItem {
     
         public $mm;                  // Bits per symbol 
         public $nn;                  // Symbols per block (= (1<<mm)-1) 
@@ -183,8 +182,7 @@
     }
     
     //##########################################################################
-    
-    class QRrs {
+class QRrs {
     
         public static $items = array();
         

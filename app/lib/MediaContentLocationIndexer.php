@@ -39,7 +39,6 @@
  */
 
 include_once(__CA_LIB_DIR__."/Db.php");
-
 class MediaContentLocationIndexer  {
 	# ------------------------------------------------
 	static $s_table_num_cache = array();

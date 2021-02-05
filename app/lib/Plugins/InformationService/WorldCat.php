@@ -94,7 +94,6 @@ $g_information_service_settings_WorldCat = array(
 			'description' => _t('A valid XSL template for transforming MARCXML provided by WorldCat into HTML for display. Only used when valid XSL and <em>Detail style</em> is set to <em>template</em>.')
 		)
 );
-
 class WLPlugInformationServiceWorldCat Extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	/**

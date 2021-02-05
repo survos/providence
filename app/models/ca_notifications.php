@@ -104,7 +104,6 @@ BaseModel::$s_ca_models_definitions['ca_notifications'] = array(
 		)
 	)
 );
-
 class ca_notifications extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -29,8 +29,7 @@
  	require_once(__CA_MODELS_DIR__."/ca_object_lots.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
 	require_once(__CA_LIB_DIR__.'/Parsers/ZipStream.php');
- 
- 	class ObjectLotEditorController extends BaseEditorController {
+class ObjectLotEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_object_lots';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

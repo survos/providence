@@ -30,8 +30,7 @@
  	require_once(__CA_LIB_DIR__."/Browse/OccurrenceBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_occurrences.php");
 	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 	
- 	class SearchOccurrencesAdvancedController extends BaseAdvancedSearchController {
+class SearchOccurrencesAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

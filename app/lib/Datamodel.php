@@ -37,8 +37,6 @@
 require_once(__CA_LIB_DIR__."/ApplicationError.php");
 require_once(__CA_LIB_DIR__."/Configuration.php");
 require_once(__CA_LIB_DIR__."/Utils/Graph.php");
-
-
 class Datamodel {
 	# --------------------------------------------------------------------------------------------
 	# --- Properties

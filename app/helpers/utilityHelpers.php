@@ -3134,7 +3134,7 @@ function caFileIsIncludable($ps_file) {
 	 * @return string
 	 * @throws \Exception
  	 */
-	class WebServiceError extends \Exception
+class WebServiceError extends \Exception
 	{
 		/**
 		 * Wrapper for getMessage() which is declared as final.

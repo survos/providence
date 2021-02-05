@@ -37,8 +37,7 @@
 require_once(__CA_LIB_DIR__."/Configuration.php");
 require_once(__CA_LIB_DIR__."/Datamodel.php");
 require_once(__CA_LIB_DIR__."/Db.php");
- 
- class ApplicationChangeLog {
+class ApplicationChangeLog {
  	# ----------------------------------------------------------------------
  	private $ops_change_log_database = '';
 	private $opb_dont_show_timestamp_in_change_log = false;

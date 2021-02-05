@@ -94,7 +94,6 @@ BaseModel::$s_ca_models_definitions['ca_occurrences_x_occurrences'] = array(
 		)
  	)
 );
-
 class ca_occurrences_x_occurrences extends BaseRelationshipModel {
 
 	use HistoryTrackingCurrentValueTrait;

@@ -103,7 +103,6 @@ $g_information_service_settings_CollectiveAccess = array(
 			'description' => _t('Display template to format detailed information blocks with.')
 		)
 );
-
 class WLPlugInformationServiceCollectiveAccess Extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

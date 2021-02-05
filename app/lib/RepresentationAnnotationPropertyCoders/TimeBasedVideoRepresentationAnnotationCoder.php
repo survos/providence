@@ -34,8 +34,7 @@
   *
   */
  	require_once(__CA_LIB_DIR__.'/RepresentationAnnotationPropertyCoders/TimeBasedRepresentationAnnotationCoder.php');
-
-	class TimeBasedVideoRepresentationAnnotationCoder extends TimeBasedRepresentationAnnotationCoder implements IRepresentationAnnotationPropertyCoder {
+class TimeBasedVideoRepresentationAnnotationCoder extends TimeBasedRepresentationAnnotationCoder implements IRepresentationAnnotationPropertyCoder {
 	# ------------------------------------------------------------------
 		public function __construct() {
 			parent::__construct();

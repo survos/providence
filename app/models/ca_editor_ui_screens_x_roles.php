@@ -76,7 +76,6 @@ BaseModel::$s_ca_models_definitions['ca_editor_ui_screens_x_roles'] = array(
 		)
 	)
 );
-
 class ca_editor_ui_screens_x_roles extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

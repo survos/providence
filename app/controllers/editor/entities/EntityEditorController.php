@@ -28,8 +28,7 @@
  
  	require_once(__CA_MODELS_DIR__."/ca_entities.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
- 
- 	class EntityEditorController extends BaseEditorController {
+class EntityEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_entities';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

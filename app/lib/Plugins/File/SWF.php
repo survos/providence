@@ -41,7 +41,6 @@
  
 require_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
 require_once(__CA_LIB_DIR__."/Plugins/IWLPlugFileFormat.php");
-
 class WLPlugFileSWF Extends WLPlug Implements IWLPlugFileFormat {
   var $errors = array();
   

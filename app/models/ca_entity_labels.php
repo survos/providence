@@ -154,7 +154,6 @@ BaseModel::$s_ca_models_definitions['ca_entity_labels'] = array(
 		)
  	)
 );
-
 class ca_entity_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -35,7 +35,6 @@ require_once(__CA_LIB_DIR__."/Plugins/InformationService/BaseGettyLODServicePlug
 
 global $g_information_service_settings_ULAN;
 $g_information_service_settings_ULAN = array();
-
 class WLPlugInformationServiceULAN extends BaseGettyLODServicePlugin implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

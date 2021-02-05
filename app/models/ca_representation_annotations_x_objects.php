@@ -93,7 +93,6 @@ BaseModel::$s_ca_models_definitions['ca_representation_annotations_x_objects'] =
 		)
  	)
 );
-
 class ca_representation_annotations_x_objects extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

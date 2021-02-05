@@ -93,7 +93,6 @@ BaseModel::$s_ca_models_definitions['ca_tour_stops_x_vocabulary_terms'] = array(
 		)
  	)
 );
-
 class ca_tour_stops_x_vocabulary_terms extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

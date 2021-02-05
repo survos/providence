@@ -30,8 +30,7 @@
  	require_once(__CA_LIB_DIR__."/Browse/MovementBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_movements.php");
 	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 	
- 	class SearchMovementsAdvancedController extends BaseAdvancedSearchController {
+class SearchMovementsAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

@@ -27,8 +27,7 @@
  
     define('STRUCTURE_HEADER_BITS',  20);
     define('MAX_STRUCTURED_SYMBOLS', 16);
-
-    class QRinputItem {
+class QRinputItem {
     
         public $mode;
         public $size;
@@ -270,8 +269,7 @@
     };
     
     //##########################################################################
-
-    class QRinput {
+class QRinput {
 
         public $items;
         

@@ -104,7 +104,6 @@ BaseModel::$s_ca_models_definitions['ca_place_labels'] = array(
 		)
  	)
 );
-
 class ca_place_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

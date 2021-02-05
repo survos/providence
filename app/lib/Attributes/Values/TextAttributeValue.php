@@ -227,8 +227,7 @@
             'description' => _t('Allow in-line references in text to a media element.')
         )
 	);
- 
-	class TextAttributeValue extends AttributeValue implements IAttributeValue {
+class TextAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		# ------------------------------------------------------------------

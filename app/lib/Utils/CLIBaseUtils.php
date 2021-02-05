@@ -40,7 +40,6 @@ require_once(__CA_APP_DIR__.'/helpers/utilityHelpers.php');
 require_once(__CA_APP_DIR__.'/helpers/mediaPluginHelpers.php');
 require_once(__CA_MODELS_DIR__."/ca_metadata_elements.php");
 require_once(__CA_LIB_DIR__."/MediaContentLocationIndexer.php");
-
 class CLIBaseUtils {
 	# -------------------------------------------------------
 	/**

@@ -95,7 +95,6 @@ BaseModel::$s_ca_models_definitions['ca_objects_x_objects'] = array(
 		)
  	)
 );
-
 class ca_objects_x_objects extends BaseRelationshipModel {
 
 	use HistoryTrackingCurrentValueTrait;

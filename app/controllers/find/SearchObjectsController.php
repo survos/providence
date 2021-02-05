@@ -34,8 +34,7 @@
 	require_once(__CA_MODELS_DIR__."/ca_set_items.php");
 	require_once(__CA_MODELS_DIR__."/ca_set_item_labels.php");
 	require_once(__CA_LIB_DIR__.'/Media/MediaViewerManager.php');
- 	
- 	class SearchObjectsController extends BaseSearchController {
+class SearchObjectsController extends BaseSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

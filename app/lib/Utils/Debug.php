@@ -35,8 +35,7 @@
   */
 
 	use DebugBar\StandardDebugBar;
-	
-	class Debug {
+class Debug {
 		# ----------------------------------------------------------------------
 		/**
 		 * Debug bar instance

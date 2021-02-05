@@ -30,8 +30,7 @@
  	require_once(__CA_MODELS_DIR__.'/ca_user_roles.php');
  	require_once(__CA_MODELS_DIR__.'/ca_editor_ui_screens.php');
  	require_once(__CA_MODELS_DIR__.'/ca_lists.php');
-
- 	class RolesController extends ActionController {
+class RolesController extends ActionController {
  		# -------------------------------------------------------
  		private $pt_role;
  		# -------------------------------------------------------

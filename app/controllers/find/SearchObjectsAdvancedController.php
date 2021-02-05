@@ -31,8 +31,7 @@
  	require_once(__CA_LIB_DIR__."/GeographicMap.php");
 	require_once(__CA_MODELS_DIR__."/ca_objects.php");
 	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 	
- 	class SearchObjectsAdvancedController extends BaseAdvancedSearchController {
+class SearchObjectsAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

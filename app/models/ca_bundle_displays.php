@@ -171,7 +171,6 @@ $_ca_bundle_displays_settings = array(		// global
 		'description' => _t('Restrict display to use in specific contexts. If no contexts are selected the display will be shown in all contexts.')
 	)
 );
-
 class ca_bundle_displays extends BundlableLabelableBaseModelWithAttributes {
 	use SetUniqueIdnoTrait;
 	

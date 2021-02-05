@@ -192,8 +192,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class UrlAttributeValue extends AttributeValue implements IAttributeValue {
+class UrlAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		# ------------------------------------------------------------------

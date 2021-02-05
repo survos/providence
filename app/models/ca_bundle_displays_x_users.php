@@ -74,7 +74,6 @@ BaseModel::$s_ca_models_definitions['ca_bundle_displays_x_users'] = array(
 		)
 	)
 );
-
 class ca_bundle_displays_x_users extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

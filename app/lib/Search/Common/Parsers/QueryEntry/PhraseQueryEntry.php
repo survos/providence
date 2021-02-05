@@ -1,6 +1,4 @@
 <?php
-
-
 class PhraseQueryEntry extends Zend_Search_Lucene_Search_QueryEntry {
 	/**
 	 * Phrase value

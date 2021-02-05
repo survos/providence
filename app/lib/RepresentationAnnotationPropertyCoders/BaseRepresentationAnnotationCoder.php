@@ -36,8 +36,7 @@
  	require_once(__CA_LIB_DIR__.'/Configuration.php');
  	require_once(__CA_LIB_DIR__.'/BaseObject.php');
  	require_once(__CA_LIB_DIR__.'/RepresentationAnnotationPropertyCoders/IRepresentationAnnotationPropertyCoder.php');
- 	
-	abstract class BaseRepresentationAnnotationCoder extends BaseObject implements IRepresentationAnnotationPropertyCoder {
+abstract class BaseRepresentationAnnotationCoder extends BaseObject implements IRepresentationAnnotationPropertyCoder {
 		# ------------------------------------------------------------------
 		protected $opo_config;
 		protected $opo_type_config;

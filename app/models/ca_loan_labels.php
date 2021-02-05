@@ -103,7 +103,6 @@ BaseModel::$s_ca_models_definitions['ca_loan_labels'] = array(
 		)
  	)
 );
-
 class ca_loan_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

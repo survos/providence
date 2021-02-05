@@ -35,8 +35,7 @@
   */
  
 require_once(__CA_LIB_DIR__.'/IApplicationPlugin.php');
- 
-	abstract class BaseApplicationPlugin implements IApplicationPlugin {
+abstract class BaseApplicationPlugin implements IApplicationPlugin {
 		# -------------------------------------------------------
 		protected $description = '';
 		# -------------------------------------------------------

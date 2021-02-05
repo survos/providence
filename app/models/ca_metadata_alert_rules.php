@@ -105,7 +105,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_alert_rules'] = array(
 		)
 	)
 );
-
 class ca_metadata_alert_rules extends BundlableLabelableBaseModelWithAttributes {
 	use SetUniqueIdnoTrait;
 	

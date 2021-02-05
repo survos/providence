@@ -23,8 +23,7 @@
  */
  
     define('QR_IMAGE', true);
-
-    class QRimage {
+class QRimage {
     
         //----------------------------------------------------------------------
         public static function png($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4,$saveandprint=FALSE) 

@@ -37,8 +37,7 @@
  	define('__NOTIFICATION_TYPE_ERROR__', 0);
  	define('__NOTIFICATION_TYPE_WARNING__', 1);
  	define('__NOTIFICATION_TYPE_INFO__', 2);
- 
-	class NotificationManager {
+class NotificationManager {
 		# -------------------------------------------------------
 		private $opo_request;
 		# -------------------------------------------------------

@@ -171,9 +171,6 @@ BaseModel::$s_ca_models_definitions['ca_editor_ui_bundle_placements'] = array(
 		)
  	)
 );
-
-
-
 class ca_editor_ui_bundle_placements extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

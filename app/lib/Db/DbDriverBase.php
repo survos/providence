@@ -155,7 +155,6 @@ class DbDriverBase {
 		}
 	}
 }
-
 class DatabaseException extends Exception {
 	private $opn_error_number = null;
 	private $ops_error_context = null;

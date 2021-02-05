@@ -44,7 +44,6 @@ include_once(__CA_LIB_DIR__."/Parsers/TilepicParser.php");
 include_once(__CA_LIB_DIR__."/Configuration.php");
 include_once(__CA_APP_DIR__."/helpers/mediaPluginHelpers.php");
 include_once(__CA_LIB_DIR__."/Parsers/MediaMetadata/XMPParser.php");
-
 class WLPlugMediaImagick Extends BaseMediaPlugin Implements IWLPlugMedia {
 	var $errors = array();
 	

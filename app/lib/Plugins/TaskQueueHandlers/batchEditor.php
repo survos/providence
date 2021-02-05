@@ -43,8 +43,7 @@ require_once(__CA_LIB_DIR__."/Datamodel.php");
 require_once(__CA_LIB_DIR__.'/BatchProcessor.php');
 require_once(__CA_MODELS_DIR__.'/ca_sets.php');
 require_once(__CA_MODELS_DIR__.'/ca_users.php');
-	
-	class WLPlugTaskQueueHandlerbatchEditor Extends WLPlug Implements IWLPlugTaskQueueHandler {
+class WLPlugTaskQueueHandlerbatchEditor Extends WLPlug Implements IWLPlugTaskQueueHandler {
 		# --------------------------------------------------------------------------------
 		public $error;
 		public $debug = 0;

@@ -103,8 +103,6 @@ BaseModel::$s_ca_models_definitions['ca_bundle_display_labels'] = array(
 		)
 	)
 );
-
-
 class ca_bundle_display_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

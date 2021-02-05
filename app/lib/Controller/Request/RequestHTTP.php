@@ -41,7 +41,6 @@ require_once(__CA_LIB_DIR__."/Controller/Request.php");
 define("__AUTH_EDIT_ACCESS__", 0);
 define("__AUTH_VIEW_ACCESS__", 1);
 define("__AUTH_NO_ACCESS__", 2);
-
 class RequestHTTP extends Request {
 	# -------------------------------------------------------
 	/**

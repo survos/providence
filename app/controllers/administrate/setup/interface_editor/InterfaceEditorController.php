@@ -29,9 +29,7 @@
  	require_once(__CA_MODELS_DIR__."/ca_editor_uis.php"); 
  	require_once(__CA_MODELS_DIR__."/ca_editor_ui_screens.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
- 	
- 
- 	class InterfaceEditorController extends BaseEditorController {
+class InterfaceEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_editor_uis';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

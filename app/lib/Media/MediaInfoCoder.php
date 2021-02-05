@@ -40,7 +40,6 @@ require_once(__CA_APP_DIR__."/helpers/utilityHelpers.php");
 require_once(__CA_APP_DIR__."/helpers/mediaPluginHelpers.php");
 
 $_MEDIA_INFO_CODER_INSTANCE_CACHE = null;
-
 class MediaInfoCoder {
 	# ---------------------------------------------------------------------------
 	private $opo_volume_info;

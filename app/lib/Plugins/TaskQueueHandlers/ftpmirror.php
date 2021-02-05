@@ -46,8 +46,7 @@ include_once(__CA_LIB_DIR__."/Media/MediaVolumes.php");
 include_once(__CA_LIB_DIR__."/Datamodel.php");
 include_once(__CA_LIB_DIR__."/ApplicationError.php");
 include_once(__CA_LIB_DIR__."/Logging/Eventlog.php");
-	
-	class WLPlugTaskQueueHandlerftpmirror Extends WLPlug Implements IWLPlugTaskQueueHandler {
+class WLPlugTaskQueueHandlerftpmirror Extends WLPlug Implements IWLPlugTaskQueueHandler {
 		# --------------------------------------------------------------------------------
 		var $error;
 		public $debug = 0;

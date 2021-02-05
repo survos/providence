@@ -93,7 +93,6 @@ BaseModel::$s_ca_models_definitions['ca_tour_stops_x_places'] = array(
 		)
  	)
 );
-
 class ca_tour_stops_x_places extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

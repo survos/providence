@@ -33,7 +33,6 @@
 namespace CA\Sync\LogEntry;
 
 require_once(__CA_LIB_DIR__.'/Sync/LogEntry/Bundlable.php');
-
 class Representation extends Bundlable {
 
 	/**

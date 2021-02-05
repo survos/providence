@@ -36,7 +36,6 @@
     
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugGeographicMap.php");
 include_once(__CA_LIB_DIR__."/Plugins/GeographicMap/BaseGeographicMapPlugin.php");
-
 class WLPlugGeographicMapLeaflet Extends BaseGeographicMapPlugIn Implements IWLPlugGeographicMap {
 	
 	# ------------------------------------------------

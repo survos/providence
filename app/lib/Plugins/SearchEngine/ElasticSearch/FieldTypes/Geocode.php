@@ -34,7 +34,6 @@ namespace ElasticSearch\FieldTypes;
 
 require_once(__CA_LIB_DIR__.'/Plugins/SearchEngine/ElasticSearch/FieldTypes/GenericElement.php');
 require_once(__CA_LIB_DIR__.'/Attributes/Values/GeocodeAttributeValue.php');
-
 class Geocode extends GenericElement {
 	public function __construct($ps_table_name, $ps_element_code) {
 		parent::__construct($ps_table_name, $ps_element_code);

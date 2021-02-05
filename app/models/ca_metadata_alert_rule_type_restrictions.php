@@ -98,7 +98,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_alert_rule_type_restrictions'] 
 		)
 	)
 );
-
 class ca_metadata_alert_rule_type_restrictions extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

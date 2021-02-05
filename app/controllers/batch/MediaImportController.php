@@ -45,9 +45,7 @@
  	require_once(__CA_LIB_DIR__."/BatchProcessor.php");
  	require_once(__CA_LIB_DIR__."/BatchEditorProgress.php");
  	require_once(__CA_LIB_DIR__."/BatchMediaImportProgress.php");
-
- 
- 	class MediaImportController extends ActionController {
+class MediaImportController extends ActionController {
  		# -------------------------------------------------------
  		protected $opo_datamodel;
  		protected $opo_app_plugin_manager;

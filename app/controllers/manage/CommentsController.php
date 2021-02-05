@@ -28,8 +28,7 @@
  	require_once(__CA_LIB_DIR__."/BaseSearchController.php");
 	require_once(__CA_MODELS_DIR__."/ca_item_comments.php");
  	require_once(__CA_LIB_DIR__."/Search/ItemCommentSearch.php");
- 	
- 	class CommentsController extends BaseSearchController {
+class CommentsController extends BaseSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

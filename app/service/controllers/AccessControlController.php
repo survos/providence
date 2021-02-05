@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/Service/deprecated/AccessControlService.php');
 	require_once(__CA_LIB_DIR__.'/Service/BaseServiceController.php');
-
-	class AccessControlController extends BaseServiceController {
+class AccessControlController extends BaseServiceController {
 		private $opo_services_conf;
 		private $opb_disable;
 		# -------------------------------------------------------

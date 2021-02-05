@@ -31,8 +31,7 @@
  */
 
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
-
-	class Visualizer {
+class Visualizer {
 		# --------------------------------------------------------------------------------
 		private $opo_config;
 		private $opo_viz_config;

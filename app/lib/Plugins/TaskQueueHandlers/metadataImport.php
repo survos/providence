@@ -38,7 +38,6 @@ require_once(__CA_LIB_DIR__."/Db/Transaction.php");
 require_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
 require_once(__CA_LIB_DIR__."/Plugins/IWLPlugTaskQueueHandler.php");
 require_once(__CA_LIB_DIR__."/Logging/Eventlog.php");
-	
 class WLPlugTaskQueueHandlermetadataImport Extends WLPlug Implements IWLPlugTaskQueueHandler {
 	# --------------------------------------------------------------------------------
 	public $error;

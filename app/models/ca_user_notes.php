@@ -96,7 +96,6 @@ BaseModel::$s_ca_models_definitions['ca_user_notes'] = array(
 		),
  	)
 );
-
 class ca_user_notes extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

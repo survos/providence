@@ -135,8 +135,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_dictionary_rules'] = array(
 		)
  	)
 );
-
-
 class ca_metadata_dictionary_rules extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

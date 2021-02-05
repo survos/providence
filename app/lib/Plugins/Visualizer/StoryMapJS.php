@@ -36,7 +36,6 @@
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugVisualizer.php");
 include_once(__CA_LIB_DIR__."/Plugins/Visualizer/BaseVisualizerPlugin.php");
 include_once(__CA_APP_DIR__."/helpers/gisHelpers.php");
-
 class WLPlugVisualizerStoryMapJS Extends BaseVisualizerPlugIn Implements IWLPlugVisualizer {
 	# ------------------------------------------------
 	/**

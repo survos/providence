@@ -37,8 +37,7 @@
   */
  
  	require_once(__CA_LIB_DIR__.'/Controller/AppController/AppControllerPlugin.php');
- 
-	class SearchReindexingProgress extends AppControllerPlugin {
+class SearchReindexingProgress extends AppControllerPlugin {
 		# -------------------------------------------------------
 		
 		# -------------------------------------------------------

@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/Service/deprecated/CataloguingService.php');
 	require_once(__CA_LIB_DIR__.'/Service/BaseServiceController.php');
-
-	class CataloguingController extends BaseServiceController {
+class CataloguingController extends BaseServiceController {
 		# -------------------------------------------------------
 		public function __construct(&$po_request, &$po_response, $pa_view_paths) {
  			parent::__construct($po_request, $po_response, $pa_view_paths);

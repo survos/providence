@@ -35,8 +35,7 @@
   */
  
  	require_once(__CA_LIB_DIR__.'/View.php');
- 
-	class BaseSettings {
+class BaseSettings {
 		# ------------------------------------------------------
 		/**
 		 *

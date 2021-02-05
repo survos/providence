@@ -37,7 +37,6 @@
     
 require_once(__CA_LIB_DIR__."/Plugins/IWLPlugInformationService.php");
 require_once(__CA_LIB_DIR__."/Plugins/InformationService/BaseInformationServicePlugin.php");
-
 abstract class BaseNomismaLODServicePlugin extends BaseInformationServicePlugin {
 	# ------------------------------------------------
 	protected $opo_linked_data_conf = null;

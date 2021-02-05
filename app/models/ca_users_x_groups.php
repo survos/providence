@@ -63,7 +63,6 @@ BaseModel::$s_ca_models_definitions['ca_users_x_groups'] = array(
 		)
  	)
 );
-
 class ca_users_x_groups extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

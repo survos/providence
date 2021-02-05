@@ -38,7 +38,6 @@ require_once(__CA_LIB_DIR__.'/BaseObject.php');
 require_once(__CA_LIB_DIR__.'/Attributes/Attribute.php');
 require_once(__CA_LIB_DIR__.'/Attributes/Values/AttributeValue.php');
 require_once(__CA_APP_DIR__.'/helpers/htmlFormHelpers.php');
-
 abstract class AuthorityAttributeValue extends AttributeValue {
 	# ------------------------------------------------------------------
 	/**

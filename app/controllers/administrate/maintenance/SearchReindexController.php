@@ -32,7 +32,6 @@ require_once(__CA_LIB_DIR__."/ApplicationPluginManager.php");
 require_once(__CA_APP_DIR__."/helpers/configurationHelpers.php");
 require_once(__CA_LIB_DIR__."/Search/SearchIndexer.php");
 require_once(__CA_LIB_DIR__.'/SearchReindexingProgress.php');
-
 class SearchReindexController extends ActionController {
 
 	# ------------------------------------------------	

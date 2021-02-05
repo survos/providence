@@ -31,8 +31,7 @@
  	require_once(__CA_MODELS_DIR__.'/ca_object_checkouts.php');
  	require_once(__CA_LIB_DIR__.'/Logging/Eventlog.php');
  	require_once(__CA_LIB_DIR__.'/Db.php');
-	
-	class libraryServicesPlugin extends BaseApplicationPlugin {
+class libraryServicesPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		private $opo_config;
 		private $opo_library_services_config;

@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/BaseLookupController.php");
- 
- 	class ListController extends BaseLookupController {
+class ListController extends BaseLookupController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = false;
  		protected $ops_table_name = 'ca_lists';		// name of "subject" table (what we're editing)

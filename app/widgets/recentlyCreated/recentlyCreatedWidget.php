@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__.'/IWidget.php');
  	require_once(__CA_LIB_DIR__.'/Db.php');
 	require_once(__CA_LIB_DIR__.'/Datamodel.php');
- 
-	class recentlyCreatedWidget extends BaseWidget implements IWidget {
+class recentlyCreatedWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		private $opo_datamodel;

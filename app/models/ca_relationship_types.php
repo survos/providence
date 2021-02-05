@@ -143,7 +143,6 @@ BaseModel::$s_ca_models_definitions['ca_relationship_types'] = array(
 		)
  	)
 );
-
 class ca_relationship_types extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

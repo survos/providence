@@ -38,8 +38,7 @@ require_once(__CA_LIB_DIR__."/BaseFindEngine.php");
 require_once(__CA_LIB_DIR__.'/Configuration.php');
 require_once(__CA_LIB_DIR__."/Datamodel.php");
 require_once(__CA_LIB_DIR__."/Db.php");
-	
-	class SearchBase extends BaseFindEngine {
+class SearchBase extends BaseFindEngine {
 		# ------------------------------------------------
 		protected $opo_datamodel;
 		protected $opo_db;

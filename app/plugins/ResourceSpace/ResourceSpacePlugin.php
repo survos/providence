@@ -25,8 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
- 
-	class ResourceSpacePlugin extends BaseApplicationPlugin {
+class ResourceSpacePlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		/**
 		 *

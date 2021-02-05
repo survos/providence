@@ -49,7 +49,6 @@ BaseModel::$s_ca_models_definitions['ca_application_vars'] = array(
 		)
 	)
 );
- 
 class ca_application_vars extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

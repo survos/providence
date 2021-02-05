@@ -82,7 +82,6 @@ BaseModel::$s_ca_models_definitions['ca_attributes'] = array(
 		)
 	)
 );
-
 class ca_attributes extends BaseModel {
 	# ---------------------------------
 	use SyncableBaseModel;

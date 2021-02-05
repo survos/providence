@@ -99,7 +99,6 @@ BaseModel::$s_ca_models_definitions['ca_user_roles'] = array(
 		)
  	)
 );
-
 class ca_user_roles extends BaseModel {
 	use SyncableBaseModel;
 	

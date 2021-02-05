@@ -127,7 +127,6 @@ BaseModel::$s_ca_models_definitions['ca_items_x_tags'] = array(
 		)
  	)
 );
-
 class ca_items_x_tags extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -30,8 +30,7 @@
  	require_once(__CA_LIB_DIR__."/Browse/ObjectLotBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_object_lots.php");
 	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 	
- 	class SearchObjectLotsAdvancedController extends BaseAdvancedSearchController {
+class SearchObjectLotsAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

@@ -28,8 +28,7 @@
  
  	require_once(__CA_MODELS_DIR__."/ca_storage_locations.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
- 
- 	class StorageLocationEditorController extends BaseEditorController {
+class StorageLocationEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_storage_locations';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

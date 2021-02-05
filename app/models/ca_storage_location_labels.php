@@ -104,7 +104,6 @@ BaseModel::$s_ca_models_definitions['ca_storage_location_labels'] = array(
 		)
  	)
 );
-
 class ca_storage_location_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -28,7 +28,6 @@
 require_once(__CA_LIB_DIR__."/BaseLookupController.php");
 require_once(__CA_LIB_DIR__."/Search/ObjectSearch.php");
 require_once(__CA_LIB_DIR__."/Search/CollectionSearch.php");
-
 class ObjectCollectionHierarchyController extends BaseLookupController {
 	# -------------------------------------------------------
 	protected $opb_uses_hierarchy_browser = false;

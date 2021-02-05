@@ -131,8 +131,6 @@ define("TEP_ERROR_UNCERTAINTY_OVERFLOW", 5);
 define("TEP_ERROR_INVALID_EXPRESSION", 6);		# general parse error (expression is just plain wrong)
 define("TEP_ERROR_TRAILING_JUNK", 7);			# extra tokens after otherwise valid expression
 define("TEP_ERROR_PARSER_ERROR", 8);			# internal error in parse - stuff that "shouldn't happen"
-
-
 class TimeExpressionParser {
 	# -------------------------------------------------------------------
 	private $ops_language = null;				// iso-639-1 + country code for current language [default is US english]

@@ -33,7 +33,6 @@
 namespace ElasticSearch\FieldTypes;
 
 require_once(__CA_LIB_DIR__.'/Plugins/SearchEngine/ElasticSearch/FieldTypes/FieldType.php');
-
 class Timestamp extends FieldType {
 
 	/**

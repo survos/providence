@@ -27,8 +27,7 @@
  */
  
  require_once(__CA_LIB_DIR__."/View.php");
- 
- class StatisticsDashboard { 
+class StatisticsDashboard { 
     # ------------------------------------------------------------------
     /**
      *

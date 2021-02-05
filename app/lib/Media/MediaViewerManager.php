@@ -35,8 +35,7 @@
  */
  
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
- 
-	class MediaViewerManager {
+class MediaViewerManager {
 		# -------------------------------------------------------
 		/** 
 		 * @var Global flag indicating whether we've required() viewer plugins yet

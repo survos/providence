@@ -228,5 +228,4 @@ trait DeduplicateBaseModel {
 	}
 	# -------------------------------------------------------
 }
-
 class DeduplicateException extends Exception {}

@@ -34,7 +34,6 @@
 	require_once(__CA_LIB_DIR__.'/Datamodel.php');
 	require_once(__CA_LIB_DIR__.'/BaseEditorController.php');
 	require_once(__CA_LIB_DIR__.'/ResultContext.php');
-
 class ElementsController extends BaseEditorController {
 	# -------------------------------------------------------
 	protected $ops_table_name = 'ca_metadata_elements';		// name of "subject" table (what we're editing)

@@ -37,7 +37,6 @@
 require_once(__CA_LIB_DIR__."/Service/BaseService.php");
 require_once(__CA_APP_DIR__."/helpers/utilityHelpers.php");
 require_once(__CA_MODELS_DIR__."/ca_list_items.php");
-
 class SearchService extends BaseService {
 	# -------------------------------------------------------
 	public function  __construct($po_request) {

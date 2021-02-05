@@ -27,8 +27,7 @@
  */
 
  	require_once(__CA_LIB_DIR__.'/Logging/Downloadlog.php');
-
- 	class DownloadController extends ActionController {
+class DownloadController extends ActionController {
  		# -------------------------------------------------------
  		#
  		# -------------------------------------------------------

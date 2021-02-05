@@ -27,8 +27,6 @@
  */
 require_once(__CA_APP_DIR__."/helpers/displayHelpers.php");
 require_once(__CA_MODELS_DIR__."/ca_locales.php");
-
-
 class GeoNamesController extends ActionController {
  	# -------------------------------------------------------
  	public function __construct(&$po_request, &$po_response, $pa_view_paths=null) {

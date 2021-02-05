@@ -103,8 +103,6 @@ BaseModel::$s_ca_models_definitions['ca_data_importer_labels'] = array(
 		)
 	)
 );
-
-
 class ca_data_importer_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

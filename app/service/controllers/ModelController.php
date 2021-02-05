@@ -30,7 +30,6 @@ require_once(__CA_LIB_DIR__.'/Service/ModelService.php');
 require_once(__CA_LIB_DIR__.'/ConfigurationExporter.php');
 
 require_once(__CA_BASE_DIR__.'/install/inc/Installer.php');
-
 class ModelController extends BaseServiceController {
 	# -------------------------------------------------------
 	public function __construct(&$po_request, &$po_response, $pa_view_paths) {

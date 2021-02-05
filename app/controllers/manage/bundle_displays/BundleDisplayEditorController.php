@@ -29,9 +29,7 @@
  	require_once(__CA_MODELS_DIR__."/ca_bundle_displays.php");
  	require_once(__CA_MODELS_DIR__."/ca_bundle_display_placements.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
- 	
- 
- 	class BundleDisplayEditorController extends BaseEditorController {
+class BundleDisplayEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_bundle_displays';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

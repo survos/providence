@@ -45,8 +45,7 @@
  require_once(__CA_APP_DIR__.'/models/ca_users.php');
  require_once(__CA_APP_DIR__.'/helpers/accessHelpers.php');
  require_once(__CA_APP_DIR__.'/helpers/displayHelpers.php');
- 
-	class LabelableBaseModelWithAttributes extends BaseModelWithAttributes implements ILabelable {
+class LabelableBaseModelWithAttributes extends BaseModelWithAttributes implements ILabelable {
 		# ------------------------------------------------------------------
 		static $s_label_cache = array();
 		

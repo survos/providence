@@ -31,7 +31,6 @@
  */
 
 require_once(__CA_LIB_DIR__.'/Export/BaseExportFormat.php');
-
 class ExportMARC extends BaseExportFormat {
 	# ------------------------------------------------------
 	

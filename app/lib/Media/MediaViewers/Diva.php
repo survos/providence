@@ -38,8 +38,7 @@
 	require_once(__CA_LIB_DIR__.'/Media/IMediaViewer.php');
 	require_once(__CA_LIB_DIR__.'/Media/BaseMediaViewer.php');
 	require_once(__CA_MODELS_DIR__.'/ca_object_representations.php');
- 
-	class Diva extends BaseMediaViewer implements IMediaViewer {
+class Diva extends BaseMediaViewer implements IMediaViewer {
 		# -------------------------------------------------------
 		/**
 		 *

@@ -36,8 +36,7 @@
   
  	require_once(__CA_LIB_DIR__.'/Browse/BaseBrowse.php');
  	require_once(__CA_LIB_DIR__.'/Browse/InterstitialBrowseResult.php');
- 
-	class InterstitialBrowse extends BaseBrowse {
+class InterstitialBrowse extends BaseBrowse {
 		# ------------------------------------------------------
 		/**
 		 * Which table does this class represent?

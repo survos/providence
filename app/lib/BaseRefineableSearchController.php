@@ -34,8 +34,7 @@
   *
   */
 	require_once(__CA_LIB_DIR__."/BaseFindController.php");
-	
-	class BaseRefineableSearchController extends BaseFindController {
+class BaseRefineableSearchController extends BaseFindController {
 		# -------------------------------------------------------
  		/**
  		 * Browse engine used to wrap searches. The browse "wrapper" provides for "refine search" functionality

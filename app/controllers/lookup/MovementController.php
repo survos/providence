@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/BaseLookupController.php");
- 
- 	class MovementController extends BaseLookupController {
+class MovementController extends BaseLookupController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = false;
  		protected $ops_table_name = 'ca_movements';		// name of "subject" table (what we're editing)

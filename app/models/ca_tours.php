@@ -147,7 +147,6 @@ BaseModel::$s_ca_models_definitions['ca_tours'] = array(
 		)
  	)
 );
-
 class ca_tours extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

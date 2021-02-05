@@ -33,7 +33,6 @@
 namespace CA\MetadataAlerts\TriggerTypes;
 
 require_once(__CA_MODELS_DIR__ . '/ca_metadata_elements.php');
-
 class Modification extends Base {
 
 	/**

@@ -37,8 +37,7 @@
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
 	require_once(__CA_LIB_DIR__.'/Media/IMediaViewer.php');
 	require_once(__CA_LIB_DIR__.'/Media/BaseMediaViewer.php');
- 
-	class VideoJS extends BaseMediaViewer implements IMediaViewer {
+class VideoJS extends BaseMediaViewer implements IMediaViewer {
 		# -------------------------------------------------------
 		/**
 		 *

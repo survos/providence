@@ -17,8 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
-	class phpFlickr {
+class phpFlickr {
 		var $api_key;
 		var $secret;
 
@@ -1691,8 +1690,7 @@
 			return $this->parsed_response ? $this->parsed_response['user'] : false;
 		}
 	}
-
-	class phpFlickr_pager {
+class phpFlickr_pager {
 		var $phpFlickr, $per_page, $method, $args, $results, $global_phpFlickr;
 		var $total = null, $page = 0, $pages = null, $photos, $_extra = null;
 

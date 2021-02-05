@@ -31,7 +31,6 @@
  */
 
 require_once(__CA_APP_DIR__.'/helpers/htmlFormHelpers.php');
- 
 class ExternalExportManager {
     # ------------------------------------------------------
     /**
@@ -438,7 +437,6 @@ class ExternalExportManager {
     }
     # ------------------------------------------------------
 }
-
 class ExternalExportManagerException extends ApplicationException {
 
 }

@@ -43,9 +43,7 @@
  	require_once(__CA_LIB_DIR__."/ResultContext.php");
  	require_once(__CA_LIB_DIR__."/BatchProcessor.php");
  	require_once(__CA_LIB_DIR__."/BatchMetadataImportProgress.php");
-
- 
- 	class MetadataImportController extends ActionController {
+class MetadataImportController extends ActionController {
  		# -------------------------------------------------------
  		protected $opo_datamodel;
  		protected $opo_app_plugin_manager;

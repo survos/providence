@@ -133,7 +133,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_elements'] = array(
 		)
 	)
 );
-
 class ca_metadata_elements extends LabelableBaseModelWithAttributes implements ITakesSettings {
 	use SyncableBaseModel;
 	# ---------------------------------

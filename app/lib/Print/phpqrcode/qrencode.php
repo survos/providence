@@ -24,8 +24,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
- 
-    class QRrsblock {
+class QRrsblock {
         public $dataLength;
         public $data = array();
         public $eccLength;
@@ -43,8 +42,7 @@
     };
     
     //##########################################################################
-
-    class QRrawcode {
+class QRrawcode {
         public $version;
         public $datacode = array();
         public $ecccode = array();
@@ -152,8 +150,7 @@
     }
 
     //##########################################################################
-    
-    class QRcode {
+class QRcode {
     
         public $version;
         public $width;
@@ -302,8 +299,7 @@
     }
     
     //##########################################################################
-    
-    class FrameFiller {
+class FrameFiller {
     
         public $width;
         public $frame;
@@ -392,8 +388,7 @@
     } ;
     
     //##########################################################################    
-    
-    class QRencode {
+class QRencode {
     
         public $casesensitive = true;
         public $eightbit = false;

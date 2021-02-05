@@ -42,7 +42,6 @@ require_once(__CA_MODELS_DIR__."/ca_relationship_types.php");
 require_once(__CA_MODELS_DIR__."/ca_locales.php");
 require_once(__CA_MODELS_DIR__."/ca_tours.php");
 require_once(__CA_MODELS_DIR__."/ca_tour_stops.php");
-
 class TourService extends BaseService {
 	# -------------------------------------------------------
 	protected $opo_dm;

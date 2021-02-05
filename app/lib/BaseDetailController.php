@@ -41,8 +41,7 @@
 	require_once(__CA_MODELS_DIR__."/ca_bundle_displays.php");
 	require_once(__CA_MODELS_DIR__."/ca_relationship_types.php");
 	require_once(__CA_MODELS_DIR__."/ca_lists.php");
- 	
-	class BaseDetailController extends ActionController {
+class BaseDetailController extends ActionController {
 		# -------------------------------------------------------
  		protected $opo_datamodel;
  		protected $ops_context = '';

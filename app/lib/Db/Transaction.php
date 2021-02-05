@@ -36,7 +36,6 @@
  
 require_once(__CA_LIB_DIR__."/Configuration.php");
 require_once(__CA_LIB_DIR__."/Db.php");
-
 class Transaction {
 	# ----------------------------------------
   	private $o_db; # database connection

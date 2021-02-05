@@ -98,7 +98,6 @@ BaseModel::$s_ca_models_definitions['ca_bundle_display_type_restrictions'] = arr
 		)
  	)
 );
-	
 class ca_bundle_display_type_restrictions extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

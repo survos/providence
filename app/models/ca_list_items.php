@@ -387,7 +387,6 @@ $_ca_list_items_settings = array(
 		)
 	),
 );
-
 class ca_list_items extends RepresentableBaseModel implements IHierarchy {
 	# ------------------------------------------------------
 	# --- Object attribute properties

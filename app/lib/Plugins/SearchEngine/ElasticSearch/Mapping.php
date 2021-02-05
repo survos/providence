@@ -31,7 +31,6 @@
  */
 
 namespace ElasticSearch;
-
 class Mapping {
 	/**
 	 * @var \Configuration

@@ -76,7 +76,6 @@ BaseModel::$s_ca_models_definitions['ca_ip_bans'] = array(
 		),
  	)
 );
-
 class ca_ip_bans extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

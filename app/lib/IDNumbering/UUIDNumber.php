@@ -35,8 +35,7 @@
 	require_once(__CA_LIB_DIR__ . "/IDNumbering/IDNumber.php");
 	require_once(__CA_LIB_DIR__ . "/IDNumbering/IIDNumbering.php");
 	require_once(__CA_APP_DIR__ . "/helpers/navigationHelpers.php");
-
-	class UUIDNumber extends IDNumber implements IIDNumbering {
+class UUIDNumber extends IDNumber implements IIDNumbering {
 		# -------------------------------------------------------
 		private $opo_idnumber_config;
 		private $opa_formats;

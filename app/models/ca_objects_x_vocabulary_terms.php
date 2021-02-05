@@ -93,7 +93,6 @@ BaseModel::$s_ca_models_definitions['ca_objects_x_vocabulary_terms'] = array(
 		)
  	)
 );
-
 class ca_objects_x_vocabulary_terms extends ObjectRelationshipBaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

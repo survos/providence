@@ -63,7 +63,6 @@ define('__CA_PARENT_CHANGED__', 1);
  * Returned by BundlableLabelableBaseModelWithAttributes::saveBundlesForScreenWillChangeParent() when parent will be changed to a related collection in a object-collection hierarchy
  */
 define('__CA_PARENT_COLLECTION_CHANGED__', 2);
-
 class BundlableLabelableBaseModelWithAttributes extends LabelableBaseModelWithAttributes implements IBundleProvider {
 	# ------------------------------------------------------
 	use SyncableBaseModel;

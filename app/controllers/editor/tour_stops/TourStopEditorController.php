@@ -27,9 +27,7 @@
  */
  	require_once(__CA_MODELS_DIR__."/ca_tour_stops.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
- 	
- 
- 	class TourStopEditorController extends BaseEditorController {
+class TourStopEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_tour_stops';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

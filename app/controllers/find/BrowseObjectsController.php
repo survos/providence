@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__."/BaseBrowseController.php");
  	require_once(__CA_LIB_DIR__."/Browse/ObjectBrowse.php");
  	require_once(__CA_LIB_DIR__."/GeographicMap.php");
- 
- 	class BrowseObjectsController extends BaseBrowseController {
+class BrowseObjectsController extends BaseBrowseController {
  		# -------------------------------------------------------
  		 /** 
  		 * Name of table for which this browse returns items

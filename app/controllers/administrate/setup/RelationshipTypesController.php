@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__."/BaseSearchController.php");
  	require_once(__CA_LIB_DIR__."/Search/RelationshipTypeSearch.php");
- 	
- 	class RelationshipTypesController extends BaseSearchController {
+class RelationshipTypesController extends BaseSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

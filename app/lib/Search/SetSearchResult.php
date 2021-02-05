@@ -23,7 +23,6 @@
  */
 
 include_once(__CA_LIB_DIR__."/Search/BaseSearchResult.php");
-
 class SetSearchResult extends BaseSearchResult {
 	# -------------------------------------
 	/**

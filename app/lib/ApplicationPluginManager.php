@@ -36,8 +36,7 @@
  
  require_once(__CA_LIB_DIR__.'/Configuration.php');
  require_once(__CA_LIB_DIR__.'/BaseApplicationPlugin.php');
- 
-	class ApplicationPluginManager {
+class ApplicationPluginManager {
 		# -------------------------------------------------------
 		 /** 
 		  * @var Global flag indicating whether we've required() plugins yet

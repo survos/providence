@@ -76,7 +76,6 @@ BaseModel::$s_ca_models_definitions['ca_replication_log'] = array(
 		),
 	)
 );
-
 class ca_replication_log extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

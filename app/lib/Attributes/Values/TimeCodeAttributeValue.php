@@ -140,8 +140,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class TimeCodeAttributeValue extends AttributeValue implements IAttributeValue {
+class TimeCodeAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		private $opn_duration;

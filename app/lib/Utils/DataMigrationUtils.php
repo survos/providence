@@ -50,8 +50,7 @@
 	define("__CA_DATA_IMPORT_ERROR__", 0);
 	define("__CA_DATA_IMPORT_WARNING__", 1);
 	define("__CA_DATA_IMPORT_NOTICE__", 2);
- 
-	class DataMigrationUtils {
+class DataMigrationUtils {
 		# -------------------------------------------------------
 		/**
 		 * @var encoding of source data

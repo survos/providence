@@ -33,8 +33,7 @@
  /**
   *
   */
-
-	class Timer {
+class Timer {
 		# ----------------------------------------------------------------------
 		/**
 		 * @float microtime the timer started

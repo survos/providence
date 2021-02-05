@@ -67,7 +67,6 @@ $g_information_service_settings_ala_nsl = array(
 			Available fields are at https://biodiversity.org.au/nsl/docs/main.html#nslsimplename."),
 	)
 );
-
 class WLPlugInformationServiceALANSL extends BaseInformationServicePlugin implements IWLPlugInformationService
 {
 	/** @var array of settings */

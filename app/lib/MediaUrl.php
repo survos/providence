@@ -35,7 +35,6 @@ namespace CA;
   *
   */
 require_once(__CA_LIB_DIR__.'/Plugins/PluginConsumer.php');
-
 class MediaUrl extends \CA\Plugins\PluginConsumer {
 	# ----------------------------------------------------------
 	# Properties

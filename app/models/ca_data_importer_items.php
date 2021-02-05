@@ -94,7 +94,6 @@ BaseModel::$s_ca_models_definitions['ca_data_importer_items'] = array(
 		)
 	)
 );
-	
 class ca_data_importer_items extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

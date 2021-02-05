@@ -143,7 +143,6 @@ BaseModel::$s_ca_models_definitions['ca_representation_annotations'] = array(
 		)
  	)
 );
-
 class ca_representation_annotations extends BundlableLabelableBaseModelWithAttributes implements IBundleProvider {
 	# ---------------------------------
 	# --- Object attribute properties

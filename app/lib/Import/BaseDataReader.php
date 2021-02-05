@@ -41,7 +41,6 @@
 define("__CA_DATA_READER_INPUT_FILE__", 0);
 define("__CA_DATA_READER_INPUT_URL__", 1);
 define("__CA_DATA_READER_INPUT_TEXT__", 2);
-
 abstract class BaseDataReader {
 	# -------------------------------------------------------
 	/**

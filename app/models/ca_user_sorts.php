@@ -119,7 +119,6 @@ BaseModel::$s_ca_models_definitions['ca_user_sorts'] = array(
 		)
 	)
 );
-
 class ca_user_sorts extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

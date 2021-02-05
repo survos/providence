@@ -30,8 +30,7 @@
 	require_once(__CA_LIB_DIR__.'/Parsers/ExpressionParser.php');
 	require_once(__CA_APP_DIR__.'/helpers/importHelpers.php');
 	require_once(__CA_MODELS_DIR__.'/ca_collections.php');
- 
-	class collectionIndentedHierarchyBuilderRefinery extends BaseRefinery {
+class collectionIndentedHierarchyBuilderRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		/**
 		 * Last collection_id inserted for each level of the hierarchy

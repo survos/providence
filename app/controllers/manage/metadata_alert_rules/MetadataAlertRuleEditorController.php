@@ -28,9 +28,7 @@
  
  	require_once(__CA_MODELS_DIR__."/ca_metadata_alert_rules.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
- 	
- 
- 	class MetadataAlertRuleEditorController extends BaseEditorController {
+class MetadataAlertRuleEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_metadata_alert_rules';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

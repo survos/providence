@@ -31,7 +31,6 @@
  */
 
 namespace Doctrine\Common\Cache;
-
 class CAFileSystemCache extends FilesystemCache {
 
 	/**

@@ -98,7 +98,6 @@ BaseModel::$s_ca_models_definitions['ca_data_import_event_log'] = array(
 		)
  	)
 );
-
 class ca_data_import_event_log extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

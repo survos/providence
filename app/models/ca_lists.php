@@ -115,7 +115,6 @@ BaseModel::$s_ca_models_definitions['ca_lists'] = array(
 		)
  	)
 );
-
 class ca_lists extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

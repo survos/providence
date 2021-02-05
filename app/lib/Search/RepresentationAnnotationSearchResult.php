@@ -36,7 +36,6 @@
 
 include_once(__CA_LIB_DIR__."/Search/BaseSearchResult.php");
 include_once(__CA_LIB_DIR__."/Parsers/TimecodeParser.php");
-
 class RepresentationAnnotationSearchResult extends BaseSearchResult {
 	# -------------------------------------
 	/**

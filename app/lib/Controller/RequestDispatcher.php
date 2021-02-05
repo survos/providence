@@ -40,7 +40,6 @@ require_once(__CA_LIB_DIR__."/Controller/Request/RequestHTTP.php");
 require_once(__CA_LIB_DIR__."/Controller/Response/ResponseHTTP.php");
 require_once(__CA_LIB_DIR__."/AccessRestrictions.php");
 require_once(__CA_LIB_DIR__."/ApplicationPluginManager.php");
-
 class RequestDispatcher extends BaseObject {
 	# -------------------------------------------------------
 	private $request;

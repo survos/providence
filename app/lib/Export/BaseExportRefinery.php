@@ -35,8 +35,7 @@
   */
  
  	require_once(__CA_LIB_DIR__.'/ApplicationVars.php'); 	
- 
-	abstract class BaseExportRefinery {
+abstract class BaseExportRefinery {
 		# -------------------------------------------------------
 		/** 
 		 *

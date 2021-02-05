@@ -29,8 +29,7 @@
  *
  * ----------------------------------------------------------------------
  */
- 
-	class AppControllerPlugin {
+class AppControllerPlugin {
 		# -------------------------------------------------------
 		private $opo_request;
 		private $opo_response;

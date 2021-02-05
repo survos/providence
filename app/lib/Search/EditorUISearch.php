@@ -37,7 +37,6 @@
 include_once(__CA_LIB_DIR__."/Search/BaseSearch.php");
 include_once(__CA_LIB_DIR__."/Search/EditorUISearchResult.php");
 include_once(__CA_MODELS_DIR__."/ca_lists.php");
-
 class EditorUISearch extends BaseSearch {
 	# ----------------------------------------------------------------------
 	/**

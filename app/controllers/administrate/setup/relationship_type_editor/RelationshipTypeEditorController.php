@@ -29,9 +29,7 @@
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
  	require_once(__CA_LIB_DIR__."/Search/RelationshipTypeSearch.php");
  	require_once(__CA_LIB_DIR__."/ResultContext.php");
- 	
- 
- 	class RelationshipTypeEditorController extends BaseEditorController {
+class RelationshipTypeEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_relationship_types';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

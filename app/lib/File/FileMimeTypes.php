@@ -870,9 +870,7 @@ $g_mimetypes_to_info= array(
 	'swf'    => 'image/vnd.rn-realflash',
 	'wmv'	 => 'application/windows-media'
  );
- 
- 
- class FileMimeTypes {
+class FileMimeTypes {
  	# ------------------------------------------------
  	/**
  	 * Convert file extension into mimetype. If extension is not known 'application/octet-stream' is returned.

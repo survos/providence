@@ -30,8 +30,7 @@
  	require_once(__CA_LIB_DIR__."/Browse/EntityBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_entities.php");
 	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 	
- 	class SearchEntitiesAdvancedController extends BaseAdvancedSearchController {
+class SearchEntitiesAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

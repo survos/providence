@@ -38,8 +38,7 @@
 	require_once(__CA_APP_DIR__."/helpers/utilityHelpers.php");
 	require_once(__CA_LIB_DIR__."/Import/DataReaders/FMPXMLResultReader.php");
 	require_once(__CA_LIB_DIR__."/Import/DataReaders/PastPerfectXMLReader.php");
- 
-	class CLITools extends CLIBaseUtils {
+class CLITools extends CLIBaseUtils {
 		# -------------------------------------------------------
 		# Create a profile <list> element from an Excel spreadsheet. 
 		# -------------------------------------------------------

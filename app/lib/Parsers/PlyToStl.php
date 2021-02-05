@@ -31,7 +31,6 @@
  */
  
 require_once(__CA_LIB_DIR__.'/Db.php');
- 
 class PlyToStl {
 	# ------------------------------------------------
 	const MODE_HEADER = 0;

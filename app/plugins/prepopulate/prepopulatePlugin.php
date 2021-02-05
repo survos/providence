@@ -28,7 +28,6 @@
  */
 
 require_once(__CA_APP_DIR__."/plugins/prepopulate/lib/applyPrepopulateRulesTool.php");
-
 class prepopulatePlugin extends BaseApplicationPlugin {
 	# --------------------------------------------------------------------------------------------
 	/**

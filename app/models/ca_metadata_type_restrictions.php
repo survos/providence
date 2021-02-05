@@ -144,7 +144,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_type_restrictions'] = array(
 		)
  	)
 );
-
 class ca_metadata_type_restrictions extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

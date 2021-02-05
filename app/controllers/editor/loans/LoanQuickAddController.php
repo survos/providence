@@ -28,8 +28,7 @@
  
  	require_once(__CA_MODELS_DIR__."/ca_loans.php");
  	require_once(__CA_LIB_DIR__."/BaseQuickAddController.php");
- 
- 	class LoanQuickAddController extends BaseQuickAddController {
+class LoanQuickAddController extends BaseQuickAddController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_loans';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

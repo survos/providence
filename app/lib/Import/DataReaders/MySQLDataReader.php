@@ -35,8 +35,6 @@
  */
 
 require_once(__CA_LIB_DIR__.'/Import/BaseDataReader.php');
-
-
 class MySQLDataReader extends BaseDataReader {
 	# -------------------------------------------------------
 	private $opo_handle = null;

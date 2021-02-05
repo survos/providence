@@ -125,7 +125,6 @@ BaseModel::$s_ca_models_definitions['ca_editor_uis'] = array(
 		)
  	)
 );
-
 class ca_editor_uis extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -140,8 +140,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class WeightAttributeValue extends AttributeValue implements IAttributeValue {
+class WeightAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		private $opn_decimal_value;

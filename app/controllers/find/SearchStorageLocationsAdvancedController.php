@@ -30,8 +30,7 @@
  	require_once(__CA_LIB_DIR__."/Browse/StorageLocationBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_storage_locations.php");
 	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 	
- 	class SearchStorageLocationsAdvancedController extends BaseAdvancedSearchController {
+class SearchStorageLocationsAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

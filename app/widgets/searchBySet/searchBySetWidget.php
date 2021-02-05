@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__.'/IWidget.php');
  	require_once(__CA_LIB_DIR__.'/Db.php');
  	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 
-	class searchBySetWidget extends BaseWidget implements IWidget {
+class searchBySetWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		static $s_widget_settings = array();

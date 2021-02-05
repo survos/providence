@@ -124,7 +124,6 @@ BaseModel::$s_ca_models_definitions['ca_attribute_values'] = array(
 		)
 	)
 );
-
 class ca_attribute_values extends BaseModel {
 	# ---------------------------------
 	use SyncableBaseModel;

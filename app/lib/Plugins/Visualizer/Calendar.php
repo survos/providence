@@ -36,7 +36,6 @@
 
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugVisualizer.php");
 include_once(__CA_LIB_DIR__."/Plugins/Visualizer/BaseVisualizerPlugin.php");
-
 class WLPlugVisualizerCalendar Extends BaseVisualizerPlugIn Implements IWLPlugVisualizer {
 	# ------------------------------------------------
 	/**

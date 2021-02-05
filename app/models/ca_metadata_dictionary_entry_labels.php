@@ -102,7 +102,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_dictionary_entry_labels'] = arr
 		)
  	)
 );
-
 class ca_metadata_dictionary_entry_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

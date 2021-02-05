@@ -28,8 +28,7 @@
  
  	require_once(__CA_LIB_DIR__."/BaseBrowseController.php");
  	require_once(__CA_LIB_DIR__."/Browse/StorageLocationBrowse.php");
- 
- 	class BrowseStorageLocationsController extends BaseBrowseController {
+class BrowseStorageLocationsController extends BaseBrowseController {
  		# -------------------------------------------------------
  		 /** 
  		 * Name of table for which this browse returns items

@@ -66,8 +66,7 @@ define("__CA_ATTRIBUTE_VALUE_LOANS__", 27);
 define("__CA_ATTRIBUTE_VALUE_MOVEMENTS__", 28);
 define("__CA_ATTRIBUTE_VALUE_OBJECTS__", 29);
 define("__CA_ATTRIBUTE_VALUE_OBJECTLOTS__", 30);
- 
-	class Attribute {
+class Attribute {
  		# ------------------------------------------------------------------
  		private $opa_values;
  		private $opn_attribute_id;

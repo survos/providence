@@ -29,7 +29,6 @@ require_once(__CA_LIB_DIR__."/Controller/ActionController.php");
 require_once(__CA_MODELS_DIR__.'/ca_metadata_dictionary_entries.php');
 require_once(__CA_MODELS_DIR__.'/ca_metadata_dictionary_rules.php');
 require_once(__CA_LIB_DIR__."/ResultContext.php");
-
 class DataDictionaryController extends ActionController {
 	# -------------------------------------------------------
 	public function __construct(&$po_request, &$po_response, $pa_view_paths=null) {

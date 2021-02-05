@@ -33,7 +33,6 @@
 /**
  *
  */
-
 abstract class BaseDataImporter {
 	# -------------------------------------------------------
 	protected $opn_importer_id;

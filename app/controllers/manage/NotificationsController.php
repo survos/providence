@@ -27,7 +27,6 @@
  */
 require_once(__CA_LIB_DIR__."/Controller/ActionController.php");
 require_once(__CA_MODELS_DIR__.'/ca_notifications.php');
-
 class NotificationsController extends ActionController {
 	# -------------------------------------------------------
 	public function __construct(&$po_request, &$po_response, $pa_view_paths=null) {

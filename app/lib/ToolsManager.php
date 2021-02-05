@@ -34,9 +34,7 @@
   *
   */
  	require_once(__CA_LIB_DIR__."/ApplicationPluginManager.php");
-
- 
-	class ToolsManager {
+class ToolsManager {
 		# -------------------------------------------------------
 		/**
 		 * Instance of application plugin manager, used to query available tools

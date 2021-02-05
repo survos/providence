@@ -48,7 +48,6 @@ include_once(__CA_LIB_DIR__."/Parsers/MediaMetadata/XMPParser.php");
 include_once(__CA_LIB_DIR__."/Plugins/Media/GraphicsMagick.php");
 include_once(__CA_LIB_DIR__."/Plugins/Media/ImageMagick.php");
 include_once(__CA_LIB_DIR__."/Plugins/Media/Imagick.php");
-
 class WLPlugMediaGmagick Extends BaseMediaPlugin Implements IWLPlugMedia {
 	var $errors = array();
 	

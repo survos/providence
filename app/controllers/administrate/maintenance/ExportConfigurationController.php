@@ -28,7 +28,6 @@
 
 require_once(__CA_APP_DIR__."/helpers/configurationHelpers.php");
 require_once(__CA_LIB_DIR__."/ConfigurationExporter.php");
-
 class ExportConfigurationController extends ActionController {
 
 	# ------------------------------------------------	

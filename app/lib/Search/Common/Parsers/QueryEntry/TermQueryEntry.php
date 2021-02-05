@@ -1,6 +1,4 @@
 <?php
-
-
 class TermQueryEntry extends Zend_Search_Lucene_Search_QueryEntry {
 	/**
 	 * Term value

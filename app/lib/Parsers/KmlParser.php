@@ -48,7 +48,6 @@
 
 require_once(__CA_LIB_DIR__."/Parsers/UnZipFile.php");
 require_once(__CA_APP_DIR__."/helpers/utilityHelpers.php");
-
 class KmlParser {
 	# --------------------------------------------------------------------------------
 	private $opa_filedata;

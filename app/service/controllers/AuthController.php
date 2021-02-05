@@ -27,8 +27,7 @@
  */
 	require_once(__CA_LIB_DIR__.'/Service/BaseServiceController.php');
 	require_once(__CA_LIB_DIR__.'/Service/ModelService.php');
-
-	class AuthController extends BaseServiceController {
+class AuthController extends BaseServiceController {
 		# -------------------------------------------------------
 		public function __construct(&$po_request, &$po_response, $pa_view_paths) {
  			parent::__construct($po_request, $po_response, $pa_view_paths);

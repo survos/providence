@@ -26,9 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_MODELS_DIR__.'/ca_site_pages.php');
- 	
-
- 	class ShowController extends ActionController {
+class ShowController extends ActionController {
  		# -------------------------------------------------------
  		/**
 		 *

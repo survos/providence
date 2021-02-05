@@ -95,7 +95,6 @@ BaseModel::$s_ca_models_definitions['ca_object_representation_multifiles'] = arr
 		)
  	)
 );
-
 class ca_object_representation_multifiles extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -28,8 +28,7 @@
  	require_once(__CA_LIB_DIR__.'/Import/BaseRefinery.php');
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
  	require_once(__CA_LIB_DIR__.'/Db.php');
- 
-	class ATRelatedGetterRefinery extends BaseRefinery {
+class ATRelatedGetterRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		static $s_sql_field_cache;
 		# -------------------------------------------------------

@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/BaseLookupController.php");
- 	
- 	class StorageLocationController extends BaseLookupController {
+class StorageLocationController extends BaseLookupController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = true;
  		protected $ops_table_name = 'ca_storage_locations';		// name of "subject" table (what we're editing)

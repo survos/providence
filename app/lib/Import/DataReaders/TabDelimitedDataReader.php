@@ -36,7 +36,6 @@
 
 require_once(__CA_LIB_DIR__.'/Import/DataReaders/BaseDelimitedDataReader.php');
 require_once(__CA_APP_DIR__.'/helpers/displayHelpers.php');
-
 class TabDelimitedDataReader extends BaseDelimitedDataReader {
 	# -------------------------------------------------------
 	/**

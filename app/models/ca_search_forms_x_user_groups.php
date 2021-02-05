@@ -75,7 +75,6 @@ BaseModel::$s_ca_models_definitions['ca_search_forms_x_user_groups'] = array(
 		)
 	)
 );
-
 class ca_search_forms_x_user_groups extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

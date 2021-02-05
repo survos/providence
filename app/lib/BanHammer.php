@@ -27,8 +27,7 @@
  */
 
 	require_once(__CA_MODELS_DIR__."/ca_ip_bans.php");
-
-	class BanHammer {
+class BanHammer {
 		# ------------------------------------------------------
 		/**
 		 *

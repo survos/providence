@@ -33,8 +33,7 @@
  /**
   *
   */
- 	
- 	class BaseServiceController extends ActionController {
+class BaseServiceController extends ActionController {
  		# -------------------------------------------------------
  	
  		# -------------------------------------------------------

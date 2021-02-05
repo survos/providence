@@ -98,7 +98,6 @@ BaseModel::$s_ca_models_definitions['ca_editor_ui_screen_type_restrictions'] = a
 		)
  	)
 );
-	
 class ca_editor_ui_screen_type_restrictions extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

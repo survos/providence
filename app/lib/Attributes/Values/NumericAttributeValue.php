@@ -180,8 +180,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class NumericAttributeValue extends AttributeValue implements IAttributeValue {
+class NumericAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		private $opn_numeric_value;

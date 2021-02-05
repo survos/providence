@@ -94,8 +94,7 @@
 	
 	define('QR_FORMAT_TEXT', 0);
 	define('QR_FORMAT_PNG',  1);
-	
-	class qrstr {
+class qrstr {
 		public static function set(&$srctab, $x, $y, $repl, $replLen = false) {
 			$srctab[$y] = substr_replace($srctab[$y], ($replLen !== false)?substr($repl,0,$replLen):$repl, $x, ($replLen !== false)?$replLen:strlen($repl));
 		}
@@ -154,8 +153,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-
-    class QRtools {
+class QRtools {
     
         //----------------------------------------------------------------------
         public static function binarize($frame)
@@ -350,8 +348,7 @@
     define('QRCAP_WORDS',        1);
     define('QRCAP_REMINDER',     2);
     define('QRCAP_EC',           3);
-
-    class QRspec {
+class QRspec {
     
         public static $capacity = array(
             array(  0,    0, 0, array(   0,    0,    0,    0)),
@@ -934,8 +931,7 @@
  */
  
     define('QR_IMAGE', true);
-
-    class QRimage {
+class QRimage {
     
         //----------------------------------------------------------------------
         public static function png($frame, $filename = false, $pixelPerPoint = 4, $outerFrame = 4,$saveandprint=FALSE) 
@@ -1040,8 +1036,7 @@
  
     define('STRUCTURE_HEADER_BITS',  20);
     define('MAX_STRUCTURED_SYMBOLS', 16);
-
-    class QRinputItem {
+class QRinputItem {
     
         public $mode;
         public $size;
@@ -1283,8 +1278,7 @@
     };
     
     //##########################################################################
-
-    class QRinput {
+class QRinput {
 
         public $items;
         
@@ -1773,8 +1767,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-     
-    class QRbitstream {
+class QRbitstream {
     
         public $data = array();
         
@@ -1967,7 +1960,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
-    class QRsplit {
+class QRsplit {
 
         public $dataStr = '';
         public $input;
@@ -2282,8 +2275,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
- 
-    class QRrsItem {
+class QRrsItem {
     
         public $mm;                  // Bits per symbol 
         public $nn;                  // Symbols per block (= (1<<mm)-1) 
@@ -2438,8 +2430,7 @@
     }
     
     //##########################################################################
-    
-    class QRrs {
+class QRrs {
     
         public static $items = array();
         
@@ -2501,8 +2492,7 @@
 	define('N2', 3);
 	define('N3', 40);
 	define('N4', 10);
-
-	class QRmask {
+class QRmask {
 	
 		public $runLength = array();
 		
@@ -2832,8 +2822,7 @@
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
- 
-    class QRrsblock {
+class QRrsblock {
         public $dataLength;
         public $data = array();
         public $eccLength;
@@ -2851,8 +2840,7 @@
     };
     
     //##########################################################################
-
-    class QRrawcode {
+class QRrawcode {
         public $version;
         public $datacode = array();
         public $ecccode = array();
@@ -2960,8 +2948,7 @@
     }
 
     //##########################################################################
-    
-    class QRcode {
+class QRcode {
     
         public $version;
         public $width;
@@ -3110,8 +3097,7 @@
     }
     
     //##########################################################################
-    
-    class FrameFiller {
+class FrameFiller {
     
         public $width;
         public $frame;
@@ -3200,8 +3186,7 @@
     } ;
     
     //##########################################################################    
-    
-    class QRencode {
+class QRencode {
     
         public $casesensitive = true;
         public $eightbit = false;

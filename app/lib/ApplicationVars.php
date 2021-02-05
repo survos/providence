@@ -37,7 +37,6 @@
 include_once(__CA_LIB_DIR__."/BaseObject.php");
 include_once(__CA_APP_DIR__."/helpers/utilityHelpers.php");
 include_once(__CA_LIB_DIR__."/Db.php");
-
 class ApplicationVars extends BaseObject {
 	# ----------------------------------------
 	# --- Properties

@@ -104,7 +104,6 @@ BaseModel::$s_ca_models_definitions['ca_representation_annotation_labels'] = arr
 		)
  	)
 );
-
 class ca_representation_annotation_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

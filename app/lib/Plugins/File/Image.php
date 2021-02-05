@@ -46,7 +46,6 @@ require_once(__CA_LIB_DIR__."/Configuration.php");
 
 define("LIBRARY_GD", 0);
 define("LIBRARY_MAGICKWAND",1);
-
 class WLPlugFileImage Extends WLPlug Implements IWLPlugFileFormat {
   var $errors = array();
   

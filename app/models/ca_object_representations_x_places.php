@@ -100,7 +100,6 @@ BaseModel::$s_ca_models_definitions['ca_object_representations_x_places'] = arra
 		)
  	)
 );
-
 class ca_object_representations_x_places extends BaseRepresentationRelationship {
 	# ---------------------------------
 	# --- Object attribute properties

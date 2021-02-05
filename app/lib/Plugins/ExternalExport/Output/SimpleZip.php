@@ -36,7 +36,6 @@
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugExternalExportFormat.php");
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugExternalExportTransport.php");
 include_once(__CA_LIB_DIR__."/Plugins/ExternalExport/BaseExternalExportFormatPlugin.php");
-
 class WLPlugSimpleZip Extends BaseExternalExportFormatPlugin Implements IWLPlugExternalExportFormat {
 	# ------------------------------------------------------
 	
@@ -156,7 +155,6 @@ class WLPlugSimpleZip Extends BaseExternalExportFormatPlugin Implements IWLPlugE
     }
     # ------------------------------------------------------
 }
-
 class WLPlugSimpleZipException extends ApplicationException {
 
 }

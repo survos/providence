@@ -80,7 +80,6 @@ BaseModel::$s_ca_models_definitions['ca_object_representation_captions'] = array
 		)
  	)
 );
-
 class ca_object_representation_captions extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

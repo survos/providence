@@ -92,8 +92,6 @@ BaseModel::$s_ca_models_definitions['ca_search_form_placements'] = array(
 		)
 	)
 );
-
-
 class ca_search_form_placements extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

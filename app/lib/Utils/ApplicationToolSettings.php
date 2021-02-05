@@ -35,8 +35,7 @@
   */
  
  	require_once(__CA_LIB_DIR__.'/BaseSettings.php');
- 
-	class ApplicationToolSettings extends BaseSettings {
+class ApplicationToolSettings extends BaseSettings {
 		# ------------------------------------------------------
 		
 		/**

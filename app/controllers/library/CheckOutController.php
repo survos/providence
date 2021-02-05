@@ -30,8 +30,7 @@
 	require_once(__CA_LIB_DIR__.'/Search/ObjectSearch.php');
  	require_once(__CA_MODELS_DIR__.'/ca_object_checkouts.php');
 	require_once(__CA_LIB_DIR__.'/ResultContext.php');
-
- 	class CheckOutController extends ActionController {
+class CheckOutController extends ActionController {
  		# -------------------------------------------------------
  		public function __construct(&$po_request, &$po_response, $pa_view_paths=null) {
  			parent::__construct($po_request, $po_response, $pa_view_paths);

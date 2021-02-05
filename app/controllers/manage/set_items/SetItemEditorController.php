@@ -29,9 +29,7 @@
  	require_once(__CA_MODELS_DIR__."/ca_sets.php");
  	require_once(__CA_MODELS_DIR__."/ca_set_items.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
- 	
- 
- 	class SetItemEditorController extends BaseEditorController {
+class SetItemEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_set_items';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

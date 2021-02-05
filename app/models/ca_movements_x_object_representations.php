@@ -100,7 +100,6 @@ BaseModel::$s_ca_models_definitions['ca_movements_x_object_representations'] = a
 		)
  	)
 );
-
 class ca_movements_x_object_representations extends BaseRepresentationRelationship {
 	# ---------------------------------
 	# --- Object attribute properties

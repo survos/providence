@@ -38,7 +38,6 @@ use phpseclib\Net\SFTP;
  */
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugExternalExportTransport.php");
 include_once(__CA_LIB_DIR__."/Plugins/ExternalExport/BaseExternalExportTransportPlugin.php");
-
 class WLPlugsFTP Extends BaseExternalExportTransportPlugin Implements IWLPlugExternalExportTransport {
 	# ------------------------------------------------------
 	
@@ -147,7 +146,6 @@ class WLPlugsFTP Extends BaseExternalExportTransportPlugin Implements IWLPlugExt
     }
     # ------------------------------------------------------
 }
-
 class WLPlugsFTPException extends ApplicationException {
 
 }

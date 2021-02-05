@@ -189,8 +189,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class IntegerAttributeValue extends AttributeValue implements IAttributeValue {
+class IntegerAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		private $opn_integer_value;

@@ -54,8 +54,7 @@
 	 * Contains array of complementary code to load
 	 */
 	$g_asset_complementary = null;
-
-	class AssetLoadManager {
+class AssetLoadManager {
 		# --------------------------------------------------------------------------------
 		/**
 		 * Flag indicating whether to load minified assets or uncompressed

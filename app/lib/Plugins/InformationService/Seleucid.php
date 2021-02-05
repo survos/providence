@@ -42,7 +42,6 @@ global $g_information_service_settings_seleucid;
 $g_information_service_settings_seleucid= [
 
 ];
-
 class WLPlugInformationServiceSeleucid extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

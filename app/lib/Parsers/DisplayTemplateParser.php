@@ -31,8 +31,6 @@
  */
  
 require_once(__CA_LIB_DIR__.'/Parsers/ganon.php');
-
- 
 class DisplayTemplateParser {
 	# -------------------------------------------------------------------
 	/**

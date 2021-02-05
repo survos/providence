@@ -93,7 +93,6 @@ BaseModel::$s_ca_models_definitions['ca_representation_annotations_x_vocabulary_
 		)
  	)
 );
-
 class ca_representation_annotations_x_vocabulary_terms extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

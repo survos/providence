@@ -42,9 +42,7 @@
  require_once(__CA_APP_DIR__.'/models/ca_metadata_type_restrictions.php');
  require_once(__CA_LIB_DIR__.'/Attributes/Attribute.php');
  require_once(__CA_LIB_DIR__.'/Attributes/Values/AuthorityAttributeValue.php');
-
- 
-	class BaseModelWithAttributes extends BaseModel implements ITakesAttributes {
+class BaseModelWithAttributes extends BaseModel implements ITakesAttributes {
 		# ------------------------------------------------------------------
 		static $s_applicable_element_code_cache = array();
 		static $s_element_label_cache = array();

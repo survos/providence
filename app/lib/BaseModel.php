@@ -129,8 +129,6 @@ require_once(__CA_LIB_DIR__."/MediaContentLocationIndexer.php");
  * variable stores using php serialize(), automatic management of hierarchies, etc.)
  * Each table in your database should have a class that extends BaseModel.
  */
- 
- 
 class BaseModel extends BaseObject {
 	# --------------------------------------------------------------------------------
 	# --- Properties

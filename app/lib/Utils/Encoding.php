@@ -36,8 +36,6 @@ POSSIBILITY OF SUCH DAMAGE.
  * @example  https://github.com/neitanod/forceutf8
  * @license  Revised BSD
   */
-
-
 class Encoding {
     
   protected static $win1252ToUtf8 = array(

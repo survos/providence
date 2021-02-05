@@ -93,7 +93,6 @@ BaseModel::$s_ca_models_definitions['ca_objects_x_places'] = array(
 		)
  	)
 );
-
 class ca_objects_x_places extends ObjectRelationshipBaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

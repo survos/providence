@@ -95,7 +95,6 @@
 		'description' => _t('Check this option if this attribute value can be used for display in search results. (The default is to be.)')
 	)
 );
-
 class FloorPlanAttributeValue extends AttributeValue implements IAttributeValue {
 	# ------------------------------------------------------------------
  	private $ops_text_value;

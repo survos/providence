@@ -49,7 +49,6 @@ $g_information_service_settings_Wikipedia = array(
 		'description' => _t('2- or 3-letter language code for Wikipedia to use. Defaults to "en". See http://meta.wikimedia.org/wiki/List_of_Wikipedias')
 	),
 );
-
 class WLPlugInformationServiceWikipedia Extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

@@ -92,7 +92,6 @@ BaseModel::$s_ca_models_definitions['ca_list_items_x_list_items'] = array(
 		)
  	)
 );
-
 class ca_list_items_x_list_items extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -33,7 +33,6 @@
 /**
  *
  */
- 
 class pdfjs extends BaseMediaViewer implements IMediaViewer {
 	# -------------------------------------------------------
 	/**

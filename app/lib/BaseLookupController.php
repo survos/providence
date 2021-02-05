@@ -37,8 +37,7 @@
  	require_once(__CA_MODELS_DIR__.'/ca_lists.php');
  	require_once(__CA_MODELS_DIR__.'/ca_list_items.php');
  	require_once(__CA_MODELS_DIR__.'/ca_user_roles.php');
- 	
- 	class BaseLookupController extends ActionController {
+class BaseLookupController extends ActionController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = false;
  		protected $ops_table_name = '';

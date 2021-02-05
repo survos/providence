@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__."/Search/ObjectRepresentationSearch.php");
  	require_once(__CA_LIB_DIR__."/Browse/ObjectRepresentationBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_object_representations.php");
- 	
- 	class SearchObjectRepresentationsAdvancedController extends BaseAdvancedSearchController {
+class SearchObjectRepresentationsAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

@@ -38,7 +38,6 @@ require_once(__CA_LIB_DIR__."/File/FileVolumes.php");
 require_once(__CA_APP_DIR__."/helpers/utilityHelpers.php");
 
 $_FILE_INFO_CODER_INSTANCE_CACHE = null;
-
 class FileInfoCoder {
 	# ---------------------------------------------------------------------------
 	private $opo_volume_info;

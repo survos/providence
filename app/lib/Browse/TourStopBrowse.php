@@ -36,8 +36,7 @@
   
  	require_once(__CA_LIB_DIR__.'/Browse/BaseBrowse.php');
  	require_once(__CA_LIB_DIR__.'/Browse/TourStopBrowseResult.php');
- 
-	class TourStopBrowse extends BaseBrowse {
+class TourStopBrowse extends BaseBrowse {
 		# ------------------------------------------------------
 		/**
 		 * Which table does this class represent?

@@ -125,7 +125,6 @@ BaseModel::$s_ca_models_definitions['ca_task_queue'] = array(
 		)
  	)
 );
-
 class ca_task_queue extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

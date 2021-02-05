@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- class GeographicMapItem {
+class GeographicMapItem {
  	# -------------------------------------------------------------------
  	private $opa_coordinate_list = array();
  	private $ops_label = '';							// the overall "title" for the item (used for tooltips)

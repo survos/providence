@@ -36,7 +36,6 @@
 
 require_once(__CA_LIB_DIR__.'/BaseSettings.php');
 require_once(__CA_LIB_DIR__.'/View.php');
-
 class ModelSettings extends BaseSettings {
 	# ------------------------------------------------------
 	/**

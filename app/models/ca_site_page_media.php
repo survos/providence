@@ -181,7 +181,6 @@ BaseModel::$s_ca_models_definitions['ca_site_page_media'] = array(
 		)
  	)
 );
-
 class ca_site_page_media extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

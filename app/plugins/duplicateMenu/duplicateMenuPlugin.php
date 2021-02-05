@@ -25,8 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
- 
-	class duplicateMenuPlugin extends BaseApplicationPlugin {
+class duplicateMenuPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		public function __construct($ps_plugin_path) {
 			$this->description = _t('Adds a "duplicate" menu listing all recently duplicated items and providing an easy way to create additional duplicates.');

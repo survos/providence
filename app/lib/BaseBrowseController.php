@@ -39,8 +39,7 @@
 	require_once(__CA_MODELS_DIR__."/ca_relationship_types.php");
  	require_once(__CA_APP_DIR__.'/helpers/browseHelpers.php');
  	require_once(__CA_APP_DIR__.'/helpers/accessHelpers.php');
- 	
- 	class BaseBrowseController extends BaseFindController {
+class BaseBrowseController extends BaseFindController {
  		# -------------------------------------------------------
 		protected $opo_browse;
 		protected $ops_tablename;

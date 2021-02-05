@@ -44,7 +44,6 @@
  * @version 1.1.1 (2008-03-02)
  * @link http://code.google.com/p/jsmin-php/
  */
-
 class JSMin {
   const ORD_LF    = 10;
   const ORD_SPACE = 32;

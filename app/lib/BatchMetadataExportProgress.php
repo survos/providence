@@ -38,8 +38,7 @@
  
  	require_once(__CA_LIB_DIR__.'/Datamodel.php');
  	require_once(__CA_LIB_DIR__.'/Controller/AppController/AppControllerPlugin.php');
- 
-	class BatchMetadataExportProgress extends AppControllerPlugin {
+class BatchMetadataExportProgress extends AppControllerPlugin {
 		# -------------------------------------------------------
 		
 		# -------------------------------------------------------

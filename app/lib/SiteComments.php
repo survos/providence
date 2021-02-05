@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__.'/Configuration.php');
  	require_once(__CA_LIB_DIR__.'/BaseObject.php');
  	require_once(__CA_MODELS_DIR__.'/ca_item_comments.php');
- 
-	class SiteComments extends BaseObject {
+class SiteComments extends BaseObject {
 		# -------------------------------------------------------
 		private $opo_config;
 		# -------------------------------------------------------

@@ -769,7 +769,6 @@ function _PEAR_call_destructors()
 }
 
 // }}}
-
 class PEAR_Error
 {
     // {{{ properties

@@ -127,7 +127,6 @@ BaseModel::$s_ca_models_definitions['ca_data_importers'] = array(
 		)
 	)
 );
-	
 class ca_data_importers extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

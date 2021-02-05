@@ -30,8 +30,7 @@
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
 	require_once(__CA_LIB_DIR__.'/Db.php');
 	require_once(__CA_LIB_DIR__.'/TaskQueue.php');
- 
-	class trackProcessingWidget extends BaseWidget implements IWidget {
+class trackProcessingWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		private $opo_db;

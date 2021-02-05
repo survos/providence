@@ -109,7 +109,6 @@ BaseModel::$s_ca_models_definitions['ca_notification_subjects'] = array(
 );
 
 require_once(__CA_MODELS_DIR__ . '/ca_guids.php');
-
 class ca_notification_subjects extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

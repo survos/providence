@@ -172,8 +172,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class CurrencyAttributeValue extends AttributeValue implements IAttributeValue {
+class CurrencyAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_currency_specifier;
  		private $opn_value;

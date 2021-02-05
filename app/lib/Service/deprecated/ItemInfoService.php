@@ -43,7 +43,6 @@ require_once(__CA_MODELS_DIR__."/ca_locales.php");
 require_once(__CA_MODELS_DIR__."/ca_sets.php");
 require_once(__CA_MODELS_DIR__."/ca_set_items.php");
 require_once(__CA_MODELS_DIR__."/ca_metadata_elements.php");
-
 class ItemInfoService extends BaseService {
 	# -------------------------------------------------------
 	protected $opo_dm;

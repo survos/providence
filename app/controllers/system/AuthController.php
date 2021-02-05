@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/WidgetManager.php');
 	require_once(__CA_LIB_DIR__.'/Auth/AuthenticationManager.php');
- 
- 	class AuthController extends ActionController {
+class AuthController extends ActionController {
  		# -------------------------------------------------------
 		
  		# -------------------------------------------------------

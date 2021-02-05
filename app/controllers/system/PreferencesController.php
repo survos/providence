@@ -29,8 +29,7 @@
  require_once(__CA_MODELS_DIR__."/ca_users.php");
  require_once(__CA_MODELS_DIR__."/ca_editor_ui_screens.php");
  require_once(__CA_LIB_DIR__."/Search/QuickSearch.php");
- 
- 	class PreferencesController extends ActionController {
+class PreferencesController extends ActionController {
  		# -------------------------------------------------------
  		/**
  		 * Tables that may have duplication preferences set

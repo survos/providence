@@ -100,7 +100,6 @@ BaseModel::$s_ca_models_definitions['ca_relationship_relationships'] = array(
 		)
  	)
 );
-
 class ca_relationship_relationships extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -36,7 +36,6 @@
 
 include_once(__CA_LIB_DIR__."/Search/BaseSearch.php");
 include_once(__CA_LIB_DIR__."/Search/TourSearchResult.php");
-
 class TourSearch extends BaseSearch {
 	# ----------------------------------------------------------------------
 	/**

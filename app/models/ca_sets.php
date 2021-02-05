@@ -178,7 +178,6 @@ BaseModel::$s_ca_models_definitions['ca_sets'] = array(
 		)
  	)
 );
-
 class ca_sets extends BundlableLabelableBaseModelWithAttributes implements IBundleProvider {
 	use SetUniqueIdnoTrait;
 

@@ -43,7 +43,6 @@ include_once(__CA_LIB_DIR__."/Plugins/IWLPlugMedia.php");
 include_once(__CA_LIB_DIR__."/Configuration.php");
 include_once(__CA_LIB_DIR__."/Media.php");
 include_once(__CA_APP_DIR__."/helpers/mediaPluginHelpers.php");
-
 class WLPlugMediaPDFWand Extends BaseMediaPlugin implements IWLPlugMedia {
 	var $errors = array();
 	

@@ -27,8 +27,7 @@
  */
 
  	require_once(__CA_LIB_DIR__.'/Logging/Eventlog.php');
-
- 	class EventsController extends ActionController {
+class EventsController extends ActionController {
  		# -------------------------------------------------------
  		#
  		# -------------------------------------------------------

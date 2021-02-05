@@ -35,7 +35,6 @@ require_once( __CA_LIB_DIR__ . "/Plugins/InformationService/BaseGettyLODServiceP
 
 global $g_information_service_settings_AAT;
 $g_information_service_settings_AAT = array();
-
 class WLPlugInformationServiceAAT extends BaseGettyLODServicePlugin implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

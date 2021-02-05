@@ -177,7 +177,6 @@
 		'description' => _t('Delimiter to use between multiple values pulled from GeoNames service.')
 	),
 );
-
 class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue {
 	# ------------------------------------------------------------------
  	private $ops_text_value;

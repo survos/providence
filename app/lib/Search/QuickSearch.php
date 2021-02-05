@@ -27,8 +27,7 @@
  */
  
  	require_once(__CA_MODELS_DIR__."/ca_lists.php");
- 
-	class QuickSearch {
+class QuickSearch {
 		# -------------------------------------------------------
 		/**
 		 * Return array with information about quick-search supported searches

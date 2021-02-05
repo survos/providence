@@ -93,7 +93,6 @@ BaseModel::$s_ca_models_definitions['ca_user_representation_annotations_x_occurr
 		)
  	)
 );
-
 class ca_user_representation_annotations_x_occurrences extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

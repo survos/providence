@@ -46,8 +46,7 @@ include_once(__CA_LIB_DIR__."/Media/MediaProcessingSettings.php");
 include_once(__CA_LIB_DIR__."/Datamodel.php");
 include_once(__CA_LIB_DIR__."/ApplicationError.php");
 include_once(__CA_LIB_DIR__."/Logging/Eventlog.php");
-	
-	class WLPlugTaskQueueHandlermediaproc Extends WLPlug Implements IWLPlugTaskQueueHandler {
+class WLPlugTaskQueueHandlermediaproc Extends WLPlug Implements IWLPlugTaskQueueHandler {
 		# --------------------------------------------------------------------------------
 		
 		public $error;

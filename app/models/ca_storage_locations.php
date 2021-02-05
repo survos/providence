@@ -214,7 +214,6 @@ BaseModel::$s_ca_models_definitions['ca_storage_locations'] = array(
 		)
  	)
 );
-
 class ca_storage_locations extends RepresentableBaseModel implements IBundleProvider, IHierarchy {
 	use HistoryTrackingCurrentValueTrait;
 	

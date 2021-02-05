@@ -68,7 +68,6 @@ define("ZIPFILE_RETURN_HANDLE", 0);		# return handle to newly created zip file
 define("ZIPFILE_RETURN_STRING", 1);		# return contents of zip file as in-memory string
 define("ZIPFILE_PASSTHRU", 2);			# pass zip file to output buffer
 define("ZIPFILE_FILEPATH", 3);			# return path to new zip file
-
 class ZipFile {
 	# ----------------------------------------------------------------------
 	# --- Properties

@@ -123,7 +123,6 @@ trait CommandConfiguration {
 	 */
 	abstract public function getBasePath();
 }
-
 class WLPlugMediaImageMagick Extends BaseMediaPlugin Implements IWLPlugMedia {
 
 	use CommandConfiguration;

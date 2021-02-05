@@ -80,7 +80,6 @@ BaseModel::$s_ca_models_definitions['ca_tour_labels'] = array(
 		)
  	)
 );
-
 class ca_tour_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

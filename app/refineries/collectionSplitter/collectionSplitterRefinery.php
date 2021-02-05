@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
 	require_once(__CA_LIB_DIR__.'/Parsers/ExpressionParser.php');
 	require_once(__CA_APP_DIR__.'/helpers/importHelpers.php');
- 
-	class collectionSplitterRefinery extends BaseRefinery {
+class collectionSplitterRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		public function __construct() {
 			$this->ops_name = 'collectionSplitter';

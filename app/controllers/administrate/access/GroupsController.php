@@ -27,8 +27,7 @@
  */
 
  	require_once(__CA_MODELS_DIR__.'/ca_user_groups.php');
-
- 	class GroupsController extends ActionController {
+class GroupsController extends ActionController {
  		# -------------------------------------------------------
  		private $pt_group;
  		# -------------------------------------------------------

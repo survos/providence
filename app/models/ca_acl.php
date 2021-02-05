@@ -103,7 +103,6 @@ define('__CA_ACL_EDIT_DELETE_ACCESS__', 3);
 		)
 	)
 );
-
 class ca_acl extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

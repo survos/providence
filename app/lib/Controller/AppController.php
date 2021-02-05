@@ -40,7 +40,6 @@ include_once(__CA_LIB_DIR__."/Exceptions/ApplicationException.php");
 
 global $g_app_controller;
 $g_app_controller = null;
-
 class AppController {
 	# -------------------------------------------------------
 	private $opo_request;

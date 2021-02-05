@@ -31,7 +31,6 @@
  */
 
 namespace ElasticSearch\FieldTypes;
-
 abstract class FieldType {
 
 	abstract public function getIndexingFragment($pm_content, $pa_options);

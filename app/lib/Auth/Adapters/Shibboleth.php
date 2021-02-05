@@ -32,7 +32,6 @@
 require_once('/var/simplesamlphp/lib/_autoload.php');
 require_once(__CA_LIB_DIR__.'/Auth/BaseAuthAdapter.php');
 require_once(__CA_MODELS_DIR__.'/ca_users.php');
-
 class ShibbolethAuthAdapter extends BaseAuthAdapter implements IAuthAdapter {
 	# --------------------------------------------------------------------------------
 	/**
@@ -184,5 +183,4 @@ class ShibbolethAuthAdapter extends BaseAuthAdapter implements IAuthAdapter {
     }
 	# --------------------------------------------------------------------------------
 }
-
 class ShibbolethException extends Exception {}

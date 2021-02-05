@@ -30,8 +30,7 @@
  	require_once(__CA_LIB_DIR__."/Browse/LoanBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_loans.php");
 	require_once(__CA_MODELS_DIR__."/ca_sets.php");
- 	
- 	class SearchLoansAdvancedController extends BaseAdvancedSearchController {
+class SearchLoansAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

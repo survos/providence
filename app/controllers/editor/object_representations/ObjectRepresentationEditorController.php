@@ -32,8 +32,7 @@
  	
  	require_once(__CA_MODELS_DIR__."/ca_object_representations.php");
  	require_once(__CA_MODELS_DIR__."/ca_editor_uis.php");
- 
- 	class ObjectRepresentationEditorController extends BaseEditorController {
+class ObjectRepresentationEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		protected $ops_table_name = 'ca_object_representations';		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

@@ -86,7 +86,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_alert_triggers'] = array(
 		)
 	)
 );
-
 class ca_metadata_alert_triggers extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

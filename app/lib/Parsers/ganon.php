@@ -47,7 +47,6 @@ if (version_compare(PHP_VERSION, '5.2.0', '<')) {
 	}
 }
 //END ganon.php
-
 class Tokenizer_Base {
 	const TOK_NULL = 0;
 	const TOK_UNKNOWN = 1;
@@ -292,7 +291,6 @@ class Tokenizer_Base {
 	}
 }
 //END gan_tokenizer.php
-
 class HTML_Parser_Base extends Tokenizer_Base {
 	const TOK_TAG_OPEN = 100;
 	const TOK_TAG_CLOSE = 101;
@@ -814,7 +812,6 @@ class HTML_Parser_HTML5 extends HTML_Parser {
 	}
 }
 //END gan_parser_html.php
-
 class HTML_Node {
 	const NODE_ELEMENT = 0;
 	const NODE_TEXT = 1;
@@ -2030,7 +2027,6 @@ class HTML_NODE_ASP extends HTML_NODE_EMBEDDED {
 	}
 }
 //END gan_node_html.php
-
 class Tokenizer_CSSQuery extends Tokenizer_Base {
 	const TOK_BRACKET_OPEN = 100;
 	const TOK_BRACKET_CLOSE = 101;

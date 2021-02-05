@@ -28,8 +28,7 @@
  
  	require_once(__CA_LIB_DIR__."/BaseBrowseController.php");
  	require_once(__CA_LIB_DIR__."/Browse/ObjectLotBrowse.php");
- 
- 	class BrowseObjectLotsController extends BaseBrowseController {
+class BrowseObjectLotsController extends BaseBrowseController {
  		# -------------------------------------------------------
  		 /** 
  		 * Name of table for which this browse returns items

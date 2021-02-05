@@ -100,7 +100,6 @@ BaseModel::$s_ca_models_definitions['ca_object_representations_x_entities'] = ar
 		)
  	)
 );
-
 class ca_object_representations_x_entities extends BaseRepresentationRelationship {
 	# ---------------------------------
 	# --- Object attribute properties

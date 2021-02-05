@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/BaseWidget.php');
  	require_once(__CA_LIB_DIR__.'/IWidget.php');
- 
-	class countWidget extends BaseWidget implements IWidget {
+class countWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		private $opa_tables;

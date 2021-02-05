@@ -35,7 +35,6 @@ namespace CA\MediaUrl\Plugins;
   *
   */
   require_once(__CA_LIB_DIR__.'/Plugins/MediaUrl/BaseMediaUrlPlugin.php');
- 
 class GoogleDrive Extends BaseMediaUrlPlugin {	
 	# ------------------------------------------------
 	/**

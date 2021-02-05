@@ -538,5 +538,4 @@ class phpVimeo
     }
 
 }
-
 class VimeoAPIException extends Exception {}

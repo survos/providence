@@ -96,8 +96,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class MediaAttributeValue extends AttributeValue implements IAttributeValue {
+class MediaAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $opa_media_data;
  		private $ops_media_data;

@@ -39,8 +39,7 @@
 	require_once(__CA_MODELS_DIR__."/ca_search_forms.php");
  	require_once(__CA_APP_DIR__.'/helpers/accessHelpers.php');
 	require_once(__CA_LIB_DIR__.'/Media/MediaViewerManager.php');
- 	
- 	class BaseSearchController extends BaseRefineableSearchController {
+class BaseSearchController extends BaseRefineableSearchController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = false;
  		protected $opo_datamodel;

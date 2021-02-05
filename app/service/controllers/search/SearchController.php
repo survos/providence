@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/Service/deprecated/SearchService.php');
 	require_once(__CA_LIB_DIR__.'/Service/BaseServiceController.php');
-
-	class SearchController extends BaseServiceController {
+class SearchController extends BaseServiceController {
 		# -------------------------------------------------------
 		public function __construct(&$po_request, &$po_response, $pa_view_paths) {
  			parent::__construct($po_request, $po_response, $pa_view_paths);

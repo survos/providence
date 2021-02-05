@@ -1,6 +1,4 @@
 <?php
-
-
 class LuceneSyntaxLexer extends Zend_Search_Lucene_FSM
 {
     /** State Machine states */

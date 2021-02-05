@@ -36,8 +36,7 @@
   
  	require_once(__CA_LIB_DIR__.'/WidgetManager.php');
  	require_once(__CA_LIB_DIR__.'/ApplicationVars.php'); 	
- 
-	class DashboardManager {
+class DashboardManager {
 		# -------------------------------------------------------
 		private $opo_request;
 		private $opa_dashboard_config = array();

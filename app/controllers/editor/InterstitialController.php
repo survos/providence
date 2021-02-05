@@ -27,8 +27,7 @@
  */
  
  	require_once(__CA_LIB_DIR__."/BaseInterstitialController.php");
- 
- 	class InterstitialController extends BaseInterstitialController {
+class InterstitialController extends BaseInterstitialController {
  		# -------------------------------------------------------
  		protected $ops_table_name = null;		// name of "subject" table (what we're editing)
  		# -------------------------------------------------------

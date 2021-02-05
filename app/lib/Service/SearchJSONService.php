@@ -35,7 +35,6 @@
  */
 
 require_once(__CA_LIB_DIR__."/Service/BaseJSONService.php");
-
 class SearchJSONService extends BaseJSONService {
 	# -------------------------------------------------------
 	private $ops_query;

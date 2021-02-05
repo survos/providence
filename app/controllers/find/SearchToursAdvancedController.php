@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__."/Search/TourSearch.php");
  	require_once(__CA_LIB_DIR__."/Browse/TourBrowse.php");
 	require_once(__CA_MODELS_DIR__."/ca_tours.php");
- 	
- 	class SearchToursAdvancedController extends BaseAdvancedSearchController {
+class SearchToursAdvancedController extends BaseAdvancedSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

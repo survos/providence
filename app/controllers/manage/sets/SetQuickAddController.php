@@ -28,7 +28,6 @@
 
 require_once(__CA_MODELS_DIR__.'/ca_sets.php');
 require_once(__CA_LIB_DIR__.'/BaseQuickAddController.php');
-
 class SetQuickAddController extends BaseQuickAddController {
 	# -------------------------------------------------------
 	protected $ops_table_name = 'ca_sets';		// name of "subject" table (what we're editing)

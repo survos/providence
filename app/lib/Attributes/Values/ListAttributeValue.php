@@ -229,9 +229,6 @@ $_ca_attribute_settings['ListAttributeValue'] = array(		// global
 		'description' => _t('Check this option if existing values should displayed in a minimized, non-editable format.')
 	)
 );
-
-
-
 class ListAttributeValue extends AuthorityAttributeValue implements IAttributeValue {
 	# ------------------------------------------------------------------	
 	/**

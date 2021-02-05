@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/BaseLookupController.php");
- 
- 	class EditorUIScreenController extends BaseLookupController {
+class EditorUIScreenController extends BaseLookupController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = false;
  		protected $ops_table_name = 'ca_editor_ui_screens';		// name of "subject" table (what we're editing)

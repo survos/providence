@@ -73,7 +73,6 @@ BaseModel::$s_ca_models_definitions['ca_set_labels'] = array(
 		)
  	)
 );
-
 class ca_set_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

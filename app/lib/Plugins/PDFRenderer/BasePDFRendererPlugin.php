@@ -38,7 +38,6 @@ include_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugPDFRenderer.php");
 include_once(__CA_LIB_DIR__."/Configuration.php");
 include_once(__CA_LIB_DIR__."/Print/PDFRenderer.php");
-
 abstract class BasePDFRendererPlugin Extends WLPlug {
 	# ------------------------------------------------
 	/**

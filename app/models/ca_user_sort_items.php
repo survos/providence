@@ -70,7 +70,6 @@ BaseModel::$s_ca_models_definitions['ca_user_sort_items'] = array(
 		)
 	)
 );
-
 class ca_user_sort_items extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

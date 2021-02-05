@@ -142,8 +142,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_dictionary_entries'] = array(
 		)
  	)
 );
-
-
 class ca_metadata_dictionary_entries extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

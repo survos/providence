@@ -36,8 +36,7 @@
  
 	require_once(__CA_LIB_DIR__.'/IWidget.php');
  	require_once(__CA_LIB_DIR__.'/ApplicationVars.php'); 	
- 
-	abstract class BaseWidget implements IWidget {
+abstract class BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		protected $title = '';
 		protected $description = '';

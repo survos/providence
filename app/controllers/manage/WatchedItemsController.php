@@ -29,8 +29,7 @@
  	require_once(__CA_MODELS_DIR__."/ca_metadata_elements.php");
  	require_once(__CA_MODELS_DIR__."/ca_watch_list.php");
 	require_once(__CA_MODELS_DIR__.'/ca_sets.php');
- 	
- 	class WatchedItemsController extends ActionController {
+class WatchedItemsController extends ActionController {
  		# -------------------------------------------------------
  		public function __construct(&$po_request, &$po_response, $pa_view_paths=null) {
  			parent::__construct($po_request, $po_response, $pa_view_paths);

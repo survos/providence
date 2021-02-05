@@ -38,8 +38,7 @@
  
  	require_once(__CA_LIB_DIR__.'/Controller/AppController/AppControllerPlugin.php');
  	require_once(__CA_LIB_DIR__.'/BatchProcessor.php');
- 
-	class BatchEditorProgress extends AppControllerPlugin {
+class BatchEditorProgress extends AppControllerPlugin {
 		# -------------------------------------------------------
 		private $request;
 		private $ot_set;

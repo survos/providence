@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
 	require_once(__CA_LIB_DIR__."/Plugins/CurrencyConversion/BaseCurrencyConversionPlugin.php");
-
-	class WLPlugCurrencyConversionEuroBank Extends BaseCurrencyConversionPlugIn implements IWLPlugCurrencyConversion {
+class WLPlugCurrencyConversionEuroBank Extends BaseCurrencyConversionPlugIn implements IWLPlugCurrencyConversion {
 		# ------------------------------------------------
 		/**
 		 * URL to XML feed of current currency conversion rates. Used by caConvertCurrencyValue()

@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/Import/BaseRefinery.php');
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
- 
-	class ATSubjectGetterRefinery extends BaseRefinery {
+class ATSubjectGetterRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		
 		# -------------------------------------------------------

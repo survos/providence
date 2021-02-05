@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/BaseLookupController.php");
- 
- 	class BundleDisplayController extends BaseLookupController {
+class BundleDisplayController extends BaseLookupController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = false;
  		protected $ops_table_name = 'ca_bundle_displays';		// name of "subject" table (what we're editing)

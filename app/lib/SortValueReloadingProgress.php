@@ -37,8 +37,7 @@
   */
  
  	require_once(__CA_LIB_DIR__.'/Controller/AppController/AppControllerPlugin.php');
- 
-	class SortValueReloadingProgress extends AppControllerPlugin {
+class SortValueReloadingProgress extends AppControllerPlugin {
 		# -------------------------------------------------------
 		
 		# -------------------------------------------------------

@@ -121,7 +121,6 @@ BaseModel::$s_ca_models_definitions['ca_editor_ui_screens'] = array(
 		)
  	)
 );
-
 class ca_editor_ui_screens extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

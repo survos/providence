@@ -141,8 +141,7 @@
 			'description' => _t('Restricts display to items of the specified type(s). Leave all unchecked for no restriction.')
 		)
 	);
- 
-	class ObjectsAttributeValue extends AuthorityAttributeValue {
+class ObjectsAttributeValue extends AuthorityAttributeValue {
  		# ------------------------------------------------------------------
  		/**
  		 * Name of table this attribute references

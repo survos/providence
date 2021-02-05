@@ -141,7 +141,6 @@ $_ca_attribute_settings['LengthAttributeValue'] = array(		// global
         'description' => _t('Delimiter to use between multiple values when used in a display.')
     )
 );
-
 class LengthAttributeValue extends AttributeValue implements IAttributeValue {
     # ------------------------------------------------------------------
     private $ops_text_value;

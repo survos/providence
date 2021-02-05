@@ -43,7 +43,6 @@ define("LIBRARY_IMAGEMAGICK",2);
 define("LIBRARY_IMAGICK",3);
 define("LIBRARY_GMAGICK",5);
 define("LIBRARY_GRAPHICSMAGICK",6);
-
 class TilepicParser {
 	var $error = "";
 	var $properties = array();

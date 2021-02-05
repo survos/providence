@@ -46,8 +46,6 @@
 # MODIFIED for use with PHPWeblib2
 # Mods (c) 2008 Whirl-i-Gig
 #
-
-
 class Barcode_code128 extends Barcode
 {
     var $_type = 'code128';

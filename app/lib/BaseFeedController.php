@@ -33,9 +33,7 @@
  /**
   *
   */
-  
-
-	class BaseFeedController extends ActionController {
+class BaseFeedController extends ActionController {
 		# -------------------------------------------------------
 		
  		# -------------------------------------------------------

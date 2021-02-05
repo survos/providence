@@ -35,8 +35,7 @@
   */
  
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
- 
-	class InformationServiceManager {
+class InformationServiceManager {
 		# -------------------------------------------------------
 		/** 
 		 * @var Global flag indicating whether we've required() plugins yet

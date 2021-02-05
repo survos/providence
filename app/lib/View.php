@@ -35,7 +35,6 @@
   */
  
 require_once(__CA_LIB_DIR__."/BaseObject.php");
- 
 class View extends BaseObject {
 	# -------------------------------------------------------
 	private $opa_view_paths;

@@ -35,7 +35,6 @@
   */
  
 include_once(__CA_LIB_DIR__."/Logging/BaseLogger.php");
-
 class Searchlog extends BaseLogger {
 	# ----------------------------------------
 	/** 

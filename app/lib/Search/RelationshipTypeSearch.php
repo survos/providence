@@ -36,7 +36,6 @@
 
 include_once(__CA_LIB_DIR__."/Search/BaseSearch.php");
 include_once(__CA_LIB_DIR__."/Search/RelationshipTypeSearchResult.php");
-
 class RelationshipTypeSearch extends BaseSearch {
 	# ----------------------------------------------------------------------
 	/**

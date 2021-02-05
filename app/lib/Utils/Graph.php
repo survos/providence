@@ -38,7 +38,6 @@ require_once(__CA_LIB_DIR__."/ApplicationError.php");
 require_once(__CA_LIB_DIR__."/Configuration.php");
 	
 # ----------------------------------------------------------------------
-
 class Graph {
 	# --------------------------------------------------------------------------------------------
 	var $opa_graph;

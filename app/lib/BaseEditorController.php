@@ -50,7 +50,6 @@ require_once(__CA_LIB_DIR__.'/Media/MediaViewerManager.php');
 require_once(__CA_LIB_DIR__.'/Logging/Downloadlog.php');
 
 define('__CA_SAVE_AND_RETURN_STACK_SIZE__', 30);
-
 class BaseEditorController extends ActionController {
 	# -------------------------------------------------------
 	protected $opo_datamodel;

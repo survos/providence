@@ -69,7 +69,6 @@ BaseModel::$s_ca_models_definitions['ca_guids'] = array(
 		)
 	)
 );
-
 class ca_guids extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

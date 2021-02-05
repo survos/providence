@@ -33,8 +33,7 @@
  /**
   *
   */
-
-	class TooltipManager {
+class TooltipManager {
 		# --------------------------------------------------------------------------------
 		private static $opa_tooltips;
 		private static $opa_tooltip_functions;

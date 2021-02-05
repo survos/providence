@@ -35,8 +35,7 @@
   */
  
 require_once(__CA_LIB_DIR__.'/BaseApplicationPlugin.php');
- 
-	abstract class BaseToolsPlugin extends BaseApplicationPlugin {
+abstract class BaseToolsPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		/**
 		 * Plugin description

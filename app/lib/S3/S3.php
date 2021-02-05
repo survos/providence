@@ -34,7 +34,6 @@
 * @link http://undesigned.org.za/2007/10/22/amazon-s3-php-class
 * @version 0.4.0
 */
-
 class S3 {
 	// ACL flags
 	const ACL_PRIVATE = 'private';
@@ -1115,7 +1114,6 @@ class S3 {
 	}
 
 }
-
 final class S3Request {
 	private $verb, $bucket, $uri, $resource = '', $parameters = array(),
 	$amzHeaders = array(), $headers = array(

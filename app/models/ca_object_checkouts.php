@@ -154,7 +154,6 @@ BaseModel::$s_ca_models_definitions['ca_object_checkouts'] = array(
 		),
  	)
 );
-
 class ca_object_checkouts extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -36,7 +36,6 @@
 
 include_once(__CA_LIB_DIR__."/Search/BaseSearch.php");
 include_once(__CA_LIB_DIR__."/Search/ObjectCheckoutSearchResult.php");
-
 class ObjectCheckoutSearch extends BaseSearch {
 	# ----------------------------------------------------------------------
 	/**

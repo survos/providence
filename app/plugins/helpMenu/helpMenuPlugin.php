@@ -27,9 +27,7 @@
  */
  
  require_once(__CA_MODELS_DIR__.'/ca_site_pages.php');
- 
- 
-	class helpMenuPlugin extends BaseApplicationPlugin {
+class helpMenuPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		private $opo_config;
 		# -------------------------------------------------------

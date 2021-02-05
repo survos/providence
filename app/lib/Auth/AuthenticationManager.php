@@ -31,7 +31,6 @@
  */
 
 require_once(__CA_LIB_DIR__.'/Auth/BaseAuthAdapter.php');
-
 class AuthenticationManager {
 	/**
 	 * @var object contains instance of authentication configuration
@@ -236,5 +235,4 @@ class AuthenticationManager {
 		return null;
 	}
 }
-
 class AuthClassDoesNotExistException extends Exception {}

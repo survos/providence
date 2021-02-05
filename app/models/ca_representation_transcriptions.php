@@ -108,7 +108,6 @@ BaseModel::$s_ca_models_definitions['ca_representation_transcriptions'] = array(
 		),
  	)
 );
-
 class ca_representation_transcriptions extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

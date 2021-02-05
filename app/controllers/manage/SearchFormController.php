@@ -30,8 +30,7 @@
 	require_once(__CA_MODELS_DIR__."/ca_search_forms.php");
 	require_once(__CA_MODELS_DIR__.'/ca_bundle_display_placements.php'); 
 	require_once(__CA_MODELS_DIR__.'/ca_bundle_displays_x_user_groups.php'); 
- 	
- 	class SearchFormController extends ActionController {
+class SearchFormController extends ActionController {
  		# -------------------------------------------------------
  		public function ListForms() {
  			AssetLoadManager::register('tableList');

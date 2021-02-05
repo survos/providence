@@ -36,7 +36,6 @@
     
 include_once(__CA_LIB_DIR__."/Plugins/PDFRenderer/BasePDFRendererPlugin.php");
 include_once(__CA_APP_DIR__."/helpers/mediaPluginHelpers.php");
-
 class WLPlugPDFRendererwkhtmltopdf Extends BasePDFRendererPlugIn Implements IWLPlugPDFRenderer {
 	# ------------------------------------------------
 	/** 

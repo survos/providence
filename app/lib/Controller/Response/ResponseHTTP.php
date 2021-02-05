@@ -35,7 +35,6 @@
   */
  
 require_once(__CA_LIB_DIR__.'/Controller/Response.php');
-
 class ResponseHTTP extends Response {
 	# -------------------------------------------------------
 

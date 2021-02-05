@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/Import/BaseRefinery.php');
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
- 
-	class placeSplitterRefinery extends BaseRefinery {
+class placeSplitterRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		public function __construct() {
 			$this->ops_name = 'placeSplitter';

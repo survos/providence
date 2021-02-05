@@ -31,7 +31,6 @@
  */
 
 require_once(__CA_LIB_DIR__."/Cache/MemoryCache.php");
-
 class ExternalCache {
 	# ------------------------------------------------
 	/**
@@ -307,5 +306,4 @@ class ExternalCache {
 	}
 	# ------------------------------------------------
 }
-
 class ExternalCacheInvalidParameterException extends Exception {}

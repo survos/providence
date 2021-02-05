@@ -176,7 +176,6 @@ BaseModel::$s_ca_models_definitions['ca_movements'] = array(
 		)
  	)
 );
-
 class ca_movements extends RepresentableBaseModel implements IBundleProvider {
 
 	/**

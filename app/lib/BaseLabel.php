@@ -37,8 +37,7 @@
  	require_once(__CA_LIB_DIR__.'/BaseModel.php');
  	require_once(__CA_LIB_DIR__.'/Parsers/TimeExpressionParser.php');
 	require_once(__CA_LIB_DIR__."/SyncableBaseModel.php");
- 
-	class BaseLabel extends BaseModel {
+class BaseLabel extends BaseModel {
 		# -------------------------------------------------------
 		use SyncableBaseModel;
 		# -------------------------------------------------------

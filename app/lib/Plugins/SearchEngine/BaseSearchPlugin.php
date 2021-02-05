@@ -40,7 +40,6 @@
  require_once(__CA_LIB_DIR__.'/Datamodel.php');
  require_once(__CA_LIB_DIR__.'/Plugins/WLPlug.php');
  require_once(__CA_LIB_DIR__.'/Plugins/IWLPlugSearchEngine.php');
-
 abstract class BaseSearchPlugin extends WLPlug implements IWLPlugSearchEngine {
 	# -------------------------------------------------------
 	

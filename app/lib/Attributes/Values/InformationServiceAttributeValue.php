@@ -153,7 +153,6 @@ $_ca_attribute_settings['InformationServiceAttributeValue'] = array(		// global
 		'description' => _t('List code for list to sort information service values on. Each item in the referenced list should have an identifier that matches the information service item uri or id and a rank that reflects the desired sort order. Leave empty to sort information service items by their value.')
 	)
 );
-
 class InformationServiceAttributeValue extends AttributeValue implements IAttributeValue {
 	# ------------------------------------------------------------------
 	private $ops_text_value;

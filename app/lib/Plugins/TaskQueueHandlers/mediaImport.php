@@ -45,8 +45,7 @@ require_once(__CA_MODELS_DIR__.'/ca_sets.php');
 require_once(__CA_MODELS_DIR__.'/ca_editor_uis.php');
 require_once(__CA_MODELS_DIR__.'/ca_editor_ui_screens.php');
 require_once(__CA_MODELS_DIR__.'/ca_users.php');
-	
-	class WLPlugTaskQueueHandlermediaImport Extends WLPlug Implements IWLPlugTaskQueueHandler {
+class WLPlugTaskQueueHandlermediaImport Extends WLPlug Implements IWLPlugTaskQueueHandler {
 		# --------------------------------------------------------------------------------
 		public $error;
 		public $debug = 0;

@@ -37,7 +37,6 @@
 require_once(__CA_LIB_DIR__."/Configuration.php");
 
 $_MEDIA_VOLUME_INSTANCE_CACHE = null;
-
 class MediaVolumes {
 	var $o_info;  # contains loaded volume information
 	

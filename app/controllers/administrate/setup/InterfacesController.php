@@ -34,7 +34,6 @@
 	require_once(__CA_LIB_DIR__.'/Datamodel.php');
 	require_once(__CA_LIB_DIR__.'/BaseEditorController.php');
 	require_once(__CA_LIB_DIR__.'/ResultContext.php');
-
 class InterfacesController extends BaseEditorController {
 	# -------------------------------------------------------
 	protected $ops_table_name = 'ca_editor_uis';		// name of "subject" table (what we're editing)

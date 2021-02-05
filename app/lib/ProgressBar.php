@@ -35,7 +35,6 @@
  */
 
 require_once(__CA_LIB_DIR__.'/Configuration.php');
-
 class ProgressBar {
 	# -------------------------------------------------------
 	/**

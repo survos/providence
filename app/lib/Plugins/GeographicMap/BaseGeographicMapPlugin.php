@@ -39,7 +39,6 @@ include_once(__CA_LIB_DIR__."/Plugins/IWLPlugGeographicMap.php");
 include_once(__CA_LIB_DIR__."/Configuration.php");
 include_once(__CA_LIB_DIR__."/GeographicMap.php");
 include_once(__CA_APP_DIR__."/helpers/gisHelpers.php");
-
 abstract class BaseGeographicMapPlugIn Extends WLPlug {
 	// properties for this plugin instance
 	protected $properties = array(

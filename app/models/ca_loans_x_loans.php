@@ -94,7 +94,6 @@ BaseModel::$s_ca_models_definitions['ca_loans_x_loans'] = array(
 		)
  	)
 );
-
 class ca_loans_x_loans extends BaseRelationshipModel {
 
 	use HistoryTrackingCurrentValueTrait;

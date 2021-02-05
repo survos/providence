@@ -37,8 +37,7 @@
 	require_once(__CA_LIB_DIR__."/Configuration.php");
 	require_once(__CA_LIB_DIR__."/Datamodel.php");
 	require_once(__CA_LIB_DIR__."/IDNumbering/IIDNumbering.php");
-	
-	abstract class IDNumber implements IIDNumbering {
+abstract class IDNumber implements IIDNumbering {
 		# -------------------------------------------------------
 		/**
 		 * Instance of application configuration

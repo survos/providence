@@ -81,7 +81,6 @@ BaseModel::$s_ca_models_definitions['ca_editor_ui_labels'] = array(
 		)
  	)
 );
-
 class ca_editor_ui_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

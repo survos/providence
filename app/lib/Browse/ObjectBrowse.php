@@ -36,8 +36,7 @@
   
  	require_once(__CA_LIB_DIR__.'/Browse/BaseBrowse.php');
  	require_once(__CA_LIB_DIR__.'/Browse/ObjectBrowseResult.php');
- 
-	class ObjectBrowse extends BaseBrowse {
+class ObjectBrowse extends BaseBrowse {
 		# ------------------------------------------------------
 		/**
 		 * Which table does this class represent?

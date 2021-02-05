@@ -39,8 +39,6 @@ include_once(__CA_LIB_DIR__."/Configuration.php");
 include_once(__CA_LIB_DIR__."/Datamodel.php");
 include_once(__CA_LIB_DIR__."/Db.php");
 include_once(__CA_LIB_DIR__."/Parsers/TimeExpressionParser.php");
-
-
 class BaseLogger {
 	# ----------------------------------------
   	protected $o_db;

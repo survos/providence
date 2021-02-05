@@ -33,7 +33,6 @@
  /**
   *
   */
-
 class WLPlug extends BaseObject {
 	# ------------------------------------------------------------------------
 	var $error_output = false;

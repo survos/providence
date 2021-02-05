@@ -104,7 +104,6 @@ BaseModel::$s_ca_models_definitions['ca_user_representation_annotation_labels'] 
 		)
  	)
 );
-
 class ca_user_representation_annotation_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -122,7 +122,6 @@ BaseModel::$s_ca_models_definitions['ca_site_pages'] = array(
 		)
  	)
 );
-
 class ca_site_pages extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

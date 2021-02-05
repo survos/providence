@@ -72,7 +72,6 @@ BaseModel::$s_ca_models_definitions['ca_watch_list'] = array(
 		)
  	)
 );
-
 class ca_watch_list extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -47,8 +47,7 @@ require_once(__CA_MODELS_DIR__."/ca_lists.php");
 require_once(__CA_MODELS_DIR__."/ca_locales.php");
 require_once(__CA_MODELS_DIR__."/ca_data_import_events.php");
 require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
- 
-	class applyPrepopulateRulesTool extends BaseApplicationTool {
+class applyPrepopulateRulesTool extends BaseApplicationTool {
 		# -------------------------------------------------------
 		
 		/**

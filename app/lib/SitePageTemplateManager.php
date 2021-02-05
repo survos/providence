@@ -35,8 +35,7 @@
   */
   require_once(__CA_LIB_DIR__."/View.php");
   require_once(__CA_MODELS_DIR__."/ca_site_templates.php");
-  
-  class SitePageTemplateManager {
+class SitePageTemplateManager {
   	# -------------------------------------------------------
   	/**
   	 *

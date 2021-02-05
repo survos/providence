@@ -33,7 +33,6 @@
 /**
  *
  */
-
 class CSVDataImporter extends BaseDataImporter {
 	# -------------------------------------------------------
 	public function __construct(){

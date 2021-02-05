@@ -29,8 +29,7 @@
 	require_once(__CA_MODELS_DIR__."/ca_item_tags.php");
 	require_once(__CA_MODELS_DIR__."/ca_items_x_tags.php");
  	require_once(__CA_LIB_DIR__."/Search/ItemTagSearch.php");
- 	
- 	class TagsController extends BaseSearchController {
+class TagsController extends BaseSearchController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

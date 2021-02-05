@@ -27,8 +27,7 @@
  */
 
  	require_once(__CA_MODELS_DIR__."/ca_locales.php");
-
- 	class LocalesController extends ActionController {
+class LocalesController extends ActionController {
  		# -------------------------------------------------------
  		private $pt_locale;
  		# -------------------------------------------------------

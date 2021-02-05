@@ -31,7 +31,6 @@
  */
 
 require_once(__CA_LIB_DIR__."/Service/BaseJSONService.php");
-
 class StatisticsService extends BaseJSONService {
 	# -------------------------------------------------------
 	/**

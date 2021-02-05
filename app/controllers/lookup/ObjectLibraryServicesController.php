@@ -28,7 +28,6 @@
 
 require_once(__CA_LIB_DIR__."/BaseLookupController.php");
 require_once(__CA_APP_DIR__.'/helpers/libraryServicesHelpers.php');
-
 class ObjectLibraryServicesController extends BaseLookupController {
 	# -------------------------------------------------------
 	protected $opb_uses_hierarchy_browser = true;

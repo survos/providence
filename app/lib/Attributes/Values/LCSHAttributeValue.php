@@ -161,8 +161,7 @@
 			)
 		)
 	);
-	
-	class LCSHAttributeValue extends AttributeValue implements IAttributeValue {
+class LCSHAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		private $ops_uri_value;

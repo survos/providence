@@ -94,7 +94,6 @@ BaseModel::$s_ca_models_definitions['ca_collections_x_storage_locations'] = arra
 		)
  	)
 );
-
 class ca_collections_x_storage_locations extends BaseRelationshipModel {
 
 	use HistoryTrackingCurrentValueTrait;

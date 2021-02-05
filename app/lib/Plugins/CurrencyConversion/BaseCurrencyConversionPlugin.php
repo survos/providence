@@ -37,7 +37,6 @@
 include_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugCurrencyConversion.php");
 include_once(__CA_LIB_DIR__."/Configuration.php");
-
 abstract class BaseCurrencyConversionPlugin Extends WLPlug {
 	# ------------------------------------------------
 	// properties for this plugin instance

@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/BaseSearchBuilderController.php");
- 	
- 	class SearchObjectsBuilderController extends BaseSearchBuilderController {
+class SearchObjectsBuilderController extends BaseSearchBuilderController {
  		# -------------------------------------------------------
  		/**
  		 * Name of subject table (ex. for an object search this is 'ca_objects')

@@ -212,7 +212,6 @@ BaseModel::$s_ca_models_definitions['ca_occurrences'] = array(
 		)
  	)
 );
-
 class ca_occurrences extends RepresentableBaseModel implements IBundleProvider {
 
 	/**

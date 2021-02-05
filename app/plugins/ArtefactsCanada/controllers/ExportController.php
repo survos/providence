@@ -29,8 +29,6 @@ require_once(__CA_LIB_DIR__.'/ProgressBar.php');
 require_once(__CA_LIB_DIR__.'/Parsers/ZipFile.php');
 require_once(__CA_MODELS_DIR__.'/ca_sets.php');
 require_once(__CA_MODELS_DIR__.'/ca_bundle_displays.php');
-
-
 class ExportController extends ActionController {
 	# -------------------------------------------------------
 	/**

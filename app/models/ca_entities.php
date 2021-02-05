@@ -222,7 +222,6 @@ BaseModel::$s_ca_models_definitions['ca_entities'] = array(
 		)
  	)
 );
-
 class ca_entities extends RepresentableBaseModel implements IBundleProvider {
 	use HistoryTrackingCurrentValueTrait;
 	

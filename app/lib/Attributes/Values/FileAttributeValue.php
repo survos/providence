@@ -97,8 +97,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class FileAttributeValue extends AttributeValue implements IAttributeValue {
+class FileAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $opa_file_data;
  		private $ops_file_data;

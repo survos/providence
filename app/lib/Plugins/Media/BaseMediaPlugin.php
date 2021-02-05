@@ -41,7 +41,6 @@
 include_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugMedia.php");
 include_once(__CA_APP_DIR__."/helpers/mediaPluginHelpers.php");
-
 class BaseMediaPlugin extends WLPlug  {
 	# ------------------------------------------------
 	/**

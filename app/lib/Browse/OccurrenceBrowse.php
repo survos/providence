@@ -36,8 +36,7 @@
   
  	require_once(__CA_LIB_DIR__.'/Browse/BaseBrowse.php');
  	require_once(__CA_LIB_DIR__.'/Browse/OccurrenceBrowseResult.php');
- 
-	class OccurrenceBrowse extends BaseBrowse {
+class OccurrenceBrowse extends BaseBrowse {
 		# ----------------------------------------------------------------------
 		/**
 		 * Which table does this class represent?

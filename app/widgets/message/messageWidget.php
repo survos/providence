@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/BaseWidget.php');
  	require_once(__CA_LIB_DIR__.'/IWidget.php');
- 
-	class messageWidget extends BaseWidget implements IWidget {
+class messageWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		static $s_widget_settings = array();

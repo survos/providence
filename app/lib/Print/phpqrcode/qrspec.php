@@ -38,8 +38,7 @@
     define('QRCAP_WORDS',        1);
     define('QRCAP_REMINDER',     2);
     define('QRCAP_EC',           3);
-
-    class QRspec {
+class QRspec {
     
         public static $capacity = array(
             array(  0,    0, 0, array(   0,    0,    0,    0)),

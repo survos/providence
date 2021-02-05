@@ -141,7 +141,6 @@ $_ca_attribute_settings['FilesizeAttributeValue'] = [		// global
         'description' => _t('Delimiter to use between multiple values when used in a display.')
     ]
 ];
-
 class FilesizeAttributeValue extends AttributeValue implements IAttributeValue {
     # ------------------------------------------------------------------
     private $ops_text_value;

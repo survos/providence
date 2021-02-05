@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/Import/BaseRefinery.php');
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
- 
-	class measurementsSplitterRefinery extends BaseRefinery {
+class measurementsSplitterRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		
 		# -------------------------------------------------------

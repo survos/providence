@@ -33,7 +33,6 @@
 include_once(__CA_LIB_DIR__.'/Datamodel.php');
 include_once(__CA_LIB_DIR__.'/Plugins/WLPlug.php');
 include_once(__CA_LIB_DIR__.'/Plugins/IWLPlugSearchEngineResult.php');
-
 class WLPlugSearchEngineElasticSearchResult extends WLPlug implements IWLPlugSearchEngineResult {
 	# -------------------------------------------------------
 	private $opa_hits;

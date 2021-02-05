@@ -32,7 +32,6 @@ include_once(__CA_LIB_DIR__."/Print/PDFRenderer.php");
 include_once(__CA_LIB_DIR__."/ApplicationPluginManager.php");
 include_once(__CA_LIB_DIR__."/ConfigurationCheck.php");
 include_once(__CA_MODELS_DIR__."/ca_change_log.php");
-
 class ConfigurationCheckController extends ActionController {
 	# ------------------------------------------------
 	public function DoCheck(){

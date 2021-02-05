@@ -204,7 +204,6 @@ BaseModel::$s_ca_models_definitions['ca_loans'] = array(
 		)
  	)
 );
-
 class ca_loans extends RepresentableBaseModel implements IBundleProvider {
 
 	/**

@@ -127,7 +127,6 @@ BaseModel::$s_ca_models_definitions['ca_user_groups'] = array(
 		)
  	)
 );
-
 class ca_user_groups extends BaseModel {
 	use SyncableBaseModel;
 	

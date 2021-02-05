@@ -33,7 +33,6 @@
 require_once(__CA_LIB_DIR__.'/Auth/BaseAuthAdapter.php');
 require_once(__CA_LIB_DIR__.'/Auth/PasswordHash.php');
 require_once(__CA_MODELS_DIR__.'/ca_users.php');
-
 class CaUsersAuthAdapter extends BaseAuthAdapter implements IAuthAdapter {
 	# --------------------------------------------------------------------------------
 	public function authenticate($ps_username, $ps_password = '', $pa_options=null) {
@@ -93,5 +92,4 @@ class CaUsersAuthAdapter extends BaseAuthAdapter implements IAuthAdapter {
 	}
 	# --------------------------------------------------------------------------------
 }
-
 class CaUsersException extends Exception {}

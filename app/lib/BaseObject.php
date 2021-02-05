@@ -35,8 +35,7 @@
   */
  
  	require_once(__CA_LIB_DIR__.'/Error/IErrorSetter.php');
- 
-	class BaseObject implements IErrorSetter {
+class BaseObject implements IErrorSetter {
 		# ------------------------------------------------------------------
 		
 		public $errors;

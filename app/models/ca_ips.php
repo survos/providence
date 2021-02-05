@@ -102,7 +102,6 @@ BaseModel::$s_ca_models_definitions['ca_ips'] = array(
 		)
  	)
 );
-
 class ca_ips extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

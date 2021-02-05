@@ -108,7 +108,6 @@ BaseModel::$s_ca_models_definitions['ca_set_items'] = array(
 		)
  	)
 );
-
 class ca_set_items extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

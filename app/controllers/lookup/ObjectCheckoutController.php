@@ -26,8 +26,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/BaseLookupController.php");
- 
- 	class ObjectCheckoutController extends BaseLookupController {
+class ObjectCheckoutController extends BaseLookupController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = true;
  		protected $ops_table_name = 'ca_object_checkouts';		// name of "subject" table (what we're editing)

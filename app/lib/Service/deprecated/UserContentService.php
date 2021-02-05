@@ -38,7 +38,6 @@ require_once(__CA_LIB_DIR__."/Service/BaseService.php");
 require_once(__CA_MODELS_DIR__."/ca_item_comments.php");
 require_once(__CA_MODELS_DIR__."/ca_sets.php");
 require_once(__CA_MODELS_DIR__."/ca_set_items.php");
-
 class UserContentService extends BaseService {
 	# -------------------------------------------------------
 	protected $opo_dm;

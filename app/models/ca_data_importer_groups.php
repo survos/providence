@@ -82,7 +82,6 @@ BaseModel::$s_ca_models_definitions['ca_data_importer_groups'] = array(
 		)
 	)
 );
-	
 class ca_data_importer_groups extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -31,8 +31,7 @@
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
 	require_once(__CA_LIB_DIR__.'/Datamodel.php');
 	require_once(__CA_MODELS_DIR__."/ca_users.php");
- 
-	class recentRegistrationsWidget extends BaseWidget implements IWidget {
+class recentRegistrationsWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		private $opo_datamodel;

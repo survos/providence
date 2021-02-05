@@ -31,7 +31,7 @@
  	//
  	// This lookup controller doesn't extend BaseLookupController
  	// since direct lookups on attributes are handled specially – not via the search engine
- 	class AttributeValueController extends ActionController {
+class AttributeValueController extends ActionController {
  		# -------------------------------------------------------
  		# AJAX handlers
  		# -------------------------------------------------------

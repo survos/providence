@@ -127,7 +127,6 @@ BaseModel::$s_ca_models_definitions['ca_search_indexing_queue'] = array(
 		)
 	)
 );
-
 class ca_search_indexing_queue extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

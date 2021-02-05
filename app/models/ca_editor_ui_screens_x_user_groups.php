@@ -74,7 +74,6 @@ BaseModel::$s_ca_models_definitions['ca_editor_ui_screens_x_user_groups'] = arra
 		)
  	)
 );
-
 class ca_editor_ui_screens_x_user_groups extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

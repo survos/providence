@@ -27,8 +27,7 @@
  */
 
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
-
-	class MetaTagManager {
+class MetaTagManager {
 		# --------------------------------------------------------------------------------
 		private static $opa_tags;
 		private static $ops_window_title = '';

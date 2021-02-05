@@ -39,7 +39,6 @@ include_once(__CA_APP_DIR__."/helpers/mediaPluginHelpers.php");
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
-
 class WLPlugPDFRendererdomPDF Extends BasePDFRendererPlugIn Implements IWLPlugPDFRenderer {
 	# ------------------------------------------------
 	/** 

@@ -31,7 +31,6 @@ require_once(__CA_LIB_DIR__."/Media.php");
 require_once(__CA_LIB_DIR__."/ApplicationPluginManager.php");
 require_once(__CA_APP_DIR__."/helpers/configurationHelpers.php");
 require_once(__CA_LIB_DIR__.'/HierarchicalReindexingProgress.php');
-
 class HierarchicalReindexController extends ActionController {
 
 	# ------------------------------------------------	

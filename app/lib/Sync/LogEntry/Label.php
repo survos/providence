@@ -33,7 +33,6 @@
 namespace CA\Sync\LogEntry;
 
 require_once(__CA_LIB_DIR__.'/Sync/LogEntry/Base.php');
-
 class Label extends Base {
 
 	public function apply(array $pa_options = array()) {

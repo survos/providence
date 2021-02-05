@@ -118,7 +118,6 @@ BaseModel::$s_ca_models_definitions['ca_media_upload_sessions'] = array(
 		)
  	)
 );
-
 class ca_media_upload_sessions extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

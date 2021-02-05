@@ -63,7 +63,6 @@ BaseModel::$s_ca_models_definitions['ca_change_log_subjects'] = array(
 		)
 	)
 );
-
 class ca_change_log_subjects extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

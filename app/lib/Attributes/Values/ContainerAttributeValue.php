@@ -118,8 +118,6 @@ $_ca_attribute_settings['ContainerAttributeValue'] = array(		// global
 		'description' => _t('Layout used when a container value is in read-only mode. If this template is set, existing values are always displayed in read-only mode until you click to edit. This can be used to preserve screen space for large containers.')
 	),
 );
-
-
 class ContainerAttributeValue extends AttributeValue implements IAttributeValue {
 	# ------------------------------------------------------------------
 

@@ -36,8 +36,7 @@
  
 	require_once(__CA_LIB_DIR__.'/Configuration.php');
  	require_once(__CA_LIB_DIR__.'/Export/BaseExportRefinery.php');
- 
-	class ExportRefineryManager {
+class ExportRefineryManager {
 		# -------------------------------------------------------
 		/** 
 		 * @var Global flag indicating whether we've required() widgets yet

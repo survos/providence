@@ -47,8 +47,7 @@
 	require_once(__CA_LIB_DIR__."/Logging/Batchlog.php");
 	require_once(__CA_LIB_DIR__."/SMS.php");
 	require_once(__CA_LIB_DIR__.'/Logging/KLogger/KLogger.php');
-
-	class BatchProcessor {
+class BatchProcessor {
 		# ----------------------------------------
         const REGEXP_FILENAME_NO_EXT = '/\\.[^.\\s]+$/';
         /**

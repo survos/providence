@@ -38,7 +38,6 @@ require_once(__CA_LIB_DIR__.'/Sync/LogEntry/Bundlable.php');
 require_once(__CA_LIB_DIR__.'/Sync/LogEntry/Relationship.php');
 require_once(__CA_LIB_DIR__.'/Sync/LogEntry/Label.php');
 require_once(__CA_LIB_DIR__.'/Sync/LogEntry/Representation.php');
-
 abstract class Base {
 
 	/**

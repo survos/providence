@@ -46,8 +46,6 @@ require_once(__CA_APP_DIR__."/helpers/browseHelpers.php");
 require_once(__CA_APP_DIR__."/helpers/accessHelpers.php");
 
 require_once(__CA_MODELS_DIR__."/ca_data_exporters.php");
-
-
 class OAIPMHService extends BaseService {
 	const OAI_PMH_NAMESPACE_URI    = 'http://www.openarchives.org/OAI/2.0/';
 	const OAI_PMH_SCHEMA_URI       = 'http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd';

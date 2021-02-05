@@ -28,8 +28,7 @@
 
  	require_once(__CA_MODELS_DIR__."/ca_site_pages.php");
  	require_once(__CA_LIB_DIR__."/BaseEditorController.php");
-
- 	class SitePageEditorController extends BaseEditorController {
+class SitePageEditorController extends BaseEditorController {
  		# -------------------------------------------------------
  		/**
 		 * name of "subject" table (what we're editing)

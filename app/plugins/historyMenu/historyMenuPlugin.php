@@ -25,8 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
- 
-	class historyMenuPlugin extends BaseApplicationPlugin {
+class historyMenuPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		private $opo_config;
 		# -------------------------------------------------------

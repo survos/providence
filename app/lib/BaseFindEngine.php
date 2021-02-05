@@ -35,8 +35,7 @@
   */
  	require_once(__CA_LIB_DIR__.'/BaseObject.php');
  	require_once(__CA_APP_DIR__.'/helpers/utilityHelpers.php');
- 	
-	class BaseFindEngine extends BaseObject {
+class BaseFindEngine extends BaseObject {
 		# ------------------------------------------------------------------
 		/**
 		 *

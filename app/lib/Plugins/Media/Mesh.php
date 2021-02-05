@@ -44,7 +44,6 @@ include_once(__CA_LIB_DIR__."/Configuration.php");
 include_once(__CA_LIB_DIR__."/Media.php");
 include_once(__CA_APP_DIR__."/helpers/mediaPluginHelpers.php");
 include_once(__CA_LIB_DIR__."/Parsers/PlyToStl.php");
-
 class WLPlugMediaMesh extends BaseMediaPlugin implements IWLPlugMedia {
 	var $errors = array();
 	

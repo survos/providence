@@ -276,7 +276,6 @@ BaseModel::$s_ca_models_definitions['ca_object_representations'] = array(
 		)
  	)
 );
-
 class ca_object_representations extends BundlableLabelableBaseModelWithAttributes implements IBundleProvider {
 	use HistoryTrackingCurrentValueTrait;
 	

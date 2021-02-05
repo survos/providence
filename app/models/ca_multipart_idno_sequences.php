@@ -72,7 +72,6 @@ BaseModel::$s_ca_models_definitions['ca_multipart_idno_sequences'] = array(
 		)
  	)
 );
-
 class ca_multipart_idno_sequences extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

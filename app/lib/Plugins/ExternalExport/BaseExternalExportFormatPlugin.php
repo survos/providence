@@ -35,7 +35,6 @@
     */ 
 include_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugExternalExportFormat.php");
-
 abstract class BaseExternalExportFormatPlugin Extends WLPlug {
 	# ------------------------------------------------
 	// properties for this plugin instance

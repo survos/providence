@@ -40,7 +40,7 @@
 	 * and in Excel-format files. Both formats are handled similarly.
 	 *
 	 */
-	class DelimitedDataParser implements IDataParser {
+class DelimitedDataParser implements IDataParser {
 		# ----------------------------------------
 		/**
 		 * @string Delimiter for text files (typically a tab or comma)

@@ -29,7 +29,6 @@
  *
  * ----------------------------------------------------------------------
  */
-
 class MemoryCache {
 	# ------------------------------------------------
 	private static $opa_caches = array();
@@ -137,5 +136,4 @@ class MemoryCache {
 	}
 	# ------------------------------------------------
 }
-
 class MemoryCacheInvalidParameterException extends Exception {}

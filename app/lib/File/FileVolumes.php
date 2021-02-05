@@ -37,7 +37,6 @@
 require_once(__CA_LIB_DIR__."/Configuration.php");
 
 $_FILE_VOLUME_INSTANCE_CACHE = null;
-
 class FileVolumes {
 	var $o_info;  # contains loaded volume information
 	

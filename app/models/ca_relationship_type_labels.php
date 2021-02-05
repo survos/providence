@@ -96,7 +96,6 @@ BaseModel::$s_ca_models_definitions['ca_relationship_type_labels'] = array(
 		)
  	)
 );
-
 class ca_relationship_type_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

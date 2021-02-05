@@ -42,8 +42,6 @@ require_once(__CA_LIB_DIR__ . "/Plugins/InformationService/BaseInformationServic
 
 global $g_information_service_settings_viaf;
 $g_information_service_settings_viaf = [];
-
-
 class WLPlugInformationServiceVIAF extends BaseInformationServicePlugin implements IWLPlugInformationService
 {
 

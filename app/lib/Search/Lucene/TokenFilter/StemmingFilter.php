@@ -36,8 +36,6 @@
 
 include_once(__CA_LIB_DIR__.'/Search/Common/Stemmer/SnoballStemmer.php');
 include_once(__CA_LIB_DIR__.'/Search/Common/Language/LanguageDetection.php');
-
-
 class StemmingFilter extends Zend_Search_Lucene_Analysis_TokenFilter
 {
     /**

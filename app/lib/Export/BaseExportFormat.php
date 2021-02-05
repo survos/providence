@@ -39,8 +39,7 @@
  	require_once(__CA_LIB_DIR__.'/Export/ExportFormats/ExportCSV.php');
 	require_once(__CA_LIB_DIR__.'/Export/ExportFormats/ExportExifTool.php');
     require_once(__CA_LIB_DIR__.'/Export/ExportFormats/ExportJSON.php');
-
-	abstract class BaseExportFormat {
+abstract class BaseExportFormat {
 		# -------------------------------------------------------
 		static $s_format_settings = array();
 		# -------------------------------------------------------

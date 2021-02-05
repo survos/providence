@@ -42,7 +42,6 @@ global $g_information_service_settings_pella;
 $g_information_service_settings_pella= [
 
 ];
-
 class WLPlugInformationServicePella extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

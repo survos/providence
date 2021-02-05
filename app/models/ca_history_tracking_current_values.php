@@ -131,7 +131,6 @@ BaseModel::$s_ca_models_definitions['ca_history_tracking_current_values'] = arra
 		)
  	)
 );
-
 class ca_history_tracking_current_values extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

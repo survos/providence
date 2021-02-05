@@ -37,8 +37,7 @@
  require_once(__CA_LIB_DIR__.'/BundlableLabelableBaseModelWithAttributes.php');
  require_once(__CA_APP_DIR__.'/helpers/htmlFormHelpers.php');
  require_once(__CA_MODELS_DIR__."/ca_representation_transcriptions.php");
- 
-	class RepresentableBaseModel extends BundlableLabelableBaseModelWithAttributes {
+class RepresentableBaseModel extends BundlableLabelableBaseModelWithAttributes {
 		# ------------------------------------------------------
 		/**
 		 * Returns information about representations linked to the currently loaded item. Use this if you want to get the urls, tags and other information for all representations associated with a given item.

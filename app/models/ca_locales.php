@@ -86,7 +86,6 @@ BaseModel::$s_ca_models_definitions['ca_locales'] = array(
 		),
  	)
 );
-
 class ca_locales extends BaseModel {
 
     use SyncableBaseModel;

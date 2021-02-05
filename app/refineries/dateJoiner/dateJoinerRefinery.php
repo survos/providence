@@ -28,8 +28,7 @@
  	require_once(__CA_LIB_DIR__.'/Import/BaseRefinery.php');
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
  	require_once(__CA_LIB_DIR__.'/Parsers/ExpressionParser.php');
- 
-	class dateJoinerRefinery extends BaseRefinery {
+class dateJoinerRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		
 		# -------------------------------------------------------

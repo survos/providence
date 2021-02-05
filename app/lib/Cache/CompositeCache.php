@@ -32,7 +32,6 @@
 
 require_once(__CA_LIB_DIR__.'/Cache/MemoryCache.php');
 require_once(__CA_LIB_DIR__.'/Cache/ExternalCache.php');
-
 class CompositeCache {
 	# ------------------------------------------------
 	/**

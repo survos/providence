@@ -35,7 +35,6 @@
   */
 
 require_once(__CA_APP_DIR__.'/helpers/utilityHelpers.php');
-
 class ProcessStatus {
 	# ---------------------------------------------------------------------------
 	# Returns true if we have the means to detect if specific processes are running.

@@ -43,7 +43,6 @@ define("__CA_MEDIA_DOCUMENT_DEFAULT_ICON__", 'document');
 define("__CA_MEDIA_3D_DEFAULT_ICON__", '3d');
 define("__CA_MEDIA_SPIN_DEFAULT_ICON__", '3d');
 define("__CA_MEDIA_BINARY_FILE_DEFAULT_ICON__", 'document');
-
 class Media extends BaseObject {
 	# ----------------------------------------------------------
 	# Properties

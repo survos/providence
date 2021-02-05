@@ -40,8 +40,6 @@
 	// Pull in Guzzle library (web services client)
 	require_once(__CA_BASE_DIR__.'/vendor/autoload.php');
 	use GuzzleHttp\Client;
-
-
 class ULANDataReader extends BaseXMLDataReader {
 	# -------------------------------------------------------
 	protected $opo_handle = null;

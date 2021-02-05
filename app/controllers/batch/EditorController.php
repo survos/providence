@@ -44,8 +44,7 @@
  	require_once(__CA_LIB_DIR__."/ResultContext.php");
  	require_once(__CA_LIB_DIR__."/BatchProcessor.php");
  	require_once(__CA_LIB_DIR__."/BatchEditorProgress.php");
- 
- 	class EditorController extends ActionController {
+class EditorController extends ActionController {
  		# -------------------------------------------------------
  		protected $opo_datamodel;
  		protected $opo_app_plugin_manager;

@@ -75,7 +75,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_alert_rules_x_user_groups'] = a
 		)
 	)
 );
-
 class ca_metadata_alert_rules_x_user_groups extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

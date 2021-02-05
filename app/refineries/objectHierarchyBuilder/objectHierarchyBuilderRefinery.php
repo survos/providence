@@ -29,8 +29,7 @@
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
 	require_once(__CA_LIB_DIR__.'/Parsers/ExpressionParser.php');
 	require_once(__CA_APP_DIR__.'/helpers/importHelpers.php');
- 
-	class objectHierarchyBuilderRefinery extends BaseRefinery {
+class objectHierarchyBuilderRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		public function __construct() {
 			$this->ops_name = 'objectHierarchyBuilder';

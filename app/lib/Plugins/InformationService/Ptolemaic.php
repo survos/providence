@@ -40,7 +40,6 @@ require_once(__CA_LIB_DIR__."/Plugins/InformationService/BaseInformationServiceP
 
 global $g_information_service_settings_ptolemaic;
 $g_information_service_settings_ptolemaic = [];
-
 class WLPlugInformationServicePtolemaic extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

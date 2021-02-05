@@ -191,8 +191,7 @@
    curl_close($vo_curl);
    return $vs_content;
  }
-
- class WLPlugInformationServiceSparqlEndpoint Extends BaseInformationServicePlugin Implements IWLPlugInformationService {
+class WLPlugInformationServiceSparqlEndpoint Extends BaseInformationServicePlugin Implements IWLPlugInformationService {
  	# ------------------------------------------------
  	static $s_settings;
  	# ------------------------------------------------

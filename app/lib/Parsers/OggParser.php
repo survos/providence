@@ -13,7 +13,6 @@ define("NOCACHING",1);
 define("UTF8",2);
 define("NOVENDORTAG",4);
 define("UPDATECACHE",8);
-	
 class OggParser
 { 
 // Public variables

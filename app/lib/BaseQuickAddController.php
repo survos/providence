@@ -40,8 +40,7 @@
  	require_once(__CA_LIB_DIR__."/ResultContext.php");
 	require_once(__CA_LIB_DIR__."/Logging/Eventlog.php");
  	require_once(__CA_LIB_DIR__.'/Utils/DataMigrationUtils.php');
- 
- 	class BaseQuickAddController extends ActionController {
+class BaseQuickAddController extends ActionController {
  		# -------------------------------------------------------
  		protected $opo_datamodel;
  		protected $opo_app_plugin_manager;

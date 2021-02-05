@@ -37,7 +37,6 @@ include_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
 include_once(__CA_LIB_DIR__."/Plugins/IWLPlugVisualizer.php");
 include_once(__CA_LIB_DIR__."/Configuration.php");
 include_once(__CA_LIB_DIR__."/Visualizer.php");
-
 abstract class BaseVisualizerPlugin Extends WLPlug {
 	# ------------------------------------------------
 	// properties for this plugin instance

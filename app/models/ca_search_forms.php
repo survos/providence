@@ -127,8 +127,6 @@ $_ca_search_forms_settings = array(		// global
 		'description' => _t('The number of columns wide the search will be.')
 	)
 );
-
-
 class ca_search_forms extends BundlableLabelableBaseModelWithAttributes {
 	use SetUniqueIdnoTrait;
 

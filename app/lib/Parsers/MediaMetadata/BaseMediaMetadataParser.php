@@ -33,7 +33,6 @@
  /**
   *
   */
- 
 abstract class BaseMediaMetadataParser {
 	# -------------------------------------------------------
 

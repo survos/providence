@@ -101,7 +101,6 @@ BaseModel::$s_ca_models_definitions['ca_data_exporters'] = array(
 		),
 	)
 );
-
 class ca_data_exporters extends BundlableLabelableBaseModelWithAttributes {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -210,7 +210,6 @@ BaseModel::$s_ca_models_definitions['ca_item_comments'] = array(
 		)
  	)
 );
-
 class ca_item_comments extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

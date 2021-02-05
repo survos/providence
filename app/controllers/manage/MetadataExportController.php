@@ -42,8 +42,6 @@ require_once(__CA_LIB_DIR__."/Datamodel.php");
 require_once(__CA_LIB_DIR__."/ApplicationPluginManager.php");
 require_once(__CA_LIB_DIR__."/BatchProcessor.php");
 require_once(__CA_LIB_DIR__."/BatchMetadataExportProgress.php");
-
-
 class MetadataExportController extends ActionController {
 	# -------------------------------------------------------
 	protected $opo_datamodel;

@@ -160,7 +160,6 @@ $g_information_service_settings_global_names= array(
 		]
 	)
 );
-
 class WLPlugInformationServiceGlobalNames extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

@@ -31,8 +31,7 @@
 	require_once(__CA_APP_DIR__.'/helpers/importHelpers.php');
 	require_once(__CA_MODELS_DIR__.'/ca_lists.php');
 	require_once(__CA_MODELS_DIR__.'/ca_list_items.php');
- 
-	class listItemIndentedHierarchyBuilderRefinery extends BaseRefinery {
+class listItemIndentedHierarchyBuilderRefinery extends BaseRefinery {
 		# -------------------------------------------------------
 		/**
 		 * Last item_id inserted for each level of the hierarchy

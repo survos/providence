@@ -28,8 +28,7 @@
 
  	require_once(__CA_MODELS_DIR__.'/ca_user_groups.php');
  	require_once(__CA_LIB_DIR__.'/ResultContext.php');
-
- 	class GroupsController extends ActionController {
+class GroupsController extends ActionController {
  		# -------------------------------------------------------
  		private $pt_group;
  		

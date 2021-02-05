@@ -104,7 +104,6 @@ BaseModel::$s_ca_models_definitions['ca_occurrence_labels'] = array(
 		)
  	)
 );
-
 class ca_occurrence_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -298,7 +298,6 @@ BaseModel::$s_ca_models_definitions['ca_collections'] =  array(
 		)
 	)
 );
-
 class ca_collections extends RepresentableBaseModel implements IBundleProvider {
 	use HistoryTrackingCurrentValueTrait;
 	use DeaccessionTrait;

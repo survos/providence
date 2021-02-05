@@ -44,8 +44,7 @@
  	require_once(__CA_LIB_DIR__.'/Print/PDFRenderer.php');
 	require_once(__CA_MODELS_DIR__.'/ca_data_exporters.php');
  	require_once(__CA_LIB_DIR__."/ApplicationPluginManager.php");
- 	
-	class BaseFindController extends ActionController {
+class BaseFindController extends ActionController {
 		# ------------------------------------------------------------------
 		protected $opo_result_context;
 		protected $opa_items_per_page;

@@ -37,7 +37,6 @@
 require_once(__CA_LIB_DIR__.'/Import/BaseDataReader.php');
 require_once(__CA_LIB_DIR__.'/Parsers/DelimitedDataParser.php');
 require_once(__CA_APP_DIR__.'/helpers/displayHelpers.php');
-
 class BaseDelimitedDataReader extends BaseDataReader {
 	# -------------------------------------------------------	
 	/**

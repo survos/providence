@@ -218,8 +218,7 @@
 			'description' => _t('Delimiter to use between multiple values when used in a display.')
 		)
 	);
- 
-	class DateRangeAttributeValue extends AttributeValue implements IAttributeValue {
+class DateRangeAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		private $opn_start_date;

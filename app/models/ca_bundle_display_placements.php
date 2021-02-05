@@ -91,8 +91,6 @@ BaseModel::$s_ca_models_definitions['ca_bundle_display_placements'] = array(
 		)
 	)
 );
-
-
 class ca_bundle_display_placements extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

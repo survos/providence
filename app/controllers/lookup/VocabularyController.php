@@ -33,8 +33,7 @@
  	require_once(__CA_LIB_DIR__."/Search/ListItemSearch.php");
  	require_once(__CA_MODELS_DIR__."/ca_objects.php");
  	require_once(__CA_LIB_DIR__."/BaseLookupController.php");
- 
- 	class VocabularyController extends BaseLookupController {
+class VocabularyController extends BaseLookupController {
  		# -------------------------------------------------------
  		protected $opb_uses_hierarchy_browser = true;
  		protected $ops_table_name = 'ca_list_items';		// name of "subject" table (what we're editing)

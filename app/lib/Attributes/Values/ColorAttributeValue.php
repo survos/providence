@@ -123,8 +123,7 @@
 			'description' => _t('Layout for value when used in a display (can include HTML). Element code tags prefixed with the ^ character can be used to represent the value in the template. For example: <i>^my_element_code</i>.')
 		)
 	);
- 
-	class ColorAttributeValue extends AttributeValue implements IAttributeValue {
+class ColorAttributeValue extends AttributeValue implements IAttributeValue {
  		# ------------------------------------------------------------------
  		private $ops_text_value;
  		# ------------------------------------------------------------------

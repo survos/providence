@@ -35,8 +35,7 @@
   */
   
 	require_once(__CA_LIB_DIR__."/Configuration.php");
-	
-	class IDNumbering {
+class IDNumbering {
 		# -------------------------------------------------------
 		/**
 		 * Initialize an instance of the currently configured numbering plugin. 

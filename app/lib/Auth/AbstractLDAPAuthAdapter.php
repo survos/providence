@@ -32,7 +32,6 @@
 
 require_once(__CA_LIB_DIR__.'/Auth/BaseAuthAdapter.php');
 require_once(__CA_LIB_DIR__.'/Auth/PasswordHash.php');
-
 abstract class AbstractLDAPAuthAdapter extends BaseAuthAdapter {
 	/**
 	 * @var array
@@ -411,5 +410,4 @@ abstract class AbstractLDAPAuthAdapter extends BaseAuthAdapter {
 	}
 	# --------------------------------------------------------------------------------
 }
-
 class LDAPException extends Exception {}

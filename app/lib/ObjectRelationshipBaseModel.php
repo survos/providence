@@ -37,8 +37,7 @@
  require_once(__CA_LIB_DIR__.'/BaseRelationshipModel.php');
  require_once(__CA_APP_DIR__.'/helpers/htmlFormHelpers.php');
  require_once(__CA_MODELS_DIR__.'/ca_objects.php');
- 
-	class ObjectRelationshipBaseModel extends BaseRelationshipModel {
+class ObjectRelationshipBaseModel extends BaseRelationshipModel {
 		# ------------------------------------------------------
 		protected function initLabelDefinitions($pa_options=null) {
 			parent::initLabelDefinitions($pa_options);

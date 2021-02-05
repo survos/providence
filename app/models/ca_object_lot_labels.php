@@ -105,7 +105,6 @@ BaseModel::$s_ca_models_definitions['ca_object_lot_labels'] = array(
 		)
  	)
 );
-
 class ca_object_lot_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

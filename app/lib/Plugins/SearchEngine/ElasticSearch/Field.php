@@ -35,7 +35,6 @@ namespace ElasticSearch;
 use ElasticSearch\FieldTypes\FieldType;
 
 require_once(__CA_APP_DIR__.'/helpers/listHelpers.php');
-
 class Field {
 
 	/**

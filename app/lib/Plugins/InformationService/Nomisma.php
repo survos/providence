@@ -53,7 +53,6 @@ $g_information_service_settings_nomisma = [
 		'description' => _t('Leave all unselected to use all available ontologies.')
 	)
 ];
-
 class WLPlugInformationServiceNomisma extends BaseNomismaLODServicePlugin implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

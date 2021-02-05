@@ -37,7 +37,6 @@
  include_once(__CA_LIB_DIR__.'/Datamodel.php');
  include_once(__CA_LIB_DIR__.'/Plugins/WLPlug.php');
  include_once(__CA_LIB_DIR__.'/Plugins/IWLPlugSearchEngineResult.php');
-
 class WLPlugSearchEngineSqlSearchResult extends WLPlug implements IWLPlugSearchEngineResult {
 	# -------------------------------------------------------
 	private $opo_config;

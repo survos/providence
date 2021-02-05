@@ -110,7 +110,6 @@ BaseModel::$s_ca_models_definitions['ca_bookmarks'] = array(
 		),
  	)
 );
-
 class ca_bookmarks extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

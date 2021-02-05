@@ -36,7 +36,6 @@ require_once(__CA_LIB_DIR__."/Browse/ObjectBrowse.php");
 require_once(__CA_LIB_DIR__."/Datamodel.php");
 require_once(__CA_MODELS_DIR__."/ca_search_forms.php");
 require_once(__CA_MODELS_DIR__.'/ca_bundle_displays.php');
-
 class BaseAdvancedSearchController extends BaseRefineableSearchController {
 	# -------------------------------------------------------
 	protected $opb_uses_hierarchy_browser = false;

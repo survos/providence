@@ -45,7 +45,6 @@
  require_once(__CA_MODELS_DIR__.'/ca_metadata_elements.php');
  require_once(__CA_APP_DIR__.'/helpers/gisHelpers.php');
  require_once(__CA_LIB_DIR__.'/Plugins/SearchEngine/BaseSearchPlugin.php');
-
 class WLPlugSearchEngineSqlSearch extends BaseSearchPlugin implements IWLPlugSearchEngine {
 	# -------------------------------------------------------
 	private $opn_indexing_subject_tablenum=null;

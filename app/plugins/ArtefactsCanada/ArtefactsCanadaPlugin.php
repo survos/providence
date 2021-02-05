@@ -25,8 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
- 
-	class ArtefactsCanadaPlugin extends BaseApplicationPlugin {
+class ArtefactsCanadaPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		/**
 		 *

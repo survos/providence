@@ -28,9 +28,7 @@
  	require_once(__CA_LIB_DIR__.'/Plugins/InformationService/WorldCat.php');
  	require_once(__CA_MODELS_DIR__.'/ca_data_importers.php');
  	require_once(__CA_APP_DIR__.'/helpers/importHelpers.php');
- 	
-
- 	class ImportController extends ActionController {
+class ImportController extends ActionController {
  		# -------------------------------------------------------
  		/**
  		 *

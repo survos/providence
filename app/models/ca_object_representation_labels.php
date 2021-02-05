@@ -103,7 +103,6 @@ BaseModel::$s_ca_models_definitions['ca_object_representation_labels'] = array(
 		)
  	)
 );
-
 class ca_object_representation_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

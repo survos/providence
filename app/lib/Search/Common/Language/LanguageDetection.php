@@ -36,7 +36,6 @@
 
 // language fingerprints are stored in global var so they only need to loaded once per request
 $LANGUAGE_DETECTION_LM_DATA;	
-
 class LanguageDetection {
 	# ------------------------------------------------------------------
 	// don't change unless you use your own fingerprints

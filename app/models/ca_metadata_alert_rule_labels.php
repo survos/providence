@@ -102,7 +102,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_alert_rule_labels'] = array(
 		)
  	)
 );
-
 class ca_metadata_alert_rule_labels extends BaseLabel {
 	# ---------------------------------
 	# --- Object attribute properties

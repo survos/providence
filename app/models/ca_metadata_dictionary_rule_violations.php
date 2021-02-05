@@ -83,8 +83,6 @@ BaseModel::$s_ca_models_definitions['ca_metadata_dictionary_rule_violations'] = 
 		),
  	)
 );
-
-
 class ca_metadata_dictionary_rule_violations extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

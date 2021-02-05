@@ -35,7 +35,6 @@ namespace CA\Sync\LogEntry;
 use Hoa\Core\Exception\Exception;
 
 require_once(__CA_LIB_DIR__.'/Sync/LogEntry/Base.php');
-
 class Relationship extends Base {
 
 	public function sanityCheck() {

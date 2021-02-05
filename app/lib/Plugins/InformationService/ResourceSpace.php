@@ -57,7 +57,6 @@ $g_information_service_settings_ResourceSpace = array(
 			'description' => _t('ResourceSpace API Key. Used to connect to ResourceSpace for all queries by this user.')
 		)
 );
-
 class WLPlugInformationServiceResourceSpace Extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	/**

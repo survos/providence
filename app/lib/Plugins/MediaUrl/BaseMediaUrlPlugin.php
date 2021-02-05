@@ -36,7 +36,6 @@ namespace CA\MediaUrl\Plugins;
   */
 
 include_once(__CA_LIB_DIR__."/Plugins/WLPlug.php");
-
 class BaseMediaUrlPlugin extends \WLPlug  {
 	# ------------------------------------------------
 	/**

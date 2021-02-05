@@ -25,8 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
- 
-	class WorldCatPlugin extends BaseApplicationPlugin {
+class WorldCatPlugin extends BaseApplicationPlugin {
 		# -------------------------------------------------------
 		/**
 		 *

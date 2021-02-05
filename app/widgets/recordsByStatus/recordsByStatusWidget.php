@@ -30,8 +30,7 @@
  	require_once(__CA_LIB_DIR__.'/Db.php');
 	require_once(__CA_LIB_DIR__.'/Datamodel.php');
 	require_once(__CA_MODELS_DIR__."/ca_lists.php");
- 
-	class recordsByStatusWidget extends BaseWidget implements IWidget {
+class recordsByStatusWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		private $opo_datamodel;

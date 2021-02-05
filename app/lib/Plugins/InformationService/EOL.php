@@ -49,7 +49,6 @@ $g_information_service_settings_EOL= array(
 		'description' => _t('EOLkey code. See http://www.ubio.org/index.php?pagename=xml_services for details. Default is the ubio_keycode setting in app.conf')
 	)
 );
-
 class WLPlugInformationServiceEOL extends BaseInformationServicePlugin Implements IWLPlugInformationService {
 	# ------------------------------------------------
 	static $s_settings;

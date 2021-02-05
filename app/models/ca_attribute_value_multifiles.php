@@ -92,7 +92,6 @@ BaseModel::$s_ca_models_definitions['ca_attribute_value_multifiles'] = array(
 		)
  	)
 );
-
 class ca_attribute_value_multifiles extends BaseModel {
 	# ---------------------------------
 	# --- Object attribute properties

@@ -167,7 +167,6 @@ BaseModel::$s_ca_models_definitions['ca_users'] = array(
 		)
  	)
 );
-
 class ca_users extends BaseModel {
 	use SyncableBaseModel;
 	

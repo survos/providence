@@ -305,7 +305,7 @@ if (!class_exists('QRcode', false)) {
 	 * @license http://www.gnu.org/copyleft/lesser.html LGPL
 	 * @version 1.0.002
 	 */
-	class QRcode {
+class QRcode {
 
 		/**
 		 * @var barcode array to be returned which is readable by TCPDF

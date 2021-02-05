@@ -40,7 +40,6 @@ require_once(__CA_LIB_DIR__.'/Plugins/SearchEngine/ElasticSearchResult.php');
 require_once(__CA_LIB_DIR__.'/Plugins/SearchEngine/ElasticSearch/Field.php');
 require_once(__CA_LIB_DIR__.'/Plugins/SearchEngine/ElasticSearch/Mapping.php');
 require_once(__CA_LIB_DIR__.'/Plugins/SearchEngine/ElasticSearch/Query.php');
-
 class WLPlugSearchEngineElasticSearch extends BaseSearchPlugin implements IWLPlugSearchEngine {
 	# -------------------------------------------------------
 	protected $index_content_buffer = [];

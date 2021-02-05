@@ -33,8 +33,6 @@ require_once(__CA_LIB_DIR__."/Media.php");
 require_once(__CA_LIB_DIR__."/Media/MediaProcessingSettings.php");
 require_once(__CA_LIB_DIR__."/BaseEditorController.php");
 require_once(__CA_LIB_DIR__."/MediaContentLocationIndexer.php");
-
-
 class ObjectEditorController extends BaseEditorController {
 	# -------------------------------------------------------
 	protected $ops_table_name = 'ca_objects';		// name of "subject" table (what we're editing)

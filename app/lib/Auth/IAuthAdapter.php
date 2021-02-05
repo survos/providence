@@ -116,5 +116,4 @@ interface IAuthAdapter {
 	public function getAccountManagementLink();
 
 }
-
 class AuthClassFeatureException extends Exception {}

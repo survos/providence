@@ -27,8 +27,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/Service/OAIPMHService.php');
 	require_once(__CA_LIB_DIR__.'/Service/BaseServiceController.php');
-
-	class OAIController extends BaseServiceController {
+class OAIController extends BaseServiceController {
 		/**
 		 * OAI-PMH service instance does most of the work
 		 */

@@ -71,7 +71,6 @@ BaseModel::$s_ca_models_definitions['ca_users_x_roles'] = array(
 		)
  	)
 );
-
 class ca_users_x_roles extends BaseRelationshipModel {
 	# ---------------------------------
 	# --- Object attribute properties

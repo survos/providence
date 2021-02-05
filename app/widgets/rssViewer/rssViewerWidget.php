@@ -28,8 +28,7 @@
  */
  	require_once(__CA_LIB_DIR__.'/BaseWidget.php');
  	require_once(__CA_LIB_DIR__.'/IWidget.php');
-
-	class rssViewerWidget extends BaseWidget implements IWidget {
+class rssViewerWidget extends BaseWidget implements IWidget {
 		# -------------------------------------------------------
 		private $opo_config;
 		
