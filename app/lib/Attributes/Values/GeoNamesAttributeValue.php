@@ -46,210 +46,217 @@
  global $_ca_attribute_settings;
  
  $_ca_attribute_settings['GeoNamesAttributeValue'] = array(		// global
-	'fieldWidth' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_FIELD,
-		'default' => 60,
-		'width' => 5, 'height' => 1,
-		'label' => _t('Width of data entry field in user interface'),
-		'description' => _t('Width, in characters, of the field when displayed in a user interface.')
-	),
-	'fieldHeight' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_FIELD,
-		'default' => 1,
-		'width' => 5, 'height' => 1,
-		'label' => _t('Height of data entry field in user interface'),
-		'description' => _t('Height, in characters, of the field when displayed in a user interface.')
-	),
-	'doesNotTakeLocale' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 1,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Does not use locale setting'),
-		'description' => _t('Check this option if you don\'t want your GeoNames values to be locale-specific. (The default is to not be.)')
-	),
-	'allowDuplicateValues' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 0,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Allow duplicate values?'),
-		'description' => _t('Check this option if you want to allow duplicate values to be set when element is not in a container and is repeating.')
-	),
-	'canBeUsedInSort' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 0,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Can be used for sorting'),
-		'description' => _t('Check this option if this attribute value can be used for sorting of search results. (The default is not to be.)')
-	),
-	'disableMap' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 0,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Disable map'),
-		'description' => _t('Check this option if you want to disable location map display.')
-	),
-	'canBeEmpty' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 0,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Can be empty'),
-		'description' => _t('Check this option if you want to allow empty attribute values. This - of course - only makes sense if you bundle several elements in a container.')
-	),
-	'canBeUsedInSearchForm' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 1,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Can be used in search form'),
-		'description' => _t('Check this option if this attribute value can be used in search forms. (The default is to be.)')
-	),
-	'canBeUsedInDisplay' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 1,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Can be used in display'),
-		'description' => _t('Check this option if this attribute value can be used for display in search results. (The default is to be.)')
-	),
-	'canMakePDF' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 0,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Allow PDF output?'),
-		'description' => _t('Check this option if this metadata element can be output as a printable PDF. (The default is not to be.)')
-	),
-	'canMakePDFForValue' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 0,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Allow PDF output?'),
-		'description' => _t('Check this option if individual values for this metadata element can be output as a printable PDF. (The default is not to be.)')
-	),
-	'displayTemplate' => array(
-		'formatType' => FT_TEXT,
-		'displayType' => DT_FIELD,
-		'default' => '',
-		'width' => 90, 'height' => 4,
-		'label' => _t('Display template'),
-		'validForRootOnly' => 1,
-		'description' => _t('Layout for value when used in a display (can include HTML). Element code tags prefixed with the ^ character can be used to represent the value in the template. For example: <i>^my_element_code</i>.')
-	),
-	'displayDelimiter' => array(
-		'formatType' => FT_TEXT,
-		'displayType' => DT_FIELD,
-		'default' => '; ',
-		'width' => 10, 'height' => 1,
-		'label' => _t('Value delimiter'),
-		'validForRootOnly' => 1,
-		'description' => _t('Delimiter to use between multiple values when used in a display.')
-	),
-	'maxResults' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_FIELD,
-		'default' => 20,
-		'width' => 5, 'height' => 1,
-		'label' => _t('Maximum number of GeoNames results'),
-		'description' => _t('Determines the maximum number of results returned by GeoNames. Tweak this number if you want to speed up lookups.')
-	),
-	'gnElements' => array(
-		'formatType' => FT_TEXT,
-		'displayType' => DT_FIELD,
-		'default' => 'name,adminName2,adminName1,countryName,continentCode',
-		'width' => 90, 'height' => 4,
-		'label' => _t('GeoNames elements'),
-		'description' => _t('Comma-separated list of GeoNames attributes to be pulled from the service to build the text representation for the selected location. See http://www.geonames.org/export/geonames-search.html for further reference, including the available element names. Note that latitude and longitude are always added to the text value to enable map display.')
-	),
-	'gnDelimiter' => array(
-		'formatType' => FT_TEXT,
-		'displayType' => DT_FIELD,
-		'default' => ', ',
-		'width' => 10, 'height' => 1,
-		'label' => _t('GeoNames element delimiter'),
-		'description' => _t('Delimiter to use between multiple values pulled from GeoNames service.')
-	),
+    'fieldWidth' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_FIELD,
+        'default' => 60,
+        'width' => 5, 'height' => 1,
+        'label' => _t('Width of data entry field in user interface'),
+        'description' => _t('Width, in characters, of the field when displayed in a user interface.')
+    ),
+    'fieldHeight' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_FIELD,
+        'default' => 1,
+        'width' => 5, 'height' => 1,
+        'label' => _t('Height of data entry field in user interface'),
+        'description' => _t('Height, in characters, of the field when displayed in a user interface.')
+    ),
+    'doesNotTakeLocale' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 1,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Does not use locale setting'),
+        'description' => _t('Check this option if you don\'t want your GeoNames values to be locale-specific. (The default is to not be.)')
+    ),
+    'allowDuplicateValues' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 0,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Allow duplicate values?'),
+        'description' => _t('Check this option if you want to allow duplicate values to be set when element is not in a container and is repeating.')
+    ),
+    'canBeUsedInSort' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 0,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Can be used for sorting'),
+        'description' => _t('Check this option if this attribute value can be used for sorting of search results. (The default is not to be.)')
+    ),
+    'disableMap' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 0,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Disable map'),
+        'description' => _t('Check this option if you want to disable location map display.')
+    ),
+    'canBeEmpty' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 0,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Can be empty'),
+        'description' => _t('Check this option if you want to allow empty attribute values. This - of course - only makes sense if you bundle several elements in a container.')
+    ),
+    'canBeUsedInSearchForm' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 1,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Can be used in search form'),
+        'description' => _t('Check this option if this attribute value can be used in search forms. (The default is to be.)')
+    ),
+    'canBeUsedInDisplay' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 1,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Can be used in display'),
+        'description' => _t('Check this option if this attribute value can be used for display in search results. (The default is to be.)')
+    ),
+    'canMakePDF' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 0,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Allow PDF output?'),
+        'description' => _t('Check this option if this metadata element can be output as a printable PDF. (The default is not to be.)')
+    ),
+    'canMakePDFForValue' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 0,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Allow PDF output?'),
+        'description' => _t('Check this option if individual values for this metadata element can be output as a printable PDF. (The default is not to be.)')
+    ),
+    'displayTemplate' => array(
+        'formatType' => FT_TEXT,
+        'displayType' => DT_FIELD,
+        'default' => '',
+        'width' => 90, 'height' => 4,
+        'label' => _t('Display template'),
+        'validForRootOnly' => 1,
+        'description' => _t('Layout for value when used in a display (can include HTML). Element code tags prefixed with the ^ character can be used to represent the value in the template. For example: <i>^my_element_code</i>.')
+    ),
+    'displayDelimiter' => array(
+        'formatType' => FT_TEXT,
+        'displayType' => DT_FIELD,
+        'default' => '; ',
+        'width' => 10, 'height' => 1,
+        'label' => _t('Value delimiter'),
+        'validForRootOnly' => 1,
+        'description' => _t('Delimiter to use between multiple values when used in a display.')
+    ),
+    'maxResults' => array(
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_FIELD,
+        'default' => 20,
+        'width' => 5, 'height' => 1,
+        'label' => _t('Maximum number of GeoNames results'),
+        'description' => _t('Determines the maximum number of results returned by GeoNames. Tweak this number if you want to speed up lookups.')
+    ),
+    'gnElements' => array(
+        'formatType' => FT_TEXT,
+        'displayType' => DT_FIELD,
+        'default' => 'name,adminName2,adminName1,countryName,continentCode',
+        'width' => 90, 'height' => 4,
+        'label' => _t('GeoNames elements'),
+        'description' => _t('Comma-separated list of GeoNames attributes to be pulled from the service to build the text representation for the selected location. See http://www.geonames.org/export/geonames-search.html for further reference, including the available element names. Note that latitude and longitude are always added to the text value to enable map display.')
+    ),
+    'gnDelimiter' => array(
+        'formatType' => FT_TEXT,
+        'displayType' => DT_FIELD,
+        'default' => ', ',
+        'width' => 10, 'height' => 1,
+        'label' => _t('GeoNames element delimiter'),
+        'description' => _t('Delimiter to use between multiple values pulled from GeoNames service.')
+    ),
 );
-class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue {
-	# ------------------------------------------------------------------
- 	private $ops_text_value;
- 	private $ops_uri_value;
- 	# ------------------------------------------------------------------
- 	public function __construct($pa_value_array=null) {
- 		parent::__construct($pa_value_array);
- 	}
- 	# ------------------------------------------------------------------
- 	public function loadTypeSpecificValueFromRow($pa_value_array) {
- 		$this->ops_text_value = $pa_value_array['value_longtext1'];
- 		$this->ops_uri_value =  $pa_value_array['value_longtext2'];
- 	}
- 	# ------------------------------------------------------------------
- 	/**
- 	 * @param array $pa_options Options are:
- 	 *		forDuplication = returns full text + Geonames URL suitable for setting a duplicate attribute. Used in BaseModelWithAttributes::copyAttributesTo()
- 	 * @return string GeoNames value
- 	 */
-	public function getDisplayValue($pa_options=null) {
-		if(isset($pa_options['coordinates']) && $pa_options['coordinates']) {
-			if (preg_match("!\[([^\]]+)!", $this->ops_text_value, $va_matches)) {
-				$va_tmp = explode(',', $va_matches[1]);
-				if ((sizeof($va_tmp) == 2) && (is_numeric($va_tmp[0])) && (is_numeric($va_tmp[1]))) {
-					return array('latitude' => trim($va_tmp[0]), 'longitude' => trim($va_tmp[1]), 'path' => trim($va_matches[1]), 'label' => $this->ops_text_value);
-				} else {
-					return array('latitude' => null, 'longitude' => null, 'path' => null, 'label' => $this->ops_text_value);
-				}
-			} else {
-				return array('latitude' => null, 'longitude' => null, 'path' => null, 'label' => $this->ops_text_value);
-			}
-		}
-		
-		if(isset($pa_options['forDuplication']) && $pa_options['forDuplication']) {
-			return $this->ops_text_value.'|'.$this->ops_uri_value;
-		}
+class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue
+{
+    # ------------------------------------------------------------------
+    private $ops_text_value;
+    private $ops_uri_value;
+    # ------------------------------------------------------------------
+    public function __construct($pa_value_array=null)
+    {
+        parent::__construct($pa_value_array);
+    }
+    # ------------------------------------------------------------------
+    public function loadTypeSpecificValueFromRow($pa_value_array)
+    {
+        $this->ops_text_value = $pa_value_array['value_longtext1'];
+        $this->ops_uri_value =  $pa_value_array['value_longtext2'];
+    }
+    # ------------------------------------------------------------------
+    /**
+     * @param array $pa_options Options are:
+     *		forDuplication = returns full text + Geonames URL suitable for setting a duplicate attribute. Used in BaseModelWithAttributes::copyAttributesTo()
+     * @return string GeoNames value
+     */
+    public function getDisplayValue($pa_options=null)
+    {
+        if (isset($pa_options['coordinates']) && $pa_options['coordinates']) {
+            if (preg_match("!\[([^\]]+)!", $this->ops_text_value, $va_matches)) {
+                $va_tmp = explode(',', $va_matches[1]);
+                if ((sizeof($va_tmp) == 2) && (is_numeric($va_tmp[0])) && (is_numeric($va_tmp[1]))) {
+                    return array('latitude' => trim($va_tmp[0]), 'longitude' => trim($va_tmp[1]), 'path' => trim($va_matches[1]), 'label' => $this->ops_text_value);
+                } else {
+                    return array('latitude' => null, 'longitude' => null, 'path' => null, 'label' => $this->ops_text_value);
+                }
+            } else {
+                return array('latitude' => null, 'longitude' => null, 'path' => null, 'label' => $this->ops_text_value);
+            }
+        }
+        
+        if (isset($pa_options['forDuplication']) && $pa_options['forDuplication']) {
+            return $this->ops_text_value.'|'.$this->ops_uri_value;
+        }
 
-		return $this->ops_uri_value ? $this->ops_text_value.' [id:'.$this->ops_uri_value.']' : '';
-	}
-	# ------------------------------------------------------------------
-	public function getTextValue(){
-		return $this->ops_text_value;
-	}
- 	# ------------------------------------------------------------------
-	public function getUri(){
-		return $this->ops_uri_value;
-	}
-	# ------------------------------------------------------------------
-	/**
-	 *
-	 */
-	public function parseValue($ps_value, $pa_element_info, $pa_options=null) {
-		global $g_ui_locale_id;
- 		$ps_value = trim(preg_replace("![\t\n\r]+!", ' ', $ps_value));
-		$vo_conf = Configuration::load();
-		$vs_user = trim($vo_conf->get("geonames_user"));
+        return $this->ops_uri_value ? $this->ops_text_value.' [id:'.$this->ops_uri_value.']' : '';
+    }
+    # ------------------------------------------------------------------
+    public function getTextValue()
+    {
+        return $this->ops_text_value;
+    }
+    # ------------------------------------------------------------------
+    public function getUri()
+    {
+        return $this->ops_uri_value;
+    }
+    # ------------------------------------------------------------------
+    /**
+     *
+     */
+    public function parseValue($ps_value, $pa_element_info, $pa_options=null)
+    {
+        global $g_ui_locale_id;
+        $ps_value = trim(preg_replace("![\t\n\r]+!", ' ', $ps_value));
+        $vo_conf = Configuration::load();
+        $vs_user = trim($vo_conf->get("geonames_user"));
 
-		$va_settings = $this->getSettingValuesFromElementArray($pa_element_info, ['canBeEmpty']);
-		if (!$ps_value) {
- 			if(!$va_settings["canBeEmpty"]){
-				$this->postError(1970, _t('Entry for <em>%1</em> was blank.', $pa_element_info['displayLabel']), 'GeoNamesAttributeValue->parseValue()');
-				return false;
-			}
-			return [];
- 		} else {
- 			$vs_text = $ps_value;
- 			$vs_id = null;
-			if (preg_match("! \[id:([0-9]+)\]$!", $vs_text, $va_matches)) {
-				$vs_id = $va_matches[1];
-				$vs_text = preg_replace("! \[id:[0-9]+\]$!", "", $ps_value);
-			}
-			if (!$vs_id) {
-			    $vs_base = $vo_conf->get('geonames_api_base_url') . '/search';
+        $va_settings = $this->getSettingValuesFromElementArray($pa_element_info, ['canBeEmpty']);
+        if (!$ps_value) {
+            if (!$va_settings["canBeEmpty"]) {
+                $this->postError(1970, _t('Entry for <em>%1</em> was blank.', $pa_element_info['displayLabel']), 'GeoNamesAttributeValue->parseValue()');
+                return false;
+            }
+            return [];
+        } else {
+            $vs_text = $ps_value;
+            $vs_id = null;
+            if (preg_match("! \[id:([0-9]+)\]$!", $vs_text, $va_matches)) {
+                $vs_id = $va_matches[1];
+                $vs_text = preg_replace("! \[id:[0-9]+\]$!", "", $ps_value);
+            }
+            if (!$vs_id) {
+                $vs_base = $vo_conf->get('geonames_api_base_url') . '/search';
                 $t_locale = new ca_locales($g_ui_locale_id);
                 $vs_lang = $t_locale->get("language");
                 $va_params = [
@@ -270,13 +277,12 @@ class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue {
                     $vo_xml = new SimpleXMLElement($vs_xml);
                 
                     $va_attr = $vo_xml->status ? $vo_xml->status->attributes() : null;
-                    if ($va_attr && isset($va_attr['value']) && ((int)$va_attr['value'] > 0)) { 
+                    if ($va_attr && isset($va_attr['value']) && ((int)$va_attr['value'] > 0)) {
                         $this->postError(1970, _t('Connection to GeoNames with username "%1" was rejected with the message "%2". Check your configuration and make sure your GeoNames.org account is enabled for web services.', $vs_user, $va_attr['message']), 'GeoNamesAttributeValue->parseValue()');
                         return false;
                     } else {
-                        foreach($vo_xml->children() as $vo_child){
-                            if($vo_child->getName()=="geoname"){
-
+                        foreach ($vo_xml->children() as $vo_child) {
+                            if ($vo_child->getName()=="geoname") {
                                 $vs_text = $vo_child->name.
                                                 ($vo_child->lat ? " [".$vo_child->lat."," : '').
                                                 ($vo_child->lng ? $vo_child->lng."]" : '');
@@ -290,78 +296,79 @@ class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue {
                     }
                 } catch (Exception $e) {
                     $this->postError(1970, _t('Could not connect to GeoNames'), 'GeoNamesAttributeValue->parseValue()');
-				    return false;
+                    return false;
                 }
-				if(!$va_settings["canBeEmpty"]){
-					$this->postError(1970, _t('Entry for <em>%1</em> was blank.', $pa_element_info['displayLabel']), 'GeoNamesAttributeValue->parseValue()');
-					return false;
-				}
-				return [];
-			}
+                if (!$va_settings["canBeEmpty"]) {
+                    $this->postError(1970, _t('Entry for <em>%1</em> was blank.', $pa_element_info['displayLabel']), 'GeoNamesAttributeValue->parseValue()');
+                    return false;
+                }
+                return [];
+            }
 
-			return [
-				'value_longtext1' => $vs_text,
-				'value_longtext2' => $vs_id,
-			];
-		}
-	}
-	# ------------------------------------------------------------------
-	/**
-	 * Return HTML form element for editing.
-	 *
-	 * @param array $pa_element_info An array of information about the metadata element being edited
-	 * @param array $pa_options array Options include:
-	 *			forSearch = simple text entry is returned for use with search forms [Default=false]
-	 *			class = the CSS class to apply to all visible form elements [Default=lookupBg]
-	 *			width = the width of the form element [Default=field width defined in metadata element definition]
-	 *			height = the height of the form element [Default=field height defined in metadata element definition]
-	 *			request = the RequestHTTP object for the current request; required for lookups to work [Default is null]
-	 *			disableMap = don't show map with Geonames data [Default=false]
-	 *
-	 * @return string
-	 */
-	public function htmlFormElement($pa_element_info, $pa_options=null) {
-		$vs_class = trim((isset($pa_options['class']) && $pa_options['class']) ? $pa_options['class'] : '');
-		if (isset($pa_options['forSearch']) && $pa_options['forSearch']) {
-			return caHTMLTextInput("{fieldNamePrefix}".$pa_element_info['element_id']."_{n}", array('id' => "{fieldNamePrefix}".$pa_element_info['element_id']."_{n}", 'value' => $pa_options['value']), $pa_options);
-		}
- 		$o_config = Configuration::load();
+            return [
+                'value_longtext1' => $vs_text,
+                'value_longtext2' => $vs_id,
+            ];
+        }
+    }
+    # ------------------------------------------------------------------
+    /**
+     * Return HTML form element for editing.
+     *
+     * @param array $pa_element_info An array of information about the metadata element being edited
+     * @param array $pa_options array Options include:
+     *			forSearch = simple text entry is returned for use with search forms [Default=false]
+     *			class = the CSS class to apply to all visible form elements [Default=lookupBg]
+     *			width = the width of the form element [Default=field width defined in metadata element definition]
+     *			height = the height of the form element [Default=field height defined in metadata element definition]
+     *			request = the RequestHTTP object for the current request; required for lookups to work [Default is null]
+     *			disableMap = don't show map with Geonames data [Default=false]
+     *
+     * @return string
+     */
+    public function htmlFormElement($pa_element_info, $pa_options=null)
+    {
+        $vs_class = trim((isset($pa_options['class']) && $pa_options['class']) ? $pa_options['class'] : '');
+        if (isset($pa_options['forSearch']) && $pa_options['forSearch']) {
+            return caHTMLTextInput("{fieldNamePrefix}".$pa_element_info['element_id']."_{n}", array('id' => "{fieldNamePrefix}".$pa_element_info['element_id']."_{n}", 'value' => $pa_options['value']), $pa_options);
+        }
+        $o_config = Configuration::load();
 
- 		$va_settings = $this->getSettingValuesFromElementArray($pa_element_info, array('fieldWidth', 'fieldHeight', 'disableMap', 'maxResults', 'gnElements', 'gnDelimiter'));
-		
- 		$vn_max_results = (isset($va_settings['maxResults']) ? intval($va_settings['maxResults']) : 20);
- 		$vs_gn_elements = $va_settings['gnElements'];
- 		$vs_gn_delimiter = $va_settings['gnDelimiter'];
+        $va_settings = $this->getSettingValuesFromElementArray($pa_element_info, array('fieldWidth', 'fieldHeight', 'disableMap', 'maxResults', 'gnElements', 'gnDelimiter'));
+        
+        $vn_max_results = (isset($va_settings['maxResults']) ? intval($va_settings['maxResults']) : 20);
+        $vs_gn_elements = $va_settings['gnElements'];
+        $vs_gn_delimiter = $va_settings['gnDelimiter'];
 
- 		if ($pa_options['request']) {
-			$vs_url = caNavUrl($pa_options['request'], 'lookup', 'GeoNames', 'Get', array('maxRows' => $vn_max_results, 'gnElements' => urlencode($vs_gn_elements), 'gnDelimiter' => urlencode($vs_gn_delimiter)));
-		}
+        if ($pa_options['request']) {
+            $vs_url = caNavUrl($pa_options['request'], 'lookup', 'GeoNames', 'Get', array('maxRows' => $vn_max_results, 'gnElements' => urlencode($vs_gn_elements), 'gnDelimiter' => urlencode($vs_gn_delimiter)));
+        }
 
- 		$vs_element = '<div id="geonames_'.$pa_element_info['element_id'].'_input{n}">'.
- 			caHTMLTextInput(
- 				'{fieldNamePrefix}'.$pa_element_info['element_id'].'_autocomplete{n}',
-				array(
-					'size' => (isset($pa_options['width']) && $pa_options['width'] > 0) ? $pa_options['width'] : $va_settings['fieldWidth'],
-					'height' => (isset($pa_options['height']) && $pa_options['height'] > 0) ? $pa_options['height'] : $va_settings['fieldHeight'], 
-					'value' => '{{'.$pa_element_info['element_id'].'}}',
-					'maxlength' => 512,
-					'id' => "geonames_".$pa_element_info['element_id']."_autocomplete{n}",
-					'class' => $vs_class ? $vs_class : 'lookupBg'
-				)
-			).
-			caHTMLHiddenInput(
-				'{fieldNamePrefix}'.$pa_element_info['element_id'].'_{n}',
-				array(
-					'value' => '{{'.$pa_element_info['element_id'].'}}',
-					'id' => '{fieldNamePrefix}'.$pa_element_info['element_id'].'_{n}'
-				)
-			);
-			
-		$vs_element .= " <a href='#' class='caGeoNamesServiceMoreLink' id='{fieldNamePrefix}".$pa_element_info['element_id']."_link{n}' target='_geonames_details'>"._t("More &rsaquo;")."</a>";
+        $vs_element = '<div id="geonames_'.$pa_element_info['element_id'].'_input{n}">'.
+            caHTMLTextInput(
+                '{fieldNamePrefix}'.$pa_element_info['element_id'].'_autocomplete{n}',
+                array(
+                    'size' => (isset($pa_options['width']) && $pa_options['width'] > 0) ? $pa_options['width'] : $va_settings['fieldWidth'],
+                    'height' => (isset($pa_options['height']) && $pa_options['height'] > 0) ? $pa_options['height'] : $va_settings['fieldHeight'],
+                    'value' => '{{'.$pa_element_info['element_id'].'}}',
+                    'maxlength' => 512,
+                    'id' => "geonames_".$pa_element_info['element_id']."_autocomplete{n}",
+                    'class' => $vs_class ? $vs_class : 'lookupBg'
+                )
+            ).
+            caHTMLHiddenInput(
+                '{fieldNamePrefix}'.$pa_element_info['element_id'].'_{n}',
+                array(
+                    'value' => '{{'.$pa_element_info['element_id'].'}}',
+                    'id' => '{fieldNamePrefix}'.$pa_element_info['element_id'].'_{n}'
+                )
+            );
+            
+        $vs_element .= " <a href='#' class='caGeoNamesServiceMoreLink' id='{fieldNamePrefix}".$pa_element_info['element_id']."_link{n}' target='_geonames_details'>"._t("More &rsaquo;")."</a>";
 
-		$vs_element .= '</div>';
+        $vs_element .= '</div>';
 
-		$vs_element .= "
+        $vs_element .= "
 			<script type='text/javascript'>
 				jQuery(document).ready(function() {
 					jQuery('#geonames_".$pa_element_info['element_id']."_autocomplete{n}').autocomplete(
@@ -387,11 +394,11 @@ class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue {
 			</script>
 		";
 
-		if(!caGetOption("disableMap", $va_settings, false) && !caGetOption("disableMap", $pa_options, false)) {
-			if (strlen($o_config->get('google_maps_key'))) {
-				AssetLoadManager::register('maps');
+        if (!caGetOption("disableMap", $va_settings, false) && !caGetOption("disableMap", $pa_options, false)) {
+            if (strlen($o_config->get('google_maps_key'))) {
+                AssetLoadManager::register('maps');
 
-				$vs_element .= "
+                $vs_element .= "
 					<div id='map_".$pa_element_info['element_id']."{n}' style='width:700px; height:160px;'>
 
 					</div>
@@ -402,7 +409,7 @@ class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue {
 							jQuery(document).ready(function() {
 				";
 
-				$vs_element .= "
+                $vs_element .= "
 						var re = /\[([\d\.\-,; ]+)\]/;
 						var r = re.exec('{{".$pa_element_info['element_id']."}}');
 						var latlong = (r) ? r[1] : null;
@@ -424,40 +431,43 @@ class GeoNamesAttributeValue extends AttributeValue implements IAttributeValue {
 							});
 						}";
 
-				$vs_element .= "
+                $vs_element .= "
 							});
 						}
 					</script>";
-			} else {
-				$vs_element .= "<h3>"._t('Warning: Cannot display map without configured GoogleMaps key')."</h3>";
-			}
-		}
+            } else {
+                $vs_element .= "<h3>"._t('Warning: Cannot display map without configured GoogleMaps key')."</h3>";
+            }
+        }
 
- 		return $vs_element;
- 	}
- 	# ------------------------------------------------------------------
- 	public function getAvailableSettings($pa_element_info=null) {
- 		global $_ca_attribute_settings;
+        return $vs_element;
+    }
+    # ------------------------------------------------------------------
+    public function getAvailableSettings($pa_element_info=null)
+    {
+        global $_ca_attribute_settings;
 
- 		return $_ca_attribute_settings['GeoNamesAttributeValue'];
- 	}
- 	# ------------------------------------------------------------------
-		/**
-		 * Returns name of field in ca_attribute_values to use for sort operations
-		 * 
-		 * @return string Name of sort field
-		 */
-		public function sortField() {
-			return 'value_longtext1';
-		}
- 	# ------------------------------------------------------------------
-		/**
-		 * Returns constant for geonames attribute value
-		 * 
-		 * @return int Attribute value type code
-		 */
-		public function getType() {
-			return __CA_ATTRIBUTE_VALUE_GEONAMES__;
-		}
- 		# ------------------------------------------------------------------
+        return $_ca_attribute_settings['GeoNamesAttributeValue'];
+    }
+    # ------------------------------------------------------------------
+    /**
+     * Returns name of field in ca_attribute_values to use for sort operations
+     *
+     * @return string Name of sort field
+     */
+    public function sortField()
+    {
+        return 'value_longtext1';
+    }
+    # ------------------------------------------------------------------
+    /**
+     * Returns constant for geonames attribute value
+     *
+     * @return int Attribute value type code
+     */
+    public function getType()
+    {
+        return __CA_ATTRIBUTE_VALUE_GEONAMES__;
+    }
+    # ------------------------------------------------------------------
 }

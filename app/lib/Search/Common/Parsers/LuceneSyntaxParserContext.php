@@ -1,5 +1,6 @@
 <?php
-class LuceneSyntaxParserContext {
+class LuceneSyntaxParserContext
+{
     /**
      * Default field for the context.
      *
@@ -65,7 +66,7 @@ class LuceneSyntaxParserContext {
     private $_encoding;
     
     
-	private $opn_default_operator = LuceneSyntaxParser::B_AND;
+    private $opn_default_operator = LuceneSyntaxParser::B_AND;
 
 
     /**
@@ -118,7 +119,7 @@ class LuceneSyntaxParserContext {
 
         if ($sign == Zend_Search_Lucene_Search_QueryToken::TT_REQUIRED) {
             $this->_nextEntrySign = true;
-        } else if ($sign == Zend_Search_Lucene_Search_QueryToken::TT_PROHIBITED) {
+        } elseif ($sign == Zend_Search_Lucene_Search_QueryToken::TT_PROHIBITED) {
             $this->_nextEntrySign = false;
         } else {
             throw new Zend_Search_Lucene_Exception('Unrecognized sign type.');
@@ -219,7 +220,7 @@ class LuceneSyntaxParserContext {
     {
         $query = new Zend_Search_Lucene_Search_Query_Boolean();
 
-       // if (Zend_Search_Lucene_Search_QueryParser::getDefaultOperator() == Zend_Search_Lucene_Search_QueryParser::B_AND) {
+        // if (Zend_Search_Lucene_Search_QueryParser::getDefaultOperator() == Zend_Search_Lucene_Search_QueryParser::B_AND) {
         if ($this->getDefaultOperator() == LuceneSyntaxParser::B_AND) {
             $defaultSign = true; // required
         } else {
@@ -356,20 +357,22 @@ class LuceneSyntaxParserContext {
     }
     
     /**
-	 * Set default boolean operator
-	 *
-	 * @param integer $operator
-	 */
-	public function setDefaultOperator($operator) {
-		$this->opn_default_operator = $operator;
-	}
+     * Set default boolean operator
+     *
+     * @param integer $operator
+     */
+    public function setDefaultOperator($operator)
+    {
+        $this->opn_default_operator = $operator;
+    }
 
-	/**
-	 * Get default boolean operator
-	 *
-	 * @return integer
-	 */
-	public function getDefaultOperator() {
-		return $this->opn_default_operator;
-	}
+    /**
+     * Get default boolean operator
+     *
+     * @return integer
+     */
+    public function getDefaultOperator()
+    {
+        return $this->opn_default_operator;
+    }
 }

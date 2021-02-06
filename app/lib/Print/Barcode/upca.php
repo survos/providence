@@ -53,42 +53,41 @@
  */
 class Barcode_upca extends Barcode
 {
-
-	var $_printText = false; // print number below barcode?
-	
+    public $_printText = false; // print number below barcode?
+    
     /**
      * Barcode type
      * @var string
      */
-    var $_type = 'upca';
+    public $_type = 'upca';
 
     /**
      * Barcode height
      *
      * @var integer
      */
-    var $_barcodeheight = 50;
+    public $_barcodeheight = 50;
 
     /**
      * Font use to display text
      *
      * @var integer
      */
-    var $_font = 2;  // gd internal small font
+    public $_font = 2;  // gd internal small font
 
     /**
      * Bar width
      *
      * @var integer
      */
-    var $_barwidth = 1;
+    public $_barwidth = 1;
 
 
     /**
      * Number set
      * @var array
      */
-    var $_number_set = array(
+    public $_number_set = array(
            '0' => array(
                     'A' => array(0,0,0,1,1,0,1),
                     'B' => array(0,1,0,0,1,1,1),
@@ -142,7 +141,7 @@ class Barcode_upca extends Barcode
         );
 
 
-    var $_number_set_left_coding = array(
+    public $_number_set_left_coding = array(
            '0' => array('A','A','A','A','A','A'),
            '1' => array('A','A','B','A','B','B'),
            '2' => array('A','A','B','B','A','B'),
@@ -171,7 +170,7 @@ class Barcode_upca extends Barcode
      * @author  Didier Fournout <didier.fournout@nyc.fr>
      *
      */
-    function &draw($text, $imgtype = 'png')
+    public function &draw($text, $imgtype = 'png')
     {
         $error = false;
         if ((is_numeric($text)==false) || (strlen($text)!=12)) {
@@ -206,21 +205,21 @@ class Barcode_upca extends Barcode
             $black    = ImageColorAllocate($imgerror, 0, 0, 0);
             imagefill($imgerror, 0, 0, $red);
 
-			
+            
             if ($this->_printText) {
-				imagestring(
-					$imgerror,
-					$this->_font,
-					$barcodewidth / 2 - (10/2 * imagefontwidth($this->_font)),
-					$this->_barcodeheight / 2,
-					'Code Error',
-					$black
-				);
-			}
+                imagestring(
+                    $imgerror,
+                    $this->_font,
+                    $barcodewidth / 2 - (10/2 * imagefontwidth($this->_font)),
+                    $this->_barcodeheight / 2,
+                    'Code Error',
+                    $black
+                );
+            }
         }
 
         // get the first digit which is the key for creating the first 6 bars
-        $key = substr($text,0,1);
+        $key = substr($text, 0, 1);
 
         // Initiate x position
         $xpos = 0;
@@ -256,8 +255,8 @@ class Barcode_upca extends Barcode
 
         // Draw left $text contents
         for ($idx = 1; $idx < 6; $idx ++) {
-            $value=substr($text,$idx,1);
-            imagestring ($img, $this->_font, $xpos+1, $this->_barcodeheight, $value, $black);
+            $value=substr($text, $idx, 1);
+            imagestring($img, $this->_font, $xpos+1, $this->_barcodeheight, $value, $black);
 
             //foreach ($this->_number_set[$value][$set_array[$idx-1]] as $bar) {
 
@@ -287,8 +286,8 @@ class Barcode_upca extends Barcode
 
         // Draw right $text contents
         for ($idx = 6; $idx < 11; $idx ++) {
-            $value=substr($text,$idx,1);
-            imagestring ($img, $this->_font, $xpos+1, $this->_barcodeheight, $value, $black);
+            $value=substr($text, $idx, 1);
+            imagestring($img, $this->_font, $xpos+1, $this->_barcodeheight, $value, $black);
             foreach ($this->_number_set[$value]['C'] as $bar) {
                 if ($bar) {
                     imagefilledrectangle($img, $xpos, 0, $xpos + $this->_barwidth - 1, $this->_barcodeheight, $black);
@@ -299,7 +298,7 @@ class Barcode_upca extends Barcode
 
 
 
-        $value = substr($text,11,1);
+        $value = substr($text, 11, 1);
         foreach ($this->_number_set[$value]['C'] as $bar) {
             if ($bar) {
                 imagefilledrectangle($img, $xpos, 0, $xpos + $this->_barwidth - 1, $barcodelongheight, $black);
@@ -329,6 +328,4 @@ class Barcode_upca extends Barcode
             return $img;
         }
     } // function create
-
 } // class
-?>

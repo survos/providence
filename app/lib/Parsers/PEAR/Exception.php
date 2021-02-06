@@ -180,15 +180,15 @@ class PEAR_Exception extends Exception
             }
             settype($func, 'array');
             switch ($func[0]) {
-                case self::OBSERVER_PRINT :
+                case self::OBSERVER_PRINT:
                     $f = (isset($func[1])) ? $func[1] : '%s';
                     printf($f, $this->getMessage());
                     break;
-                case self::OBSERVER_TRIGGER :
+                case self::OBSERVER_TRIGGER:
                     $f = (isset($func[1])) ? $func[1] : E_USER_NOTICE;
                     trigger_error($this->getMessage(), $f);
                     break;
-                case self::OBSERVER_DIE :
+                case self::OBSERVER_DIE:
                     $f = (isset($func[1])) ? $func[1] : '%s';
                     die(printf($f, $this->getMessage()));
                     break;
@@ -348,20 +348,27 @@ class PEAR_Exception extends Exception
             $args = array();
             if (!empty($v['args'])) {
                 foreach ($v['args'] as $arg) {
-                    if (is_null($arg)) $args[] = 'null';
-                    elseif (is_array($arg)) $args[] = 'Array';
-                    elseif (is_object($arg)) $args[] = 'Object('.get_class($arg).')';
-                    elseif (is_bool($arg)) $args[] = $arg ? 'true' : 'false';
-                    elseif (is_int($arg) || is_double($arg)) $args[] = $arg;
-                    else {
+                    if (is_null($arg)) {
+                        $args[] = 'null';
+                    } elseif (is_array($arg)) {
+                        $args[] = 'Array';
+                    } elseif (is_object($arg)) {
+                        $args[] = 'Object('.get_class($arg).')';
+                    } elseif (is_bool($arg)) {
+                        $args[] = $arg ? 'true' : 'false';
+                    } elseif (is_int($arg) || is_double($arg)) {
+                        $args[] = $arg;
+                    } else {
                         $arg = (string)$arg;
                         $str = htmlspecialchars(substr($arg, 0, 16));
-                        if (strlen($arg) > 16) $str .= '&hellip;';
+                        if (strlen($arg) > 16) {
+                            $str .= '&hellip;';
+                        }
                         $args[] = "'" . $str . "'";
                     }
                 }
             }
-            $html .= '(' . implode(', ',$args) . ')'
+            $html .= '(' . implode(', ', $args) . ')'
                    . '</td>'
                    . '<td>' . (isset($v['file']) ? $v['file'] : 'unknown')
                    . ':' . (isset($v['line']) ? $v['line'] : 'unknown')

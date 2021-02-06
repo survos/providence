@@ -47,34 +47,34 @@ class Barcode_int25 extends Barcode
      * Barcode type
      * @var string
      */
-    var $_type = 'int25';
+    public $_type = 'int25';
 
     /**
      * Barcode height
      *
      * @var integer
      */
-    var $_barcodeheight = 50;
+    public $_barcodeheight = 50;
 
     /**
      * Bar thin width
      *
      * @var integer
      */
-    var $_barthinwidth = 1;
+    public $_barthinwidth = 1;
 
     /**
      * Bar thick width
      *
      * @var integer
      */
-    var $_barthickwidth = 3;
+    public $_barthickwidth = 3;
 
     /**
      * Coding map
      * @var array
      */
-    var $_coding_map = array(
+    public $_coding_map = array(
            '0' => '00110',
            '1' => '10001',
            '2' => '01001',
@@ -101,12 +101,13 @@ class Barcode_int25 extends Barcode
      * @since  Barcode 0.3
      */
 
-    function &draw($text, $imgtype = 'png')
+    public function &draw($text, $imgtype = 'png')
     {
-
         $text = trim($text);
 
-        if (!preg_match("/[0-9]/",$text)) return;
+        if (!preg_match("/[0-9]/", $text)) {
+            return;
+        }
 
         // if odd $text lenght adds a '0' at string beginning
         $text = strlen($text) % 2 ? '0' . $text : $text;
@@ -153,7 +154,7 @@ class Barcode_int25 extends Barcode
 
                 // Left enought space to draw even char (white)
                 $elementwidth = (substr($this->_coding_map[$evenchar], $baridx, 1)) ?  $this->_barthickwidth : $this->_barthinwidth;
-                $xpos += $elementwidth; 
+                $xpos += $elementwidth;
                 $xpos ++;
             }
         }
@@ -170,6 +171,4 @@ class Barcode_int25 extends Barcode
 
         return $img;
     } // function create
-
 } // class
-?>

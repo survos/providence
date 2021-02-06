@@ -174,8 +174,8 @@ class KLogger
         $this->_severityThreshold = $severity;
         if (!file_exists($logDirectory)) {
             if (!@mkdir($logDirectory, self::$_defaultPermissions, true)) {
-            	$this->_logStatus = self::STATUS_OPEN_FAILED;
-            	$this->_messageQueue[] = $this->_messages['openfail'];
+                $this->_logStatus = self::STATUS_OPEN_FAILED;
+                $this->_messageQueue[] = $this->_messages['openfail'];
             }
         }
 
@@ -243,7 +243,7 @@ class KLogger
 
     /**
      * Sets the date format used by all instances of KLogger
-     * 
+     *
      * @param string $dateFormat Valid format string for date()
      */
     public static function setDateFormat($dateFormat)
@@ -277,7 +277,7 @@ class KLogger
 
     /**
      * Writes a $line to the log with a severity level of WARN. Generally
-     * corresponds to E_WARNING, E_USER_WARNING, E_CORE_WARNING, or 
+     * corresponds to E_WARNING, E_USER_WARNING, E_CORE_WARNING, or
      * E_COMPILE_WARNING
      *
      * @param string $line Information to log
@@ -359,7 +359,7 @@ class KLogger
             
             $line = "$status $line";
             
-            if($args !== self::NO_ARGUMENTS) {
+            if ($args !== self::NO_ARGUMENTS) {
                 /* Print the passed object value */
                 $line = $line . '; ' . var_export($args, true);
             }

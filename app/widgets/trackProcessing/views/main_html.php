@@ -1,6 +1,6 @@
 <?php
 /* ----------------------------------------------------------------------
- * app/widgets/count/views/main_html.php : 
+ * app/widgets/count/views/main_html.php :
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -16,9 +16,9 @@
  *
  * CollectiveAccess is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * This source code is free and modifiable under the terms of 
+ * This source code is free and modifiable under the terms of
  * GNU General Public License. (http://www.gnu.org/copyleft/gpl.html). See
  * the "license.txt" file for details, or visit the CollectiveAccess web site at
  * http://www.CollectiveAccess.org
@@ -26,39 +26,40 @@
  * ----------------------------------------------------------------------
  */
  
- 	$vs_widget_id = $this->getVar('widget_id');
-	$vn_jobs_done = $this->getVar('jobs_done');
-	$va_jobs_done = $this->getVar('jobs_done_data');
-	$vn_jobs_queued_processing = $this->getVar('jobs_queued_processing');
-	$va_jobs_queued = $this->getVar('qd_job_data');
-	$va_jobs_processing = $this->getVar('pr_job_data');
+    $vs_widget_id = $this->getVar('widget_id');
+    $vn_jobs_done = $this->getVar('jobs_done');
+    $va_jobs_done = $this->getVar('jobs_done_data');
+    $vn_jobs_queued_processing = $this->getVar('jobs_queued_processing');
+    $va_jobs_queued = $this->getVar('qd_job_data');
+    $va_jobs_processing = $this->getVar('pr_job_data');
 
-	/**
-	 * Returns a string to render status information in html.
-	 *
-	 * @param $va_status
-	 * @param $view
-	 */
-	function getStatusForDisplay($va_status, $view){
-		$result = "";
-		foreach($va_status as $vs_code => $va_info) {
-			switch($vs_code) {
-				case 'table':
-					$va_tmp = explode(':', $va_status['table']['value']);
-					if ($vs_link = caEditorLink($view->request, $va_info['value'], 'link', $va_tmp[0], $va_tmp[2], array(), array(), array('verifyLink' => true))) {
-						$result .= "<strong>".$va_info['label']."</strong>: ".$vs_link."<br/>\n";
-					} else {
-						$result .=  "<strong>".$va_info['label']."</strong>: ".$va_info['value']." [<em>"._t('DELETED')."</em>]<br/>\n";
-					}
-					break;
-				default:
-					$result .= "<strong>".$va_info['label']."</strong>: ".$va_info['value']."<br/>\n";
-					break;
-			}
-		}
+    /**
+     * Returns a string to render status information in html.
+     *
+     * @param $va_status
+     * @param $view
+     */
+    function getStatusForDisplay($va_status, $view)
+    {
+        $result = "";
+        foreach ($va_status as $vs_code => $va_info) {
+            switch ($vs_code) {
+                case 'table':
+                    $va_tmp = explode(':', $va_status['table']['value']);
+                    if ($vs_link = caEditorLink($view->request, $va_info['value'], 'link', $va_tmp[0], $va_tmp[2], array(), array(), array('verifyLink' => true))) {
+                        $result .= "<strong>".$va_info['label']."</strong>: ".$vs_link."<br/>\n";
+                    } else {
+                        $result .=  "<strong>".$va_info['label']."</strong>: ".$va_info['value']." [<em>"._t('DELETED')."</em>]<br/>\n";
+                    }
+                    break;
+                default:
+                    $result .= "<strong>".$va_info['label']."</strong>: ".$va_info['value']."<br/>\n";
+                    break;
+            }
+        }
 
-		return $result;
-	}
+        return $result;
+    }
 ?>
 
 <div class="dashboardWidgetContentContainer" id="widget_<?php print $vs_widget_id; ?>">
@@ -68,37 +69,36 @@
 	<div class="clear"></div>
 
 <?php
-	if((sizeof($va_jobs_processing) > 0) || (sizeof($va_jobs_queued) > 0) || (sizeof($va_jobs_done) > 0)){
-?>
+    if ((sizeof($va_jobs_processing) > 0) || (sizeof($va_jobs_queued) > 0) || (sizeof($va_jobs_done) > 0)) {
+        ?>
 	<div id="tabContainer_<?php print $vs_widget_id; ?>" class="tabContainer">
 		<ul>
 <?php
-		if(sizeof($va_jobs_processing) > 0){
-?>
+        if (sizeof($va_jobs_processing) > 0) {
+            ?>
 			<li><a href="#running_<?php print $vs_widget_id; ?>"><span><?php print _t("%1 running", sizeof($va_jobs_processing)); ?></span></a></li>
 <?php
-		}
-		if(sizeof($va_jobs_queued) > 0){
-?>
+        }
+        if (sizeof($va_jobs_queued) > 0) {
+            ?>
 			<li><a href="#queued_<?php print $vs_widget_id; ?>"><span><?php print _t("%1 queued", sizeof($va_jobs_queued)); ?></span></a></li>
 <?php
-		}
-		if(sizeof($va_jobs_done) > 0){
-?>
+        }
+        if (sizeof($va_jobs_done) > 0) {
+            ?>
 			<li><a href="#completed_<?php print $vs_widget_id; ?>"><span><?php print _t("%1 completed", $vn_jobs_done); ?></span></a></li>
 <?php
-		}
-?>
+        } ?>
 		</ul>
 <?php
-		if(sizeof($va_jobs_processing)>0):
+        if (sizeof($va_jobs_processing)>0):
 ?>
 			<div id="running_<?php print $vs_widget_id; ?>"><div class="dashboardWidgetScrollMedium"><table class='dashboardWidgetTable'>
 				<tr>
 					<th><strong><?php print _t("Jobs currently being processed").":"; ?></strong></th>
 				</tr>
 <?php
-			foreach($va_jobs_processing as $va_job):
+            foreach ($va_jobs_processing as $va_job):
 ?>
 				<tr>
 					<td>
@@ -106,24 +106,23 @@
 						
 						<?php print "<strong>"._t("Created on")."</strong>: ".date("n/d/Y @ g:i:sa T", $va_job["created"])."<br />"; ?>
 						<?php print "<strong>"._t("Created by")."</strong>: ".$va_job['by']."<br />"; ?>
-						<?php print getStatusForDisplay( $va_job['status'], $this ); ?>
+						<?php print getStatusForDisplay($va_job['status'], $this); ?>
 					</td>
 				</tr>
 <?php
-			endforeach;
-?>
+            endforeach; ?>
 			</table></div><!-- end dashboardWidgetScrollMedium --></div><!-- end running -->
 <?php
-		endif;
+        endif;
 
-		if(sizeof($va_jobs_queued)>0):
+        if (sizeof($va_jobs_queued)>0):
 ?>
 			<div id="queued_<?php print $vs_widget_id; ?>"><div class="dashboardWidgetScrollMedium"><table class='dashboardWidgetTable'>
 				<tr>
 					<th><strong><?php print _t("Jobs queued for later processing").":"; ?></strong></th>
 				</tr>
 <?php
-			foreach($va_jobs_queued as $va_job):
+            foreach ($va_jobs_queued as $va_job):
 ?>
 				<tr>
 					<td>
@@ -131,66 +130,65 @@
 						
 						<?php print "<strong>"._t("Created on")."</strong>: ".date("n/d/Y @ g:i:sa T", $va_job["created"])."<br />"; ?>
 						<?php print "<strong>"._t("Created by")."</strong>: ".$va_job['by']."<br />"; ?>
-						<?php print getStatusForDisplay($va_job['status'], $this);
-?>
+						<?php print getStatusForDisplay($va_job['status'], $this); ?>
 					</td>
 				</tr>
 <?php
-			endforeach;
-?>
+            endforeach; ?>
 			</table></div><!-- end dashboardWidgetScrollMedium --></div><!-- end queued -->
 <?php
-		endif;
-		if(sizeof($va_jobs_done)>0):
-		?>
+        endif;
+        if (sizeof($va_jobs_done)>0):
+        ?>
 			<div id="completed_<?php print $vs_widget_id; ?>"><div class="dashboardWidgetScrollMedium"><table class='dashboardWidgetTable'>
 				<tr>
 					<th><strong><?php print _t("Jobs completed in the last %1 hours", $this->getVar('hours')).":"; ?></strong></th>
 				</tr>
 		<?php
-			foreach($va_jobs_done as $va_job):
-		?>
+            foreach ($va_jobs_done as $va_job):
+        ?>
 				<tr>
 					<td>
 						<?php print "<h2>"._t('By <em>%1</em>', mb_strtolower($va_job['handler_name']))."</h2>"; ?>
 						
 						<?php print "<strong>"._t("Created on")."</strong>: ".date("n/d/Y @ g:i:sa T", $va_job["created"])."<br />"; ?>
 						<?php print "<strong>"._t("Created by")."</strong>: ".$va_job['by']."<br />"; ?>
-		<?php 
-						if ((int)$va_job["completed_on"] > 0) {
-							print "<strong>"._t('Completed on')."</strong>: ".date("n/d/Y @ g:i:sa T", $va_job["completed_on"])."<br/>\n"; 
-							
-							if ((int)$va_job["error_code"] > 0) {
-								print "<span style='color: #cc0000;'><strong>" . _t( 'Error' ) . "</strong>: "
-								      . $va_job["error_message"] . " [" . $va_job["error_code"] . "] <em>"
-								      . _t( 'TASK DID NOT COMPLETE' ) . "</em>"
-								      ." Review " . caNavLink( $this->request,
-										'Event Log', '', '', 'logs/Events', 'Index' ) . "</span><br/>\n";
-							}
-						}
+		<?php
+                        if ((int)$va_job["completed_on"] > 0) {
+                            print "<strong>"._t('Completed on')."</strong>: ".date("n/d/Y @ g:i:sa T", $va_job["completed_on"])."<br/>\n";
+                            
+                            if ((int)$va_job["error_code"] > 0) {
+                                print "<span style='color: #cc0000;'><strong>" . _t('Error') . "</strong>: "
+                                      . $va_job["error_message"] . " [" . $va_job["error_code"] . "] <em>"
+                                      . _t('TASK DID NOT COMPLETE') . "</em>"
+                                      ." Review " . caNavLink(
+                                          $this->request,
+                                          'Event Log',
+                                          '',
+                                          '',
+                                          'logs/Events',
+                                          'Index'
+                                      ) . "</span><br/>\n";
+                            }
+                        }
 
-						print getStatusForDisplay( $va_job['status'], $this );
-
-						?>
+        print getStatusForDisplay($va_job['status'], $this); ?>
 						<?php print "<strong>"._t("Total processing time")."</strong>: ".$va_job['processing_time']."s<br />"; ?>
 					</td>
 				</tr>
 		<?php
-			endforeach;
-		?>
+            endforeach; ?>
 			</table></div><!-- end dashboardWidgetScrollMedium --></div><!-- end completed -->
 		<?php
-		endif;
-?>		
+        endif; ?>		
 	</div><!-- end tabContainer -->
 <?php
-	}else{
-		?>
+    } else {
+        ?>
 	<div class="block">
-		<?php print _t("There are no running jobs, queued jobs or jobs completed in the last %1 hours.", $this->getVar('hours'));
-		?>
+		<?php print _t("There are no running jobs, queued jobs or jobs completed in the last %1 hours.", $this->getVar('hours')); ?>
 	</div><?php
-	}
+    }
 ?>
 </div>
 
@@ -201,12 +199,12 @@
 		}
 	);
 <?php
-	if (!$this->request->isAjax()) {
-?>
+    if (!$this->request->isAjax()) {
+        ?>
 		setInterval(function() {
-			jQuery('#widget_<?php print $vs_widget_id; ?>').load('<?php print caNavUrl($this->request, '', 'Dashboard', 'getWidget', array('widget_id' => $vs_widget_id));?>');
-		}, <?php print ($this->getVar('update_frequency') * 1000); ?>);
+			jQuery('#widget_<?php print $vs_widget_id; ?>').load('<?php print caNavUrl($this->request, '', 'Dashboard', 'getWidget', array('widget_id' => $vs_widget_id)); ?>');
+		}, <?php print($this->getVar('update_frequency') * 1000); ?>);
 <?php
-	}
+    }
 ?>
 </script>

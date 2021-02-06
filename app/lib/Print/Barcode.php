@@ -66,7 +66,7 @@ class Barcode extends PEAR
      * @author Marcelo Subtil Marcal <msmarcal@php.net>
      * @since  Image_Barcode 0.3
      */
-    function &draw($text, $dest_file, $type = 'int25', $imgtype = 'png', $height=60)
+    public function &draw($text, $dest_file, $type = 'int25', $imgtype = 'png', $height=60)
     {
         //Make sure no bad files are included
         if (!preg_match('/^[a-zA-Z0-9_-]+$/', $type)) {
@@ -78,37 +78,36 @@ class Barcode extends PEAR
 
         $classname = 'Barcode_' . $type;
 
-        if (!in_array('draw',get_class_methods($classname))) {
-           $classname = 'code39';
+        if (!in_array('draw', get_class_methods($classname))) {
+            $classname = 'code39';
         }
 
         @$obj = new $classname();
 
-		$obj->_barcodeheight = $height;
+        $obj->_barcodeheight = $height;
         $img = &$obj->draw($text, $imgtype);
 
         if (PEAR::isError($img)) {
             return null;
         }
         
-         switch ($imgtype) {
-			case 'gif':
-				imagegif($img ,$dest_file);
-				break;
+        switch ($imgtype) {
+            case 'gif':
+                imagegif($img, $dest_file);
+                break;
 
-			case 'jpg':
-				imagejpeg($img, $dest_file);
-				break;
+            case 'jpg':
+                imagejpeg($img, $dest_file);
+                break;
 
-			default:
-				imagepng($img, $dest_file);
-				break;
-		}
-		
+            default:
+                imagepng($img, $dest_file);
+                break;
+        }
+        
         $va_dimensions = array('width' => imagesx($img), 'height' => imagesy($img), 0 => imagesx($img), 1 => imagesy($img));
      
-		imagedestroy($img);
+        imagedestroy($img);
         return $va_dimensions;
     }
 }
-?>

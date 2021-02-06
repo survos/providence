@@ -17,7 +17,7 @@
  * - 7 Unit Stop Character
  * - 10 Unit Quiet Zone
  *
- * I originally wrote this algorithm in Visual Basic 6 for a Rapid 
+ * I originally wrote this algorithm in Visual Basic 6 for a Rapid
  * Software Development class, where we printed Code128 B bar codes
  * to read using Cue Cat bar code readers.  I rewrote the algorithm
  * using PHP for inclusion in the PEAR Barcode project.
@@ -48,13 +48,13 @@
 #
 class Barcode_code128 extends Barcode
 {
-    var $_type = 'code128';
-    var $_barcodeheight = 60;
-    var $_font = 2;  
-    var $_barwidth = 1;
-    var $code;
-  	
-  	var $_printText = false; // print number below barcode?
+    public $_type = 'code128';
+    public $_barcodeheight = 60;
+    public $_font = 2;
+    public $_barwidth = 1;
+    public $code;
+    
+    public $_printText = false; // print number below barcode?
 
 
     /**
@@ -76,7 +76,7 @@ class Barcode_code128 extends Barcode
      * the image along with the barcode text and display it to the beholder.
      *
      */
-    function &draw($text, $imgtype = 'png')
+    public function &draw($text, $imgtype = 'png')
     {
 
         // We start with the Code128 Start Code character.  We
@@ -158,17 +158,17 @@ class Barcode_code128 extends Barcode
 
         // First, print the image, centered across the bottom.
         if ($this->_printText) {
-			imagestring(
-				$img,
-				$this->_font,
-				$barcodewidth / 2 - strlen($text) / 2 * (imagefontwidth($this->_font)),
-				$this->_barcodeheight + imagefontheight($this->_font) / 2,
-				$text,
-				$black
-			);
-		}
+            imagestring(
+                $img,
+                $this->_font,
+                $barcodewidth / 2 - strlen($text) / 2 * (imagefontwidth($this->_font)),
+                $this->_barcodeheight + imagefontheight($this->_font) / 2,
+                $text,
+                $black
+            );
+        }
 
-        // We set $xpos to 10 so we start bar printing after 
+        // We set $xpos to 10 so we start bar printing after
         // position 10 to simulate the 10 pixel "Quiet Zone"
         $xpos = 10;
 
@@ -200,7 +200,7 @@ class Barcode_code128 extends Barcode
     * the $code array, containing the bar and space pattern
     * for the Code128 B character set.
     */
-    function Barcode_code128()
+    public function Barcode_code128()
     {
         $this->code[0] = "212222";  // " "
         $this->code[1] = "222122";  // "!"
@@ -310,7 +310,8 @@ class Barcode_code128 extends Barcode
     /**
     * Return the Code128 code for a character
     */
-    function getCharCode($c) {
+    public function getCharCode($c)
+    {
         $retval = $this->code[ord($c) - 32];
         return $retval;
     }
@@ -318,21 +319,24 @@ class Barcode_code128 extends Barcode
     /**
     * Return the Start Code for Code128
     */
-    function getStartCode() {
+    public function getStartCode()
+    {
         return '211214';
     }
 
     /**
     * Return the Stop Code for Code128
     */
-    function getStopCode() {
+    public function getStopCode()
+    {
         return '2331112';
     }
 
     /**
     * Return the Code128 code equivalent of a character number
     */
-    function getNumCode($index) {
+    public function getNumCode($index)
+    {
         $retval = $this->code[$index];
         return $retval;
     }
@@ -340,10 +344,9 @@ class Barcode_code128 extends Barcode
     /**
     * Return the Code128 numerical equivalent of a character.
     */
-    function getCharNumber($c) {
+    public function getCharNumber($c)
+    {
         $retval = ord($c) - 32;
         return $retval;
     }
-
 } // class
-?>

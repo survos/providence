@@ -1,6 +1,6 @@
 <?php
 /** ---------------------------------------------------------------------
- * app/lib/Attributes/Values/LengthAttributeValue.php : 
+ * app/lib/Attributes/Values/LengthAttributeValue.php :
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -15,10 +15,10 @@
  * the terms of the provided license as published by Whirl-i-Gig
  *
  * CollectiveAccess is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+ * WITHOUT ANY WARRANTIES whatsoever, including any implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * This source code is free and modifiable under the terms of 
+ * This source code is free and modifiable under the terms of
  * GNU General Public License. (http://www.gnu.org/copyleft/gpl.html). See
  * the "license.txt" file for details, or visit the CollectiveAccess web site at
  * http://www.CollectiveAccess.org
@@ -75,13 +75,13 @@ $_ca_attribute_settings['LengthAttributeValue'] = array(		// global
         'description' => _t('Check this option if you want an error to be thrown if this measurement is left blank.')
     ),
     'allowDuplicateValues' => array(
-		'formatType' => FT_NUMBER,
-		'displayType' => DT_CHECKBOXES,
-		'default' => 0,
-		'width' => 1, 'height' => 1,
-		'label' => _t('Allow duplicate values?'),
-		'description' => _t('Check this option if you want to allow duplicate values to be set when element is not in a container and is repeating.')
-	),
+        'formatType' => FT_NUMBER,
+        'displayType' => DT_CHECKBOXES,
+        'default' => 0,
+        'width' => 1, 'height' => 1,
+        'label' => _t('Allow duplicate values?'),
+        'description' => _t('Check this option if you want to allow duplicate values to be set when element is not in a container and is repeating.')
+    ),
     'canBeUsedInSort' => array(
         'formatType' => FT_NUMBER,
         'displayType' => DT_CHECKBOXES,
@@ -141,18 +141,21 @@ $_ca_attribute_settings['LengthAttributeValue'] = array(		// global
         'description' => _t('Delimiter to use between multiple values when used in a display.')
     )
 );
-class LengthAttributeValue extends AttributeValue implements IAttributeValue {
+class LengthAttributeValue extends AttributeValue implements IAttributeValue
+{
     # ------------------------------------------------------------------
     private $ops_text_value;
     private $opn_decimal_value;
     private $config;
     # ------------------------------------------------------------------
-    public function __construct($pa_value_array=null) {
+    public function __construct($pa_value_array=null)
+    {
         $this->config = Configuration::load(__CA_APP_DIR__."/conf/dimensions.conf");
         parent::__construct($pa_value_array);
     }
     # ------------------------------------------------------------------
-    public function loadTypeSpecificValueFromRow($pa_value_array) {
+    public function loadTypeSpecificValueFromRow($pa_value_array)
+    {
         global $g_ui_locale;
         global $g_ui_units_pref;
         
@@ -161,7 +164,7 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
             return;
         }
 
-        $this->ops_text_value = $this->_getValueAsText($pa_value_array, ['precision' => 4]);			
+        $this->ops_text_value = $this->_getValueAsText($pa_value_array, ['precision' => 4]);
 
         // Trim off trailing zeros in quantity
         $this->ops_text_value = preg_replace("!\\.([1-9]*)[0]+([A-Za-z\\.\"' ]+)$!", ".$1$2", $this->ops_text_value);
@@ -171,14 +174,15 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
     }
     # ------------------------------------------------------------------
     /**
-     * 
+     *
      *
      * @param $pa_options array Options are:
      *		units = force units used for display. Values are: metric, english, as_entered. [Default is to use units system of as entered value]
      *
      * @return string
      */
-    public function _getValueAsText($pa_value_array, $pa_options=null) {
+    public function _getValueAsText($pa_value_array, $pa_options=null)
+    {
         global $g_ui_locale;
         global $g_ui_units_pref;
     
@@ -191,18 +195,23 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
             $vs_value = '';
             $vn_precision = caGetOption('precision', $pa_options, null);
             
-            if (!is_array($unicode_fracs = $this->config->get('use_unicode_fraction_glyphs_for'))) { $unicode_fracs = []; }
-            if (!is_array($fracs = $this->config->get('display_fractions_for'))) { $fracs = []; }
-            $vn_maximum_denominator = array_reduce($fracs, function($acc, $v) { 
-                $t = explode("/", $v); return ((int)$t[1] > $acc) ? (int)$t[1] : $acc; 
+            if (!is_array($unicode_fracs = $this->config->get('use_unicode_fraction_glyphs_for'))) {
+                $unicode_fracs = [];
+            }
+            if (!is_array($fracs = $this->config->get('display_fractions_for'))) {
+                $fracs = [];
+            }
+            $vn_maximum_denominator = array_reduce($fracs, function ($acc, $v) {
+                $t = explode("/", $v);
+                return ((int)$t[1] > $acc) ? (int)$t[1] : $acc;
             }, 0);
             
             if (!in_array($vs_units, ['metric', 'english','as_entered'])) {
                 $vs_as_entered_units = caParseLengthDimension($pa_value_array['value_longtext1'])->getType();
-                $vs_units = 'as_entered'; 
+                $vs_units = 'as_entered';
             }
             
-            switch($vs_units) {
+            switch ($vs_units) {
                 default:
                 case 'metric':
                     $vs_value_in_cm = $vo_measurement->convertTo(Zend_Measure_Length::CENTIMETER, 15);
@@ -248,20 +257,24 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
                     }
                     
                     $vs_value = $vo_measurement->convertTo($vs_convert_to_units, $vn_precision);
-                    list($vn_whole, $vn_decimal) = explode(".",$vs_value);
-                    if($vn_decimal > 0) {
-                        switch($vs_convert_to_units) {
+                    list($vn_whole, $vn_decimal) = explode(".", $vs_value);
+                    if ($vn_decimal > 0) {
+                        switch ($vs_convert_to_units) {
                             case Zend_Measure_Length::FEET:
                                 $vn_inches = (float)(".{$vn_decimal}") * 12;
-                                $vo_feet = new Zend_Measure_Length($vn_whole, $vs_convert_to_units, $g_ui_locale);                                    
+                                $vo_feet = new Zend_Measure_Length($vn_whole, $vs_convert_to_units, $g_ui_locale);
                                 $vo_inches = new Zend_Measure_Length($vn_inches, Zend_Measure_Length::INCH, $g_ui_locale);
                                 
                                 $vs_value = $vo_feet->convertTo($vs_convert_to_units, $vn_precision);
-                                if(in_array($vs_convert_to_units, $this->config->get('add_period_after_units'))) { $vs_value .= '.'; }
+                                if (in_array($vs_convert_to_units, $this->config->get('add_period_after_units'))) {
+                                    $vs_value .= '.';
+                                }
                                 
                                 if ($vn_inches > 0) {
                                     $vs_value .= " ".caLengthToFractions($vn_inches, $vn_maximum_denominator, true, ['precision' => $this->config->get('inch_decimal_precision'), 'allowFractionsFor' => $fracs, 'useUnicodeFractionGlyphsFor' => $unicode_fracs]);
-                                    if(in_array(Zend_Measure_Length::INCH, $this->config->get('add_period_after_units'))) { $vs_value .= '.'; }
+                                    if (in_array(Zend_Measure_Length::INCH, $this->config->get('add_period_after_units'))) {
+                                        $vs_value .= '.';
+                                    }
                                 }
                                 return trim($vs_value);
                                 break;
@@ -270,7 +283,7 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
                                 list($vn_whole_feet, $vn_decimal_inches) = explode(".", $vn_feet);
                                 $vn_inches = (float)(".{$vn_decimal_inches}") * 12;
                                 
-                                $vo_miles = new Zend_Measure_Length($vn_whole, $vs_convert_to_units, $g_ui_locale);    
+                                $vo_miles = new Zend_Measure_Length($vn_whole, $vs_convert_to_units, $g_ui_locale);
                                 $vo_feet = new Zend_Measure_Length($vn_whole_feet, Zend_Measure_Length::FEET, $g_ui_locale);
                                 $vo_inches = new Zend_Measure_Length($vn_inches, Zend_Measure_Length::INCH, $g_ui_locale);
                                 
@@ -279,15 +292,21 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
                                     $vn_precision = $this->config->get(strtolower($vs_convert_to_units).'_decimal_precision');
                                 }
                                 $vs_value = $vo_miles->convertTo($vs_convert_to_units, $vn_precision);
-                                if(in_array($vs_convert_to_units, $this->config->get('add_period_after_units'))) { $vs_value .= '.'; }
+                                if (in_array($vs_convert_to_units, $this->config->get('add_period_after_units'))) {
+                                    $vs_value .= '.';
+                                }
                                 
                                 if ($vn_whole_feet > 0) {
                                     $vs_value .= " ".$vo_feet->convertTo(Zend_Measure_Length::FEET, $this->config->get('feet_decimal_precision'));
-                                    if(in_array(Zend_Measure_Length::INCH, $this->config->get('add_period_after_units'))) { $vs_value .= '.'; }
+                                    if (in_array(Zend_Measure_Length::INCH, $this->config->get('add_period_after_units'))) {
+                                        $vs_value .= '.';
+                                    }
                                 }
                                 if ($vn_inches > 0) {
                                     $vs_value .= " ".caLengthToFractions($vn_inches, $vn_maximum_denominator, true, ['units' => Zend_Measure_Length::INCH, 'allowFractionsFor' => $fracs, 'useUnicodeFractionGlyphsFor' => $unicode_fracs]);
-                                    if(in_array(Zend_Measure_Length::INCH, $this->config->get('add_period_after_units'))) { $vs_value .= '.'; }
+                                    if (in_array(Zend_Measure_Length::INCH, $this->config->get('add_period_after_units'))) {
+                                        $vs_value .= '.';
+                                    }
                                 }
                                 return trim($vs_value);
                                 break;
@@ -296,19 +315,19 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
                                 $vs_value = caLengthToFractions($vs_value_in_inches, $vn_maximum_denominator, true, ['units' => $vs_convert_to_units, 'allowFractionsFor' => $fracs, 'useUnicodeFractionGlyphsFor' => $unicode_fracs]);
                                 break;
                         }
-                    } 
+                    }
                     break;
-                case 'as_entered': 
+                case 'as_entered':
                     // as-entered
                     return $pa_value_array['value_longtext1'];
                     break;
             }
     
-            if(in_array($pa_value_array['value_longtext2'], $this->config->get('add_period_after_units'))) {
+            if (in_array($pa_value_array['value_longtext2'], $this->config->get('add_period_after_units'))) {
                 $vs_value .= '.';
             }
             return $vs_value;
-        } catch (Exception $e) { 
+        } catch (Exception $e) {
             return $pa_value_array['value_longtext1'];
         }
     }
@@ -321,14 +340,16 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
      *
      * @return mixed Values as string or decimal
      */
-    public function getDisplayValue($pa_options=null) {
+    public function getDisplayValue($pa_options=null)
+    {
         if (caGetOption('returnAsDecimalMetric', $pa_options, false)) {
             return $this->opn_decimal_value;
         }
         return $this->ops_text_value;
     }
     # ------------------------------------------------------------------
-    public function parseValue($ps_value, $pa_element_info, $pa_options=null) {
+    public function parseValue($ps_value, $pa_element_info, $pa_options=null)
+    {
         global $g_ui_locale;
         
         $ps_value = preg_replace("![^\d\.\,A-Za-z\"\'\"’” \/]+!", " ", $ps_value);
@@ -353,22 +374,23 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
         return array(
             'value_longtext1' => $ps_value,					                            // parsed measurement with units
             'value_longtext2' => $vo_parsed_measurement->getType(),						// units constant
-            'value_decimal1'  => $vo_parsed_measurement->convertTo('METER',6, 'en_US')	// measurement in metric (for searching)
+            'value_decimal1'  => $vo_parsed_measurement->convertTo('METER', 6, 'en_US')	// measurement in metric (for searching)
         );
     }
     # ------------------------------------------------------------------
     /**
      *
      */
-    public function htmlFormElement($pa_element_info, $pa_options=null) {
+    public function htmlFormElement($pa_element_info, $pa_options=null)
+    {
         $va_settings = $this->getSettingValuesFromElementArray($pa_element_info, array('fieldWidth', 'fieldHeight'));
         $vs_class = trim((isset($pa_options['class']) && $pa_options['class']) ? $pa_options['class'] : 'rulerBg');
         
         return caHTMLTextInput(
-            '{fieldNamePrefix}'.$pa_element_info['element_id'].'_{n}', 
+            '{fieldNamePrefix}'.$pa_element_info['element_id'].'_{n}',
             array(
                 'size' => (isset($pa_options['width']) && $pa_options['width'] > 0) ? $pa_options['width'] : $va_settings['fieldWidth'],
-                'height' => (isset($pa_options['height']) && $pa_options['height'] > 0) ? $pa_options['height'] : $va_settings['fieldHeight'], 
+                'height' => (isset($pa_options['height']) && $pa_options['height'] > 0) ? $pa_options['height'] : $va_settings['fieldHeight'],
                 'value' => '{{'.$pa_element_info['element_id'].'}}',
                 'id' => '{fieldNamePrefix}'.$pa_element_info['element_id'].'_{n}',
                 'class' => $vs_class
@@ -376,7 +398,8 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
         );
     }
     # ------------------------------------------------------------------
-    public function getAvailableSettings($pa_element_info=null) {
+    public function getAvailableSettings($pa_element_info=null)
+    {
         global $_ca_attribute_settings;
         
         return $_ca_attribute_settings['LengthAttributeValue'];
@@ -384,19 +407,21 @@ class LengthAttributeValue extends AttributeValue implements IAttributeValue {
     # ------------------------------------------------------------------
     /**
      * Returns name of field in ca_attribute_values to use for sort operations
-     * 
+     *
      * @return string Name of sort field
      */
-    public function sortField() {
+    public function sortField()
+    {
         return 'value_decimal1';
     }
     # ------------------------------------------------------------------
     /**
      * Returns constant for length attribute value
-     * 
+     *
      * @return int Attribute value type code
      */
-    public function getType() {
+    public function getType()
+    {
         return __CA_ATTRIBUTE_VALUE_LENGTH__;
     }
     # ------------------------------------------------------------------

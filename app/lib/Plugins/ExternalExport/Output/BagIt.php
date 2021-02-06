@@ -1,6 +1,6 @@
 <?php
 /** ---------------------------------------------------------------------
- * app/lib/Plugins/ExternalExport/WLPlugBagIt.php : 
+ * app/lib/Plugins/ExternalExport/WLPlugBagIt.php :
  * ----------------------------------------------------------------------
  * CollectiveAccess
  * Open-source collections management software
@@ -37,55 +37,62 @@ require_once(__CA_LIB_DIR__."/Plugins/IWLPlugExternalExportFormat.php");
 require_once(__CA_LIB_DIR__."/Plugins/IWLPlugExternalExportTransport.php");
 require_once(__CA_LIB_DIR__."/Plugins/ExternalExport/BaseExternalExportFormatPlugin.php");
 require_once(__CA_BASE_DIR__.'/vendor/scholarslab/bagit/lib/bagit.php');
-class WLPlugBagIt Extends BaseExternalExportFormatPlugin Implements IWLPlugExternalExportFormat {
-	# ------------------------------------------------------
-	
-	
-	# ------------------------------------------------------
-	/**
-	 *
-	 */
-	public function __construct() {
-		parent::__construct();
-		$this->info['NAME'] = 'BagIt';
-		$this->description = _t('Export data in BagIt format');
-	}
-	# ------------------------------------------------------
-    /**
-     *
-     */
-	public function register() {
-	    return true;
-	}
+class WLPlugBagIt extends BaseExternalExportFormatPlugin implements IWLPlugExternalExportFormat
+{
+    # ------------------------------------------------------
+    
+    
     # ------------------------------------------------------
     /**
      *
      */
-	public function init() {
-		// noop
-		return true;
-	}
+    public function __construct()
+    {
+        parent::__construct();
+        $this->info['NAME'] = 'BagIt';
+        $this->description = _t('Export data in BagIt format');
+    }
     # ------------------------------------------------------
     /**
      *
      */
-	public function cleanup() {
-	    return true;
-	}
+    public function register()
+    {
+        return true;
+    }
     # ------------------------------------------------------
     /**
      *
      */
-	public function getDescription() {
-	    return _t('BagIt export');
-	}
+    public function init()
+    {
+        // noop
+        return true;
+    }
     # ------------------------------------------------------
     /**
      *
      */
-	public function checkStatus() {
-	    return true;
-	}
+    public function cleanup()
+    {
+        return true;
+    }
+    # ------------------------------------------------------
+    /**
+     *
+     */
+    public function getDescription()
+    {
+        return _t('BagIt export');
+    }
+    # ------------------------------------------------------
+    /**
+     *
+     */
+    public function checkStatus()
+    {
+        return true;
+    }
     # ------------------------------------------------------
     /**
      * Generate BagIt archive for provided record subject to target settings
@@ -93,21 +100,22 @@ class WLPlugBagIt Extends BaseExternalExportFormatPlugin Implements IWLPlugExter
      * @param BaseModel $t_instance
      * @param array $target_info
      * @param array $options Options include:
-	 *		logLevel = KLogger constant for minimum log level to record. Default is KLogger::INFO. Constants are, in descending order of shrillness:
-	 *			ALERT = Alert messages (action must be taken immediately)
-	 *			CRIT = Critical conditions
-	 *			ERR = Error conditions
-	 *			WARN = Warnings
-	 *			NOTICE = Notices (normal but significant conditions)
-	 *			INFO = Informational messages
-	 *			DEBUG = Debugging messages
+     *		logLevel = KLogger constant for minimum log level to record. Default is KLogger::INFO. Constants are, in descending order of shrillness:
+     *			ALERT = Alert messages (action must be taken immediately)
+     *			CRIT = Critical conditions
+     *			ERR = Error conditions
+     *			WARN = Warnings
+     *			NOTICE = Notices (normal but significant conditions)
+     *			INFO = Informational messages
+     *			DEBUG = Debugging messages
      *
      * @return string Path to generated BagIt file
      */
-    public function process($t_instance, $target_info, $options=null) {
+    public function process($t_instance, $target_info, $options=null)
+    {
     
-    	// TODO: convert to use https://github.com/whikloj/BagItTools as Scholars Lab 
-    	// BagItPHP lib (https://github.com/scholarslab/BagItPHP) is no longer supported as of 2020
+        // TODO: convert to use https://github.com/whikloj/BagItTools as Scholars Lab
+        // BagItPHP lib (https://github.com/scholarslab/BagItPHP) is no longer supported as of 2020
         
         $log = caGetLogger(['logLevel' => caGetOption('logLevel', $options, null)], 'external_export_log_directory');
          
@@ -134,15 +142,15 @@ class WLPlugBagIt Extends BaseExternalExportFormatPlugin Implements IWLPlugExter
         $file_list_template = caGetOption('file_list_template', $target_options, '');
         $file_list_delimiter = caGetOption('file_list_delimiter', $target_options, '; ');
         
-        foreach($content_mappings as $path => $content_spec) {
-            switch($content_spec['type']) {
+        foreach ($content_mappings as $path => $content_spec) {
+            switch ($content_spec['type']) {
                 case 'export':
-                	if (ca_data_exporters::exporterExists($content_spec['exporter'])) {
-						$data = ca_data_exporters::exportRecord($content_spec['exporter'], $t_instance->getPrimaryKey(), []);
-						$bag->createFile($data, $path);
-					} else {
-						$log->logError(_t('[BagIt] Could not generate data export using exporter %1 for external export %2: exporter does not exist', $content_spec['exporter'], $target_info['target']));
-					}
+                    if (ca_data_exporters::exporterExists($content_spec['exporter'])) {
+                        $data = ca_data_exporters::exportRecord($content_spec['exporter'], $t_instance->getPrimaryKey(), []);
+                        $bag->createFile($data, $path);
+                    } else {
+                        $log->logError(_t('[BagIt] Could not generate data export using exporter %1 for external export %2: exporter does not exist', $content_spec['exporter'], $target_info['target']));
+                    }
                     break;
                 case 'file':
                     $ret = self::_processFiles($t_instance, $content_spec, $options);
@@ -150,12 +158,12 @@ class WLPlugBagIt Extends BaseExternalExportFormatPlugin Implements IWLPlugExter
                     $total_filesize += $ret['totalFileSize'];
                     $file_mimetypes = array_unique(array_merge($file_mimetypes, $ret['fileMimeTypes']));
                     
-                    foreach($file_list as $file_info) {
-                    	$bag->addFile($file_info['path'], "{$path}/{$file_info['name']}");
-					
-						if ($file_info['filemodtime'] > 0) {	// preserve file modification date/times
-							touch("{$staging_dir}/{$name}/data/{$path}/{$file_info['name']}", $file_info['filemodtime']);
-						}
+                    foreach ($file_list as $file_info) {
+                        $bag->addFile($file_info['path'], "{$path}/{$file_info['name']}");
+                    
+                        if ($file_info['filemodtime'] > 0) {	// preserve file modification date/times
+                            touch("{$staging_dir}/{$name}/data/{$path}/{$file_info['name']}", $file_info['filemodtime']);
+                        }
                     }
                     break;
                 default:
@@ -165,19 +173,21 @@ class WLPlugBagIt Extends BaseExternalExportFormatPlugin Implements IWLPlugExter
         }
         // bag info
         $creator_name = $creator_email = null;
-        if (is_a($t_user, 'ca_users')) { 
-            $creator_name = $t_user->get('fname').' '.$t_user->get('lname'); 
+        if (is_a($t_user, 'ca_users')) {
+            $creator_name = $t_user->get('fname').' '.$t_user->get('lname');
             $creator_email = $t_user->get('email');
         }
         $special_bag_vals = [
-            'now' => date('c'), 
-            'creator_name' => $creator_name, 'creator_email' => $creator_email, 
+            'now' => date('c'),
+            'creator_name' => $creator_name, 'creator_email' => $creator_email,
             'total_filesize_in_bytes' => $total_filesize, 'total_filesize_for_display' => caHumanFilesize($total_filesize),
             'file_count' => is_array($file_list) ? sizeof($file_list) : 0, 'mimetypes' => join(", ", array_keys($file_mimetypes)),
-            'file_list' => join($file_list_delimiter, array_map(function($v) { return $v['name']; }, $file_list))
+            'file_list' => join($file_list_delimiter, array_map(function ($v) {
+                return $v['name'];
+            }, $file_list))
         ];
         
-        foreach($bag_info as $k => $v) {
+        foreach ($bag_info as $k => $v) {
             $k = caProcessTemplate($k, $special_bag_vals, ['skipTagsWithoutValues' => true]);
             $v = caProcessTemplate($v, $special_bag_vals, ['skipTagsWithoutValues' => true]);
             $bag->setBagInfoData($t_instance->getWithTemplate($k), $t_instance->getWithTemplate($v));
@@ -190,6 +200,6 @@ class WLPlugBagIt Extends BaseExternalExportFormatPlugin Implements IWLPlugExter
     }
     # ------------------------------------------------------
 }
-class WLPlugBagItException extends ApplicationException {
-
+class WLPlugBagItException extends ApplicationException
+{
 }
