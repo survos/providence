@@ -29,12 +29,8 @@
 	define("__CA_MICROTIME_START_OF_REQUEST__", microtime());
 	define("__CA_BASE_MEMORY_USAGE__", memory_get_usage(true));
 	require("./app/helpers/errorHelpers.php");
-	
-	if (!file_exists('./setup.php')) {
-		caDisplayException(new ApplicationException("No setup.php found"));
-		exit; 
-	}
-	require('./setup.php');
+set_include_path('.:..:../../../config') && require_once 'setup.php';
+
 	require_once('./app/helpers/post-setup.php');
 
 	try {
