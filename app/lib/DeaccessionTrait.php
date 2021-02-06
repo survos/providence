@@ -29,7 +29,6 @@
  * 
  * ----------------------------------------------------------------------
  */
- 
 trait DeaccessionTrait {
 	/** 
 	 * Returns HTML form bundle for object deaccession information

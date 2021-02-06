@@ -33,8 +33,7 @@
  /**
   *
   */
-
-	interface IDataParser {
+interface IDataParser {
 	
 		/**
 		 *	Parse specified file; return true if successful, false if not

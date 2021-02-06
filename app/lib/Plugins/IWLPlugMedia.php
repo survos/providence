@@ -33,8 +33,7 @@
  /**
   *
   */
-	
-	interface IWLPlugMedia {
+interface IWLPlugMedia {
 		# -------------------------------------------------------
 		# Initialization and state
 		# -------------------------------------------------------

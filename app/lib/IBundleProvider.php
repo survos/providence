@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- interface IBundleProvider {
+interface IBundleProvider {
  	// returns list of available bundles
  	public function getBundleList();
  	

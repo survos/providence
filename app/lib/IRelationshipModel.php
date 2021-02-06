@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- interface IRelationshipModel {
+interface IRelationshipModel {
  
  	public function getLeftTableName();
  	

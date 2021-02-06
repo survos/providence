@@ -29,8 +29,7 @@
  * 
  * ----------------------------------------------------------------------
  */
- 
-	trait CLIUtilsConfiguration { 
+trait CLIUtilsConfiguration { 
 		# -------------------------------------------------------
 		/**
 		 * Create a fresh installation of CollectiveAccess based on contents of setup.php.  This is essentially a CLI

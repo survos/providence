@@ -25,8 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
-	
-	interface IWLPlugCurrencyConversion {
+interface IWLPlugCurrencyConversion {
 		# -------------------------------------------------------
 		# Initialization and state
 		# -------------------------------------------------------

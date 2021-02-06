@@ -25,8 +25,7 @@
  *
  * ----------------------------------------------------------------------
  */
-	
-	interface IWLPlugInformationService {
+interface IWLPlugInformationService {
 		# -------------------------------------------------------
 		# Initialization and state
 		# -------------------------------------------------------

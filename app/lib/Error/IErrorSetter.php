@@ -33,8 +33,7 @@
  /**
   *
   */
- 	
-	interface IErrorSetter {
+interface IErrorSetter {
 		public function &errors();
 		public function &getErrors($source=null);
 		public function &getErrorDescriptions($source=null);

@@ -29,8 +29,7 @@
  * 
  * ----------------------------------------------------------------------
  */
- 
-	trait SetUniqueIdnoTrait {
+trait SetUniqueIdnoTrait {
 		# ------------------------------------------------------
 		/** 
 		 * Override addLabel() to set display_code if not specifically set by user

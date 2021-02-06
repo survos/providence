@@ -35,8 +35,7 @@
   */
  	
  	require_once(__CA_LIB_DIR__.'/Error/IErrorSetter.php');
- 
-	interface IAttributeValue extends IErrorSetter {
+interface IAttributeValue extends IErrorSetter {
 		// $pa_value_array is used to initialize the value object by calling loadValueFromRow() and
 		// is an associative array containing *all* of the ca_attribute_values table value_* fields
 		// 

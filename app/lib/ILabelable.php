@@ -33,8 +33,7 @@
  /**
   *
   */
-  
- interface ILabelable {
+interface ILabelable {
  	// adds a label to a database entity; $pa_label_values is an associative array containing the various name values the label requires
  	// The values for the name vary for different labels (eg. labels for ca_lists has a singular and plural form)
  	public function addLabel($pa_label_values, $pn_locale_id, $pn_type_id=null, $pb_is_preferred=false);

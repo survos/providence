@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- interface ITakesAttributes {
+interface ITakesAttributes {
  	
  	// --- Managing
  	

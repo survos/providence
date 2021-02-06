@@ -33,8 +33,7 @@
  /**
   *
   */
-	
-	interface IWLPlugFileFormat {
+interface IWLPlugFileFormat {
 		public function __construct();
 		public function register();
 		public function get($ps_property);

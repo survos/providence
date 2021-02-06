@@ -29,8 +29,7 @@
  * 
  * ----------------------------------------------------------------------
  */
- 
-	trait CLIUtilsMaintenance { 
+trait CLIUtilsMaintenance { 
 		# -------------------------------------------------------
 		/**
 		 * Rebuild search indices

@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- interface IHierarchy {
+interface IHierarchy {
  	
  	/**
 	 * Return array containing information about all lists, including their root_id's

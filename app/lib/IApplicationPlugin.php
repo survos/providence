@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- interface IApplicationPlugin {
+interface IApplicationPlugin {
  	
  	// Returns current request object
 	public function getRequest();

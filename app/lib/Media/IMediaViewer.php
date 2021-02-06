@@ -33,7 +33,6 @@
  /**
   *
   */
-	
-	interface IMediaViewer {
+interface IMediaViewer {
 		static public function getViewerHTML($po_request, $ps_identifier, $pa_data=null, $pa_options=null);
 	}

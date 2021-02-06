@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- interface IApplicationTool {
+interface IApplicationTool {
  	
  	/**
  	 * Settings

@@ -35,8 +35,7 @@
   */
   	require_once(__CA_MODELS_DIR__."/ca_history_tracking_current_values.php");
   	require_once(__CA_MODELS_DIR__."/ca_storage_locations.php");
- 
-	trait HistoryTrackingCurrentValueTrait {
+trait HistoryTrackingCurrentValueTrait {
 		# ------------------------------------------------------
 		
 		/**

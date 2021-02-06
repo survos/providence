@@ -33,8 +33,7 @@
  /**
   *
   */
-	
-	interface IWLPlugSearchEngine {
+interface IWLPlugSearchEngine {
 		# -------------------------------------------------------
 		# Initialization, state and capabilities
 		# -------------------------------------------------------

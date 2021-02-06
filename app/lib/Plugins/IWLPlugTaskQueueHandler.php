@@ -33,8 +33,7 @@
  /**
   *
   */
-	
-	interface IWLPlugTaskQueueHandler {
+interface IWLPlugTaskQueueHandler {
 		public function __construct();
 		public function getHandlerName();
 		public function getParametersForDisplay($pa_rec);

@@ -33,9 +33,7 @@
  /**
   *
   */
- 	
- 
-	interface IRepresentationAnnotationPropertyCoder {
+interface IRepresentationAnnotationPropertyCoder {
 		
 		/* return type code for annotation properties */
 		public function getType();

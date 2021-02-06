@@ -33,8 +33,7 @@
  /**
   *
   */
- 
- interface IWidget {
+interface IWidget {
  	
  	// Returns current request object
 	public function getRequest();

@@ -33,8 +33,7 @@
  /**
   *
   */
-  
- interface ITakesSettings {
+interface ITakesSettings {
  	
 	/**
 	 * Returns associative array of setting descriptions (but *not* the setting values)

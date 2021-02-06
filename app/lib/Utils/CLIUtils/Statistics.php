@@ -30,8 +30,7 @@
  * ----------------------------------------------------------------------
  */
  	require_once(__CA_LIB_DIR__."/Statistics/StatisticsAggregator.php");
- 
-	trait CLIUtilsStatistics { 
+trait CLIUtilsStatistics { 
 		# -------------------------------------------------------
 		/**
 		 *
